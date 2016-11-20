@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset={$_G['charset']}" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-<title>{$singer['search']} - æœç´¢æ­Œæ‰‹ - {$_G['name']}</title>
+<title>{$singer['search']} - ËÑË÷¸èÊÖ - {$_G['name']}</title>
 <meta name="Keywords" content="{$_G['keywords']}" />
 <meta name="Description" content="{$_G['description']}" />
 <link href="{$_G['tempath']}css/index.css" type="text/css" rel="stylesheet" />
@@ -27,33 +27,33 @@ var _menu = 'music';
 	<div class="main_top">
 		<h1 class="frame_logo"><a href="{$_G['path']}" class="logo">{$_G['name']}</a></h1>
 		<div class="frame_search">
-			<input type="text" value="æ‰¾åˆ°å¥½éŸ³ä¹" class="search_text" id="keyword" onfocus="if(this.value=='æ‰¾åˆ°å¥½éŸ³ä¹'){this.value='';}$('.frame_search').addClass('search_focus');" onblur="if(this.value==''){this.value='æ‰¾åˆ°å¥½éŸ³ä¹';}$('.frame_search').removeClass('search_focus');lib.s_onblur();" onkeyup="get_search(this.value);">
-			<input type="button" value="æœç´¢" onclick="lib.s_earch('keyword');return false;" class="go_search">
+			<input type="text" value="ÕÒµ½ºÃÒôÀÖ" class="search_text" id="keyword" onfocus="if(this.value=='ÕÒµ½ºÃÒôÀÖ'){this.value='';}$('.frame_search').addClass('search_focus');" onblur="if(this.value==''){this.value='ÕÒµ½ºÃÒôÀÖ';}$('.frame_search').removeClass('search_focus');lib.s_onblur();" onkeyup="get_search(this.value);">
+			<input type="button" value="ËÑË÷" onclick="lib.s_earch('keyword');return false;" class="go_search">
 			<div class="search_result" style="display:none" id="getsearch"></div>
 		</div>
 		<div class="navigation">
 			<ul>
-				<li class="nav_home"><a href="{$_G['path']}" class="nonce"><span>éŸ³ä¹é¦†</span></a></li>
+				<li class="nav_home"><a href="{$_G['path']}" class="nonce"><span>ÒôÀÖ¹İ</span></a></li>
 				<li class="nav_mv"><a href="{$rewrite['index.php/page/mv/']}"><span>MV</span></a></li>
-				<li class="nav_mymusic"><a href="{$rewrite['user.php/music/index/']}" target="_blank"><span>æˆ‘çš„éŸ³ä¹</span></a></li>
-				<li class="nav_musicvip"><a href="{$rewrite['user.php/profile/vip/']}" target="_blank"><span>ç»¿é’»</span></a></li>
+				<li class="nav_mymusic"><a href="{$rewrite['user.php/music/index/']}" target="_blank"><span>ÎÒµÄÒôÀÖ</span></a></li>
+				<li class="nav_musicvip"><a href="{$rewrite['user.php/profile/vip/']}" target="_blank"><span>ÂÌ×ê</span></a></li>
 			</ul>
 		</div>
 		<div class="sub_navigation">
 			<p class="sub_lib" style="display: block;">
-				<a href="{$_G['path']}">é¦–é¡µ</a>|
-				<a href="{$rewrite['index.php/page/rank/']}">å‘ç°éŸ³ä¹</a>|
-				<!--{loop special_class count=1 order=asc}--><a href="{$specialclass['link']}">ç²¾é€‰è¾‘</a>|<!--{/loop special_class}-->
-				<!--{loop singer_class count=1 order=asc}--><a href="{$singerclass['link']}" class="nonce">æ­Œæ‰‹</a><!--{/loop singer_class}-->
+				<a href="{$_G['path']}">Ê×Ò³</a>|
+				<a href="{$rewrite['index.php/page/rank/']}">·¢ÏÖÒôÀÖ</a>|
+				<!--{loop special_class count=1 order=asc}--><a href="{$specialclass['link']}">¾«Ñ¡¼­</a>|<!--{/loop special_class}-->
+				<!--{loop singer_class count=1 order=asc}--><a href="{$singerclass['link']}" class="nonce">¸èÊÖ</a><!--{/loop singer_class}-->
 			</p>
 			<p class="sub_mv" style="display: none;">
-				<a href="{$rewrite['index.php/page/mv/']}">MVæ¨è</a>|
-				<!--{loop video_class count=1 order=asc}--><a href="{$videoclass['link']}">MVåº“</a><!--{/loop video_class}-->
+				<a href="{$rewrite['index.php/page/mv/']}">MVÍÆ¼ö</a>|
+				<!--{loop video_class count=1 order=asc}--><a href="{$videoclass['link']}">MV¿â</a><!--{/loop video_class}-->
 			</p>
 			<p class="sub_mymusic" style="display: none;">
-				<a href="{$rewrite['user.php/music/index/']}" target="_blank">æˆ‘ä¸Šä¼ çš„</a>|
-				<a href="{$rewrite['user.php/music/song/']}" target="_blank">æˆ‘æ”¶è—çš„</a>|
-				<a href="{$rewrite['user.php/music/song/listen/']}" target="_blank">æˆ‘å¬è¿‡çš„</a>
+				<a href="{$rewrite['user.php/music/index/']}" target="_blank">ÎÒÉÏ´«µÄ</a>|
+				<a href="{$rewrite['user.php/music/song/']}" target="_blank">ÎÒÊÕ²ØµÄ</a>|
+				<a href="{$rewrite['user.php/music/song/listen/']}" target="_blank">ÎÒÌı¹ıµÄ</a>
 			</p>
 		</div>
 	</div>
@@ -70,13 +70,13 @@ var _menu = 'music';
 		<div class="side_container">
 			<div class="mod_side_nav">
 				<p>
-					<a style="cursor:pointer;" onclick="location.href=search_url.replace(/singer\/target/g, 'music/{$singer['search']}');">å•æ›²</a>
+					<a style="cursor:pointer;" onclick="location.href=search_url.replace(/singer\/target/g, 'music/{$singer['search']}');">µ¥Çú</a>
 				</p>
 				<p>
-					<a class="current">æ­Œæ‰‹</a>
+					<a class="current">¸èÊÖ</a>
 				</p>
 				<p>
-					<a style="cursor:pointer;" onclick="location.href=search_url.replace(/singer\/target/g, 'special/{$singer['search']}');">ä¸“è¾‘</a>
+					<a style="cursor:pointer;" onclick="location.href=search_url.replace(/singer\/target/g, 'special/{$singer['search']}');">×¨¼­</a>
 				</p>
 				<p>
 					<a style="cursor:pointer;" onclick="location.href=search_url.replace(/singer\/target/g, 'video/{$singer['search']}');">MV</a>
@@ -86,7 +86,7 @@ var _menu = 'music';
 		<div class="main_container">
 			<div class="search_album_frame">
 				<div class="search_title no_operation">
-					<h2>æ­Œæ‰‹</h2>
+					<h2>¸èÊÖ</h2>
 				</div>
 				<div class="search_album_list">
 					<ul><!--{loop singer page=30}-->
@@ -98,11 +98,11 @@ var _menu = 'music';
 				</div>
 			</div>
 			<div class="mod_page">
-				<a href="{$page['up']}" title="ä¸Šä¸€é¡µ" class="prev"><span>&lt;</span></a><a href="{$page['first']}"><span>é¦–é¡µ</span></a>{$page['number 10']}<a href="{$page['last']}"><span>å°¾é¡µ</span></a><a href="{$page['down']}" title="ä¸‹ä¸€é¡µ" class="next"><span>&gt;</span></a>
+				<a href="{$page['up']}" title="ÉÏÒ»Ò³" class="prev"><span>&lt;</span></a><a href="{$page['first']}"><span>Ê×Ò³</span></a>{$page['number 10']}<a href="{$page['last']}"><span>Î²Ò³</span></a><a href="{$page['down']}" title="ÏÂÒ»Ò³" class="next"><span>&gt;</span></a>
 				<!--{pagestyle <a href="[link]"><span>|<a class="current"><span>|</span></a>}-->
 			</div>
 			<div class="search_time">
-				<p>æ‰¾åˆ°ç›¸å…³ç»“æœå…± {$page['data']} æ¡</p>
+				<p>ÕÒµ½Ïà¹Ø½á¹û¹² {$page['data']} Ìõ</p>
 			</div>
 		</div>
 	</div>

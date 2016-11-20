@@ -28,33 +28,33 @@ var _menu = 'video';
 	<div class="main_top">
 		<h1 class="frame_logo"><a href="{$_G['path']}" class="logo">{$_G['name']}</a></h1>
 		<div class="frame_search">
-			<input type="text" value="æ‰¾åˆ°å¥½éŸ³ä¹" class="search_text" id="keyword" onfocus="if(this.value=='æ‰¾åˆ°å¥½éŸ³ä¹'){this.value='';}$('.frame_search').addClass('search_focus');" onblur="if(this.value==''){this.value='æ‰¾åˆ°å¥½éŸ³ä¹';}$('.frame_search').removeClass('search_focus');lib.s_onblur();" onkeyup="get_search(this.value);">
-			<input type="button" value="æœç´¢" onclick="lib.s_earch('keyword');return false;" class="go_search">
+			<input type="text" value="ÕÒµ½ºÃÒôÀÖ" class="search_text" id="keyword" onfocus="if(this.value=='ÕÒµ½ºÃÒôÀÖ'){this.value='';}$('.frame_search').addClass('search_focus');" onblur="if(this.value==''){this.value='ÕÒµ½ºÃÒôÀÖ';}$('.frame_search').removeClass('search_focus');lib.s_onblur();" onkeyup="get_search(this.value);">
+			<input type="button" value="ËÑË÷" onclick="lib.s_earch('keyword');return false;" class="go_search">
 			<div class="search_result" style="display:none" id="getsearch"></div>
 		</div>
 		<div class="navigation">
 			<ul>
-				<li class="nav_home"><a href="{$_G['path']}"><span>éŸ³ä¹é¦†</span></a></li>
+				<li class="nav_home"><a href="{$_G['path']}"><span>ÒôÀÖ¹İ</span></a></li>
 				<li class="nav_mv"><a href="{$rewrite['index.php/page/mv/']}" class="nonce"><span>MV</span></a></li>
-				<li class="nav_mymusic"><a href="{$rewrite['user.php/music/index/']}" target="_blank"><span>æˆ‘çš„éŸ³ä¹</span></a></li>
-				<li class="nav_musicvip"><a href="{$rewrite['user.php/profile/vip/']}" target="_blank"><span>ç»¿é’»</span></a></li>
+				<li class="nav_mymusic"><a href="{$rewrite['user.php/music/index/']}" target="_blank"><span>ÎÒµÄÒôÀÖ</span></a></li>
+				<li class="nav_musicvip"><a href="{$rewrite['user.php/profile/vip/']}" target="_blank"><span>ÂÌ×ê</span></a></li>
 			</ul>
 		</div>
 		<div class="sub_navigation">
 			<p class="sub_lib" style="display: block;">
-				<a href="{$_G['path']}">é¦–é¡µ</a>|
-				<a href="{$rewrite['index.php/page/rank/']}">å‘ç°éŸ³ä¹</a>|
-				<!--{loop special_class count=1 order=asc}--><a href="{$specialclass['link']}">ç²¾é€‰è¾‘</a>|<!--{/loop special_class}-->
-				<!--{loop singer_class count=1 order=asc}--><a href="{$singerclass['link']}">æ­Œæ‰‹</a><!--{/loop singer_class}-->
+				<a href="{$_G['path']}">Ê×Ò³</a>|
+				<a href="{$rewrite['index.php/page/rank/']}">·¢ÏÖÒôÀÖ</a>|
+				<!--{loop special_class count=1 order=asc}--><a href="{$specialclass['link']}">¾«Ñ¡¼­</a>|<!--{/loop special_class}-->
+				<!--{loop singer_class count=1 order=asc}--><a href="{$singerclass['link']}">¸èÊÖ</a><!--{/loop singer_class}-->
 			</p>
 			<p class="sub_mv" style="display: none;">
-				<a href="{$rewrite['index.php/page/mv/']}">MVæ¨è</a>|
-				<!--{loop video_class count=1 order=asc}--><a href="{$videoclass['link']}" class="nonce">MVåº“</a><!--{/loop video_class}-->
+				<a href="{$rewrite['index.php/page/mv/']}">MVÍÆ¼ö</a>|
+				<!--{loop video_class count=1 order=asc}--><a href="{$videoclass['link']}" class="nonce">MV¿â</a><!--{/loop video_class}-->
 			</p>
 			<p class="sub_mymusic" style="display: none;">
-				<a href="{$rewrite['user.php/music/index/']}" target="_blank">æˆ‘ä¸Šä¼ çš„</a>|
-				<a href="{$rewrite['user.php/music/song/']}" target="_blank">æˆ‘æ”¶è—çš„</a>|
-				<a href="{$rewrite['user.php/music/song/listen/']}" target="_blank">æˆ‘å¬è¿‡çš„</a>
+				<a href="{$rewrite['user.php/music/index/']}" target="_blank">ÎÒÉÏ´«µÄ</a>|
+				<a href="{$rewrite['user.php/music/song/']}" target="_blank">ÎÒÊÕ²ØµÄ</a>|
+				<a href="{$rewrite['user.php/music/song/listen/']}" target="_blank">ÎÒÌı¹ıµÄ</a>
 			</p>
 		</div>
 	</div>
@@ -65,7 +65,7 @@ var _menu = 'video';
 			<div class="song_title" style="height:auto;">
 				<h2><span>{$video['name']}</span></h2>
 				<div class="opertate">
-					<a class="btn_down" style="cursor:pointer;" title="ä¸‹è½½MV" onclick="location.href=temp_url+'source/down.php?type=video&id={$video['id']}';"></a>
+					<a class="btn_down" style="cursor:pointer;" title="ÏÂÔØMV" onclick="location.href=temp_url+'source/down.php?type=video&id={$video['id']}';"></a>
 				</div>
 			</div>
 			<div class="song_detail">
@@ -79,7 +79,7 @@ var _menu = 'video';
 			</div>
 			<div class="lyrics">
 				<div class="title">
-					<h3>MVç®€ä»‹</h3>
+					<h3>MV¼ò½é</h3>
 				</div>
 				<div class="content">{$video['intros']}</div>
 			</div>
@@ -89,7 +89,7 @@ var _menu = 'video';
 				<div class="album_cover">
 					<img src="{$video['cover']}">
 				</div>
-				<h4>çŒœä½ å–œæ¬¢</h4>
+				<h4>²ÂÄãÏ²»¶</h4>
 				<ol class="recommend_list"><!--{loop video count=10 sort=rand class=auto}-->
 					<li>
 					<h5><a href="{$video['link']}" title="{$video['name']}">{$video['name len=10']}</a></h5>

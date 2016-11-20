@@ -3,7 +3,7 @@
 <head>
 <meta charset="{$_G['charset']}">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
-<title>{$singer['search']} - æœç´¢æ­Œæ‰‹ - {$_G['name']}</title>
+<title>{$singer['search']} - ËÑË÷¸èÊÖ - {$_G['name']}</title>
 <link href="{$_G['tempath']}css/index.css" rel="stylesheet">
 <link href="{$_G['tempath']}css/rank.css" rel="stylesheet">
 <script src="{$_G['tempath']}js/lib.js" type="text/javascript"></script>
@@ -15,27 +15,27 @@ var search_url = '{$rewrite['index.php/search/table/target/']}';
 <div class="wrap">
 	<header class="mod_header">
 	<i class="music_logo">{$_G['name']}</i>
-	<a href="{$rewrite['index.php/page/map/']}" class="btn_download">å¯¼èˆª</a>
+	<a href="{$rewrite['index.php/page/map/']}" class="btn_download">µ¼º½</a>
 	</header>
 	<nav class="mod_nav">
-	<a href="{$_G['path']}">éŸ³ä¹</a>
-	<a href="{$rewrite['index.php/page/album/']}">ä¸“è¾‘</a>
-	<a href="{$rewrite['index.php/page/artist/']}" class="current">æ­Œæ‰‹</a>
-	<a href="{$rewrite['index.php/page/mtv/']}">è§†é¢‘</a>
+	<a href="{$_G['path']}">ÒôÀÖ</a>
+	<a href="{$rewrite['index.php/page/album/']}">×¨¼­</a>
+	<a href="{$rewrite['index.php/page/artist/']}" class="current">¸èÊÖ</a>
+	<a href="{$rewrite['index.php/page/mtv/']}">ÊÓÆµ</a>
 	</nav>
 	<div class="search_box">
 		<div class="mod_search_bar">
 			<div class="search_bar_cont">
 				<input class="search_input" type="text" onclick="this.value=''" id="keyword" value="{$singer['search']}">
-				<span class="icon icon_search">æœç´¢</span>
+				<span class="icon icon_search">ËÑË÷</span>
 			</div>
 			<div class="search_bar_tip_text" style="display:block;cursor:pointer" onclick="lib.s_earch('singer');return false;">
-				æœç´¢
+				ËÑË÷
 			</div>
 		</div>
 	</div>
 	<div class="mod_twocol_list mod_twocol_list_special">
-		<h2 class="list_title">æœç´¢â€œ<small style="color:#26A65B">{$singer['search']}</small>â€ï¼Œå…±æ‰¾åˆ° <small style="color:#ee5044">{$page['data']}</small> ä½æ­Œæ‰‹ã€‚</h2>
+		<h2 class="list_title">ËÑË÷¡°<small style="color:#26A65B">{$singer['search']}</small>¡±£¬¹²ÕÒµ½ <small style="color:#ee5044">{$page['data']}</small> Î»¸èÊÖ¡£</h2>
 		<ul class="list_container">
 			<!--{loop singer page=10}-->
 			<li class="js_play_radio">
@@ -52,7 +52,7 @@ var search_url = '{$rewrite['index.php/search/table/target/']}';
 			<!--{/loop singer}-->
 		</ul>
 		<div class="mod_bottom_tips">
-			<a class="mod_bottom_tips__btn" style="cursor:pointer" onclick="getpage({$page['now']}, {$page['all']}, '{$page['down']}')" id="loaded">åŠ è½½æ›´å¤šæ­Œæ‰‹...</a>
+			<a class="mod_bottom_tips__btn" style="cursor:pointer" onclick="getpage({$page['now']}, {$page['all']}, '{$page['down']}')" id="loaded">¼ÓÔØ¸ü¶à¸èÊÖ...</a>
 		</div>
 	</div>
 </div>

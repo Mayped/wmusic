@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset={$_G['charset']}" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-<title>{$music['classname']} - å‘ç°éŸ³ä¹ - {$_G['name']}</title>
+<title>{$music['classname']} - ·¢ÏÖÒôÀÖ - {$_G['name']}</title>
 <meta name="Keywords" content="{$_G['keywords']}" />
 <meta name="Description" content="{$_G['description']}" />
 <link href="{$_G['tempath']}css/index.css" type="text/css" rel="stylesheet" />
@@ -41,33 +41,33 @@ function display_tag(type) {
 	<div class="main_top">
 		<h1 class="frame_logo"><a href="{$_G['path']}" class="logo">{$_G['name']}</a></h1>
 		<div class="frame_search">
-			<input type="text" value="æ‰¾åˆ°å¥½éŸ³ä¹" class="search_text" id="keyword" onfocus="if(this.value=='æ‰¾åˆ°å¥½éŸ³ä¹'){this.value='';}$('.frame_search').addClass('search_focus');" onblur="if(this.value==''){this.value='æ‰¾åˆ°å¥½éŸ³ä¹';}$('.frame_search').removeClass('search_focus');lib.s_onblur();" onkeyup="get_search(this.value);">
-			<input type="button" value="æœç´¢" onclick="lib.s_earch('keyword');return false;" class="go_search">
+			<input type="text" value="ÕÒµ½ºÃÒôÀÖ" class="search_text" id="keyword" onfocus="if(this.value=='ÕÒµ½ºÃÒôÀÖ'){this.value='';}$('.frame_search').addClass('search_focus');" onblur="if(this.value==''){this.value='ÕÒµ½ºÃÒôÀÖ';}$('.frame_search').removeClass('search_focus');lib.s_onblur();" onkeyup="get_search(this.value);">
+			<input type="button" value="ËÑË÷" onclick="lib.s_earch('keyword');return false;" class="go_search">
 			<div class="search_result" style="display:none" id="getsearch"></div>
 		</div>
 		<div class="navigation">
 			<ul>
-				<li class="nav_home"><a href="{$_G['path']}" class="nonce"><span>éŸ³ä¹é¦†</span></a></li>
+				<li class="nav_home"><a href="{$_G['path']}" class="nonce"><span>ÒôÀÖ¹İ</span></a></li>
 				<li class="nav_mv"><a href="{$rewrite['index.php/page/mv/']}"><span>MV</span></a></li>
-				<li class="nav_mymusic"><a href="{$rewrite['user.php/music/index/']}" target="_blank"><span>æˆ‘çš„éŸ³ä¹</span></a></li>
-				<li class="nav_musicvip"><a href="{$rewrite['user.php/profile/vip/']}" target="_blank"><span>ç»¿é’»</span></a></li>
+				<li class="nav_mymusic"><a href="{$rewrite['user.php/music/index/']}" target="_blank"><span>ÎÒµÄÒôÀÖ</span></a></li>
+				<li class="nav_musicvip"><a href="{$rewrite['user.php/profile/vip/']}" target="_blank"><span>ÂÌ×ê</span></a></li>
 			</ul>
 		</div>
 		<div class="sub_navigation">
 			<p class="sub_lib" style="display: block;">
-				<a href="{$_G['path']}">é¦–é¡µ</a>|
-				<a href="{$rewrite['index.php/page/rank/']}" class="nonce">å‘ç°éŸ³ä¹</a>|
-				<!--{loop special_class count=1 order=asc}--><a href="{$specialclass['link']}">ç²¾é€‰è¾‘</a>|<!--{/loop special_class}-->
-				<!--{loop singer_class count=1 order=asc}--><a href="{$singerclass['link']}">æ­Œæ‰‹</a><!--{/loop singer_class}-->
+				<a href="{$_G['path']}">Ê×Ò³</a>|
+				<a href="{$rewrite['index.php/page/rank/']}" class="nonce">·¢ÏÖÒôÀÖ</a>|
+				<!--{loop special_class count=1 order=asc}--><a href="{$specialclass['link']}">¾«Ñ¡¼­</a>|<!--{/loop special_class}-->
+				<!--{loop singer_class count=1 order=asc}--><a href="{$singerclass['link']}">¸èÊÖ</a><!--{/loop singer_class}-->
 			</p>
 			<p class="sub_mv" style="display: none;">
-				<a href="{$rewrite['index.php/page/mv/']}">MVæ¨è</a>|
-				<!--{loop video_class count=1 order=asc}--><a href="{$videoclass['link']}">MVåº“</a><!--{/loop video_class}-->
+				<a href="{$rewrite['index.php/page/mv/']}">MVÍÆ¼ö</a>|
+				<!--{loop video_class count=1 order=asc}--><a href="{$videoclass['link']}">MV¿â</a><!--{/loop video_class}-->
 			</p>
 			<p class="sub_mymusic" style="display: none;">
-				<a href="{$rewrite['user.php/music/index/']}" target="_blank">æˆ‘ä¸Šä¼ çš„</a>|
-				<a href="{$rewrite['user.php/music/song/']}" target="_blank">æˆ‘æ”¶è—çš„</a>|
-				<a href="{$rewrite['user.php/music/song/listen/']}" target="_blank">æˆ‘å¬è¿‡çš„</a>
+				<a href="{$rewrite['user.php/music/index/']}" target="_blank">ÎÒÉÏ´«µÄ</a>|
+				<a href="{$rewrite['user.php/music/song/']}" target="_blank">ÎÒÊÕ²ØµÄ</a>|
+				<a href="{$rewrite['user.php/music/song/listen/']}" target="_blank">ÎÒÌı¹ıµÄ</a>
 			</p>
 		</div>
 	</div>
@@ -77,14 +77,14 @@ function display_tag(type) {
 		<div class="side_container">
 			<div class="mod_side_nav">
 				<ul>
-					<li><a href="{$rewrite['index.php/page/rank/']}" class="js_nav">æ’è¡Œæ¦œ</a></li>
+					<li><a href="{$rewrite['index.php/page/rank/']}" class="js_nav">ÅÅĞĞ°ñ</a></li>
 					<!--{loop class order=asc}-->
 					<li><a href="{$class['link']}" class="js_nav current_{$class['id']}">{$class['name']}</a></li>
 					<!--{/loop class}-->
 				</ul>
 				<div class="gedan_sort">
 					<div id="tag_0">
-						<h3><span>åœ°åŸŸ</span><i class="icon_open" onclick="display_tag(0);"></i></h3>
+						<h3><span>µØÓò</span><i class="icon_open" onclick="display_tag(0);"></i></h3>
 						<ol style="display:none">
 							<!--{loop tag type=0 order=asc}-->
 							<li><a href="{$tag['link']}" target="_blank" title="{$tag['title']}">{$tag['title']}</a></li>
@@ -92,7 +92,7 @@ function display_tag(type) {
 						</ol>
 					</div>
 					<div id="tag_1">
-						<h3><span>æ›²é£</span><i class="icon_open" onclick="display_tag(1);"></i></h3>
+						<h3><span>Çú·ç</span><i class="icon_open" onclick="display_tag(1);"></i></h3>
 						<ol style="display:none">
 							<!--{loop tag type=1 order=asc}-->
 							<li><a href="{$tag['link']}" target="_blank" title="{$tag['title']}">{$tag['title']}</a></li>
@@ -100,7 +100,7 @@ function display_tag(type) {
 						</ol>
 					</div>
 					<div id="tag_2">
-						<h3><span>å¿ƒæƒ…</span><i class="icon_open" onclick="display_tag(2);"></i></h3>
+						<h3><span>ĞÄÇé</span><i class="icon_open" onclick="display_tag(2);"></i></h3>
 						<ol style="display:none">
 							<!--{loop tag type=2 order=asc}-->
 							<li><a href="{$tag['link']}" target="_blank" title="{$tag['title']}">{$tag['title']}</a></li>
@@ -108,7 +108,7 @@ function display_tag(type) {
 						</ol>
 					</div>
 					<div id="tag_3">
-						<h3><span>æ­Œæ‰‹</span><i class="icon_open" onclick="display_tag(3);"></i></h3>
+						<h3><span>¸èÊÖ</span><i class="icon_open" onclick="display_tag(3);"></i></h3>
 						<ol style="display:none">
 							<!--{loop tag type=3 order=asc}-->
 							<li><a href="{$tag['link']}" target="_blank" title="{$tag['title']}">{$tag['title']}</a></li>
@@ -116,7 +116,7 @@ function display_tag(type) {
 						</ol>
 					</div>
 					<div id="tag_4">
-						<h3><span>è¯­è¨€</span><i class="icon_open" onclick="display_tag(4);"></i></h3>
+						<h3><span>ÓïÑÔ</span><i class="icon_open" onclick="display_tag(4);"></i></h3>
 						<ol style="display:none">
 							<!--{loop tag type=4 order=asc}-->
 							<li><a href="{$tag['link']}" target="_blank" title="{$tag['title']}">{$tag['title']}</a></li>
@@ -129,14 +129,14 @@ function display_tag(type) {
 		<div class="main_container">
 			<div class="rank_title">
 				<h2>{$music['classname']}</h2>
-				<a href="javascript:player_index('class_list', 'ing');" class="btn_play" title="æ’­æ”¾">æ’­æ”¾</a><a href="javascript:player_index('class_list', 'add');" class="btn_add" title="æ·»åŠ ">æ·»åŠ </a>
+				<a href="javascript:player_index('class_list', 'ing');" class="btn_play" title="²¥·Å">²¥·Å</a><a href="javascript:player_index('class_list', 'add');" class="btn_add" title="Ìí¼Ó">Ìí¼Ó</a>
 				<p class="rank_music_info">
-					<strong>{$page['data']} é¦–æ­Œ</strong>
+					<strong>{$page['data']} Ê×¸è</strong>
 				</p>
 			</div>
 			<div class="music_list class_songlist">
 				<div class="music_list_cp">
-					<label for="checkall"><input type="checkbox" onclick="lib.quanxuan('class_list');" id="checkall">å…¨é€‰</label>
+					<label for="checkall"><input type="checkbox" onclick="lib.quanxuan('class_list');" id="checkall">È«Ñ¡</label>
 				</div>
 				<ol id="class_list"><!--{loop music page=30 class=this}-->
 					<li onmouseover="this.className='play_hover'" onmouseout="this.className=''"><input type="checkbox" value="{$music['id']}">
@@ -151,13 +151,13 @@ function display_tag(type) {
 						<!--{if({$music['hits']}<100)}--><strong style="width:{$music['hits']}%;"><!--{else}--><strong style="width:100%;"><!--{/if}--></strong>
 					</div>
 					<div class="list_cp">
-						<a href="javascript:player_index({$music['id']}, 'ing');" title="æ’­æ”¾" class="btn_play">æ’­æ”¾</a><a href="javascript:player_index({$music['id']}, 'add');" title="æ·»åŠ " class="btn_add">æ·»åŠ </a><a href="javascript:create_fav({$music['id']});" title="æ”¶è—" class="btn_like">æ”¶è—</a>
+						<a href="javascript:player_index({$music['id']}, 'ing');" title="²¥·Å" class="btn_play">²¥·Å</a><a href="javascript:player_index({$music['id']}, 'add');" title="Ìí¼Ó" class="btn_add">Ìí¼Ó</a><a href="javascript:create_fav({$music['id']});" title="ÊÕ²Ø" class="btn_like">ÊÕ²Ø</a>
 					</div>
 					<span class="play_time">{$music['addtime style=Y-m-d']}</span></li>
 				<!--{/loop music}--></ol>
 			</div>
 			<div class="mod_page">
-				<a href="{$page['up']}" title="ä¸Šä¸€é¡µ" class="prev"><span>&lt;</span></a><a href="{$page['first']}"><span>é¦–é¡µ</span></a>{$page['number 10']}<a href="{$page['last']}"><span>å°¾é¡µ</span></a><a href="{$page['down']}" title="ä¸‹ä¸€é¡µ" class="next"><span>&gt;</span></a>
+				<a href="{$page['up']}" title="ÉÏÒ»Ò³" class="prev"><span>&lt;</span></a><a href="{$page['first']}"><span>Ê×Ò³</span></a>{$page['number 10']}<a href="{$page['last']}"><span>Î²Ò³</span></a><a href="{$page['down']}" title="ÏÂÒ»Ò³" class="next"><span>&gt;</span></a>
 				<!--{pagestyle <a href="[link]"><span>|<a class="current"><span>|</span></a>}-->
 			</div>
 		</div>

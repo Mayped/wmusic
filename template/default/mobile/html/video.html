@@ -15,22 +15,22 @@ var search_url = '{$rewrite['index.php/search/table/target/']}';
 <div class="wrap">
 	<header class="mod_header">
 	<i class="music_logo">{$_G['name']}</i>
-	<a href="{$rewrite['index.php/page/map/']}" class="btn_download">å¯¼èˆª</a>
+	<a href="{$rewrite['index.php/page/map/']}" class="btn_download">µ¼º½</a>
 	</header>
 	<nav class="mod_nav">
-	<a href="{$_G['path']}">éŸ³ä¹</a>
-	<a href="{$rewrite['index.php/page/album/']}">ä¸“è¾‘</a>
-	<a href="{$rewrite['index.php/page/artist/']}">æ­Œæ‰‹</a>
-	<a href="{$rewrite['index.php/page/mtv/']}" class="current">è§†é¢‘</a>
+	<a href="{$_G['path']}">ÒôÀÖ</a>
+	<a href="{$rewrite['index.php/page/album/']}">×¨¼­</a>
+	<a href="{$rewrite['index.php/page/artist/']}">¸èÊÖ</a>
+	<a href="{$rewrite['index.php/page/mtv/']}" class="current">ÊÓÆµ</a>
 	</nav>
 	<div class="search_box">
 		<div class="mod_search_bar">
 			<div class="search_bar_cont">
-				<input class="search_input" type="text" onclick="this.value=''" id="keyword" value="æœç´¢è§†é¢‘">
-				<span class="icon icon_search">æœç´¢</span>
+				<input class="search_input" type="text" onclick="this.value=''" id="keyword" value="ËÑË÷ÊÓÆµ">
+				<span class="icon icon_search">ËÑË÷</span>
 			</div>
 			<div class="search_bar_tip_text" style="display:block;cursor:pointer" onclick="lib.s_earch('video');return false;">
-				æœç´¢
+				ËÑË÷
 			</div>
 		</div>
 	</div>
@@ -38,7 +38,7 @@ var search_url = '{$rewrite['index.php/search/table/target/']}';
 		<script type="text/javascript">document.write(getplay('{$video['play']}'));</script>
 	</div>
 	<div class="mod_twocol_list mod_twocol_list_special">
-		<h2 class="list_title">çŒœä½ å–œæ¬¢</h2>
+		<h2 class="list_title">²ÂÄãÏ²»¶</h2>
 		<ul class="list_container">
 			<!--{loop video count=4 sort=rand class=auto}-->
 			<li>
@@ -59,7 +59,7 @@ var search_url = '{$rewrite['index.php/search/table/target/']}';
 			<!--{/loop video}-->
 		</ul>
 		<div class="mod_bottom_tips">
-			<a class="mod_bottom_tips__btn" style="cursor:pointer" onclick="location.href='{$_G['tempath']}source/download.php?type=video&id={$video['id']}'">ä¸‹è½½ã€Š{$video['name len=10']}ã€‹</a>
+			<a class="mod_bottom_tips__btn" style="cursor:pointer" onclick="location.href='{$_G['tempath']}source/download.php?type=video&id={$video['id']}'">ÏÂÔØ¡¶{$video['name len=10']}¡·</a>
 		</div>
 	</div>
 </div>

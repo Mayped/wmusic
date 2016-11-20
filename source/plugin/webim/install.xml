@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="gbk" ?>
+<root>
+	<lang type="gbk" />
+	<item name="即时通讯" dir="webim" file="admin" type="2" author="erduo" address="http://www.erduo.in/" />
+	<version>
+		<![CDATA[4.0]]>
+	</version>
+</root>

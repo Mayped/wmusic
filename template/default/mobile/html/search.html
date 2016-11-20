@@ -3,7 +3,7 @@
 <head>
 <meta charset="{$_G['charset']}">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
-<title>{$music['search']} - æœç´¢éŸ³ä¹ - {$_G['name']}</title>
+<title>{$music['search']} - ËÑË÷ÒôÀÖ - {$_G['name']}</title>
 <link href="{$_G['tempath']}css/index.css" rel="stylesheet">
 <link href="{$_G['tempath']}css/rank.css" rel="stylesheet">
 <link href="{$_G['tempath']}css/bootstrap.min.css" rel="stylesheet">
@@ -21,30 +21,30 @@ var temp_url = '{$_G['tempath']}';
 <div class="wrap">
 	<header class="mod_header">
 	<i class="music_logo">{$_G['name']}</i>
-	<a href="{$rewrite['index.php/page/map/']}" class="btn_download">å¯¼èˆª</a>
+	<a href="{$rewrite['index.php/page/map/']}" class="btn_download">µ¼º½</a>
 	</header>
 	<nav class="mod_nav">
-	<a href="{$_G['path']}" class="current">éŸ³ä¹</a>
-	<a href="{$rewrite['index.php/page/album/']}">ä¸“è¾‘</a>
-	<a href="{$rewrite['index.php/page/artist/']}">æ­Œæ‰‹</a>
-	<a href="{$rewrite['index.php/page/mtv/']}">è§†é¢‘</a>
+	<a href="{$_G['path']}" class="current">ÒôÀÖ</a>
+	<a href="{$rewrite['index.php/page/album/']}">×¨¼­</a>
+	<a href="{$rewrite['index.php/page/artist/']}">¸èÊÖ</a>
+	<a href="{$rewrite['index.php/page/mtv/']}">ÊÓÆµ</a>
 	</nav>
 	<div class="search_box">
 		<div class="mod_search_bar">
 			<div class="search_bar_cont">
 				<input class="search_input" type="text" onclick="this.value=''" id="keyword" value="{$music['search']}">
-				<span class="icon icon_search">æœç´¢</span>
+				<span class="icon icon_search">ËÑË÷</span>
 			</div>
 			<div class="search_bar_tip_text" style="display:block;cursor:pointer" onclick="lib.s_earch('music');return false;">
-				æœç´¢
+				ËÑË÷
 			</div>
 		</div>
 	</div>
 	<ul class="mod_song_list">
 		<li class="list_content">
 			<i class="icon"></i>
-			<h6 class="main_tit">æœç´¢éŸ³ä¹â€œ<strong style="color:#26A65B">{$music['search']}</strong>â€</h6>
-			<p class="sub_tit"><span>å•æ›²ï¼š{$page['data']}</span></p>
+			<h6 class="main_tit">ËÑË÷ÒôÀÖ¡°<strong style="color:#26A65B">{$music['search']}</strong>¡±</h6>
+			<p class="sub_tit"><span>µ¥Çú£º{$page['data']}</span></p>
 		</li>
 		<!--{loop music page=30}-->
 		<li class="song_list__item js-song">
@@ -67,7 +67,7 @@ var temp_url = '{$_G['tempath']}';
 		</li>
 		<!--{/loop music}-->
 	</ul>
-	<p class="mod_complete" style="cursor:pointer" onclick="getpage({$page['now']}, {$page['all']}, '{$page['down']}')" id="loaded">åŠ è½½æ›´å¤šéŸ³ä¹...</p>
+	<p class="mod_complete" style="cursor:pointer" onclick="getpage({$page['now']}, {$page['all']}, '{$page['down']}')" id="loaded">¼ÓÔØ¸ü¶àÒôÀÖ...</p>
 </div>
 <!--{require 'player.html'}-->
 </body>

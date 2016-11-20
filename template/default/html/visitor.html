@@ -1,5 +1,5 @@
 <div class="visitor_cp">
-	<a title="è¿”å›žé¡µé¢é¡¶éƒ¨" class="get_top" id="btntop"></a><a href="{$rewrite['user.php/feed/index/']}" target="_blank" title="è¯´è¯´" class="get_feedback"></a><a title="è¿”å›žé¡µé¢åº•éƒ¨" class="get_bottom" id="btnbottom"></a>
+	<a title="·µ»ØÒ³Ãæ¶¥²¿" class="get_top" id="btntop"></a><a href="{$rewrite['user.php/feed/index/']}" target="_blank" title="ËµËµ" class="get_feedback"></a><a title="·µ»ØÒ³Ãæµ×²¿" class="get_bottom" id="btnbottom"></a>
 </div>
 <link href="{$_G['tempath']}css/player.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript" src="{$_G['tempath']}js/jquery.jplayer.min.js"></script>
@@ -9,19 +9,19 @@
 		<div class="music_info">
 			<a class="album_pic" id="album_pic"><img src="{$_G['tempath']}css/cover_mine_130.jpg"></a>
 			<div class="music_info_main">
-				<p class="music_name" id="music_name"><span>æ­Œæ›²åç§°</span></p>
-				<p class="singer_name" id="singer_name">æ­Œæ‰‹åç§°</p>
+				<p class="music_name" id="music_name"><span>¸èÇúÃû³Æ</span></p>
+				<p class="singer_name" id="singer_name">¸èÊÖÃû³Æ</p>
 				<p class="play_date"><span id="playtime">0:00:00</span> / <span id="totaltime">0:00:00</span></p>
 			</div>
 		</div>
 		<div class="bar_op">
-			<strong onclick="player_prev();" title="ä¸Šä¸€é¦–" class="prev_bt"><span>ä¸Šä¸€é¦–</span></strong>
-			<strong title="æ’­æ”¾" class="play_bt"><span>æ’­æ”¾</span></strong>
-			<strong title="æš‚åœ" class="pause_bt" style="display:none"><span>æš‚åœ</span></strong>
-			<strong onclick="player_next();" title="ä¸‹ä¸€é¦–" class="next_bt"><span>ä¸‹ä¸€é¦–</span></strong>
-			<p class="volume" title="éŸ³é‡è°ƒèŠ‚">
-				<span class="volume_mute" title="å¼€å¯å£°éŸ³" style="display:none"></span>
-				<span class="volume_icon" title="å…³é—­å£°éŸ³"></span>
+			<strong onclick="player_prev();" title="ÉÏÒ»Ê×" class="prev_bt"><span>ÉÏÒ»Ê×</span></strong>
+			<strong title="²¥·Å" class="play_bt"><span>²¥·Å</span></strong>
+			<strong title="ÔÝÍ£" class="pause_bt" style="display:none"><span>ÔÝÍ£</span></strong>
+			<strong onclick="player_next();" title="ÏÂÒ»Ê×" class="next_bt"><span>ÏÂÒ»Ê×</span></strong>
+			<p class="volume" title="ÒôÁ¿µ÷½Ú">
+				<span class="volume_mute" title="¿ªÆôÉùÒô" style="display:none"></span>
+				<span class="volume_icon" title="¹Ø±ÕÉùÒô"></span>
 				<span class="volume_regulate">
 					<span class="volume_bar" style="width:0%"></span>
 				</span>
@@ -34,18 +34,18 @@
 		</p>
 	</div>
 	<span class="active_tip" id="spanaddtips" style="top:0px;display:none"></span>
-	<span title="å±•å¼€æ’­æ”¾åˆ—è¡¨" class="open_list" id="spansongnum1"><span id="spansongnums">0</span></span>
-	<span title="æ˜¾ç¤ºæ­Œè¯" class="btn_lyrics_disabled" id="btnlrc"></span>
-	<button type="button" class="folded_bt" style="cursor:pointer" title="ç‚¹å‡»å±•å¼€" id="btnfold"></button>
+	<span title="Õ¹¿ª²¥·ÅÁÐ±í" class="open_list" id="spansongnum1"><span id="spansongnums">0</span></span>
+	<span title="ÏÔÊ¾¸è´Ê" class="btn_lyrics_disabled" id="btnlrc"></span>
+	<button type="button" class="folded_bt" style="cursor:pointer" title="µã»÷Õ¹¿ª" id="btnfold"></button>
 	<div class="play_list_frame" id="divplayframe" style="display:none;opacity:1">
 		<div class="play_list_title">
-			<ul style="width:270px"><li class="current"><a style="cursor:pointer">æ’­æ”¾åˆ—è¡¨</a><i></i></li></ul>
-			<span class="clear_list">æ¸…ç©ºåˆ—è¡¨</span>
-			<strong title="æ”¶èµ·æ’­æ”¾åˆ—è¡¨" class="close_list" id="btnclose"></strong>
+			<ul style="width:270px"><li class="current"><a style="cursor:pointer">²¥·ÅÁÐ±í</a><i></i></li></ul>
+			<span class="clear_list">Çå¿ÕÁÐ±í</span>
+			<strong title="ÊÕÆð²¥·ÅÁÐ±í" class="close_list" id="btnclose"></strong>
 		</div>
 		<div class="play_list">
 			<div class="play_list_point" id="divnulllist">
-				<div><h4>æ‚¨å½“å‰è¿˜æœªæ·»åŠ ä»»ä½•æ­Œæ›²</h4><br /></div>
+				<div><h4>Äúµ±Ç°»¹Î´Ìí¼ÓÈÎºÎ¸èÇú</h4><br /></div>
 			</div>
 			<div class="play_list_main">
 				<div class="single_list">

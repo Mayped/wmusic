@@ -27,33 +27,33 @@ var _menu = 'music';
 	<div class="main_top">
 		<h1 class="frame_logo"><a href="{$_G['path']}" class="logo">{$_G['name']}</a></h1>
 		<div class="frame_search">
-			<input type="text" value="æ‰¾åˆ°å¥½éŸ³ä¹" class="search_text" id="keyword" onfocus="if(this.value=='æ‰¾åˆ°å¥½éŸ³ä¹'){this.value='';}$('.frame_search').addClass('search_focus');" onblur="if(this.value==''){this.value='æ‰¾åˆ°å¥½éŸ³ä¹';}$('.frame_search').removeClass('search_focus');lib.s_onblur();" onkeyup="get_search(this.value);">
-			<input type="button" value="æœç´¢" onclick="lib.s_earch('keyword');return false;" class="go_search">
+			<input type="text" value="ÕÒµ½ºÃÒôÀÖ" class="search_text" id="keyword" onfocus="if(this.value=='ÕÒµ½ºÃÒôÀÖ'){this.value='';}$('.frame_search').addClass('search_focus');" onblur="if(this.value==''){this.value='ÕÒµ½ºÃÒôÀÖ';}$('.frame_search').removeClass('search_focus');lib.s_onblur();" onkeyup="get_search(this.value);">
+			<input type="button" value="ËÑË÷" onclick="lib.s_earch('keyword');return false;" class="go_search">
 			<div class="search_result" style="display:none" id="getsearch"></div>
 		</div>
 		<div class="navigation">
 			<ul>
-				<li class="nav_home"><a href="{$_G['path']}" class="nonce"><span>éŸ³ä¹é¦†</span></a></li>
+				<li class="nav_home"><a href="{$_G['path']}" class="nonce"><span>ÒôÀÖ¹İ</span></a></li>
 				<li class="nav_mv"><a href="{$rewrite['index.php/page/mv/']}"><span>MV</span></a></li>
-				<li class="nav_mymusic"><a href="{$rewrite['user.php/music/index/']}" target="_blank"><span>æˆ‘çš„éŸ³ä¹</span></a></li>
-				<li class="nav_musicvip"><a href="{$rewrite['user.php/profile/vip/']}" target="_blank"><span>ç»¿é’»</span></a></li>
+				<li class="nav_mymusic"><a href="{$rewrite['user.php/music/index/']}" target="_blank"><span>ÎÒµÄÒôÀÖ</span></a></li>
+				<li class="nav_musicvip"><a href="{$rewrite['user.php/profile/vip/']}" target="_blank"><span>ÂÌ×ê</span></a></li>
 			</ul>
 		</div>
 		<div class="sub_navigation">
 			<p class="sub_lib" style="display: block;">
-				<a href="{$_G['path']}">é¦–é¡µ</a>|
-				<a href="{$rewrite['index.php/page/rank/']}">å‘ç°éŸ³ä¹</a>|
-				<!--{loop special_class count=1 order=asc}--><a href="{$specialclass['link']}">ç²¾é€‰è¾‘</a>|<!--{/loop special_class}-->
-				<!--{loop singer_class count=1 order=asc}--><a href="{$singerclass['link']}" class="nonce">æ­Œæ‰‹</a><!--{/loop singer_class}-->
+				<a href="{$_G['path']}">Ê×Ò³</a>|
+				<a href="{$rewrite['index.php/page/rank/']}">·¢ÏÖÒôÀÖ</a>|
+				<!--{loop special_class count=1 order=asc}--><a href="{$specialclass['link']}">¾«Ñ¡¼­</a>|<!--{/loop special_class}-->
+				<!--{loop singer_class count=1 order=asc}--><a href="{$singerclass['link']}" class="nonce">¸èÊÖ</a><!--{/loop singer_class}-->
 			</p>
 			<p class="sub_mv" style="display: none;">
-				<a href="{$rewrite['index.php/page/mv/']}">MVæ¨è</a>|
-				<!--{loop video_class count=1 order=asc}--><a href="{$videoclass['link']}">MVåº“</a><!--{/loop video_class}-->
+				<a href="{$rewrite['index.php/page/mv/']}">MVÍÆ¼ö</a>|
+				<!--{loop video_class count=1 order=asc}--><a href="{$videoclass['link']}">MV¿â</a><!--{/loop video_class}-->
 			</p>
 			<p class="sub_mymusic" style="display: none;">
-				<a href="{$rewrite['user.php/music/index/']}" target="_blank">æˆ‘ä¸Šä¼ çš„</a>|
-				<a href="{$rewrite['user.php/music/song/']}" target="_blank">æˆ‘æ”¶è—çš„</a>|
-				<a href="{$rewrite['user.php/music/song/listen/']}" target="_blank">æˆ‘å¬è¿‡çš„</a>
+				<a href="{$rewrite['user.php/music/index/']}" target="_blank">ÎÒÉÏ´«µÄ</a>|
+				<a href="{$rewrite['user.php/music/song/']}" target="_blank">ÎÒÊÕ²ØµÄ</a>|
+				<a href="{$rewrite['user.php/music/song/listen/']}" target="_blank">ÎÒÌı¹ıµÄ</a>
 			</p>
 		</div>
 	</div>
@@ -64,8 +64,8 @@ var _menu = 'music';
 			<div class="singer_title"><h2>{$singer['name']}</h2></div>
 			<div class="music_list_frame">
 				<div class="title">
-					<h3>TAçš„å•æ›²</h3>
-					<a href="javascript:player_index('songlist', 'ing');" class="btn_play" title="æ’­æ”¾">æ’­æ”¾</a><a href="javascript:player_index('songlist', 'add');" class="btn_add" title="æ·»åŠ ">æ·»åŠ </a>
+					<h3>TAµÄµ¥Çú</h3>
+					<a href="javascript:player_index('songlist', 'ing');" class="btn_play" title="²¥·Å">²¥·Å</a><a href="javascript:player_index('songlist', 'add');" class="btn_add" title="Ìí¼Ó">Ìí¼Ó</a>
 				</div>
 				<div class="music_list class_songlist">
 					<ol id="songlist"><!--{loop music singer=this}--><input style="display:none" type="checkbox" value="{$music['id']}" checked>
@@ -73,7 +73,7 @@ var _menu = 'music';
 							<div class="music_name"><span class="txt"><a href="{$music['link']}" target="_blank" title="{$music['name']}">{$music['name']}</a></span></div>
 							<a class="album_name" href="{$music['speciallink']}" target="_blank" title="{$music['specialname']}">{$music['specialname']}</a>
 							<div class="count"><!--{if({$music['hits']}<100)}--><strong style="width:{$music['hits']}%;"><!--{else}--><strong style="width:100%;"><!--{/if}--></strong></div>
-							<div class="list_cp"><a href="javascript:player_index({$music['id']}, 'ing');" title="æ’­æ”¾" class="btn_play">æ’­æ”¾</a><a href="javascript:player_index({$music['id']}, 'add');" title="æ·»åŠ " class="btn_add">æ·»åŠ </a><a href="javascript:create_fav({$music['id']});" title="æ”¶è—" class="btn_like">æ”¶è—</a></div>
+							<div class="list_cp"><a href="javascript:player_index({$music['id']}, 'ing');" title="²¥·Å" class="btn_play">²¥·Å</a><a href="javascript:player_index({$music['id']}, 'add');" title="Ìí¼Ó" class="btn_add">Ìí¼Ó</a><a href="javascript:create_fav({$music['id']});" title="ÊÕ²Ø" class="btn_like">ÊÕ²Ø</a></div>
 							<span class="play_time">{$music['addtime style=Y-m-d']}</span>
 						</li>
 					<!--{/loop music}--></ol>
@@ -81,7 +81,7 @@ var _menu = 'music';
 			</div>
 			<div class="album_list_frame">
 				<div class="title">
-					<h3>TAçš„ä¸“è¾‘</h3>
+					<h3>TAµÄ×¨¼­</h3>
 				</div>
 				<div class="album_list">
 					<ul><!--{loop special singer=this}-->
@@ -91,7 +91,7 @@ var _menu = 'music';
 			</div>
 			<div class="mv_list_frame">
 				<div class="title">
-					<h3>TAçš„MV</h3>
+					<h3>TAµÄMV</h3>
 				</div>
 				<div class="mv_list">
 					<ul><!--{loop video singer=this}-->
@@ -106,7 +106,7 @@ var _menu = 'music';
 			</div>
 			<div class="mod_singer_file">
 				<div class="title">
-					<h3>æ­Œæ‰‹æ¡£æ¡ˆ</h3>
+					<h3>¸èÊÖµµ°¸</h3>
 				</div>
 				<div class="mod_content">
 					<p class="file_details">
@@ -116,7 +116,7 @@ var _menu = 'music';
 			</div>
 			<div class="mod_similar_singer">
 				<div class="title">
-					<h3>ç›¸ä¼¼æ­Œæ‰‹</h3>
+					<h3>ÏàËÆ¸èÊÖ</h3>
 				</div>
 				<div class="mod_content">
 					<div class="similar_singer_list">
