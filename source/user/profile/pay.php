@@ -37,7 +37,7 @@ var in_path = '<?php echo IN_PATH; ?>';
 </div>
 <div class="l_status c_form">
 <a href="<?php echo rewrite_mode('user.php/profile/credit/'); ?>">我的积分</a><span class="pipe">|</span>
-<a href="<?php echo rewrite_mode('user.php/profile/vip/'); ?>">开通绿钻</a><span class="pipe">|</span>
+<a href="<?php echo rewrite_mode('user.php/profile/vip/'); ?>">开通会员</a><span class="pipe">|</span>
 <a href="<?php echo rewrite_mode('user.php/profile/pay/'); ?>" class="active">充值金币</a>
 </div>
 <form method="get" onsubmit="getpay();return false;" class="c_form">

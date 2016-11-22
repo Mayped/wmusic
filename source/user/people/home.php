@@ -92,9 +92,9 @@ function search_user() {
 <?php } ?>
 <a href="<?php echo getlink($erduo_in_userid); ?>"><?php echo $erduo_in_username; ?></a>
 <?php if($erduo_in_grade == 1){ ?>
-<a href="<?php echo rewrite_mode('user.php/profile/credit/'); ?>" title="您已是绿钻会员，点击查看"><img src="<?php echo IN_PATH; ?>static/user/images/vip/vip.gif" align="absmiddle" /></a>
+<a href="<?php echo rewrite_mode('user.php/profile/credit/'); ?>" title="您已是会员，点击查看"><img src="<?php echo IN_PATH; ?>static/user/images/vip/vip.gif" align="absmiddle" /></a>
 <?php }else{ ?>
-<a href="<?php echo rewrite_mode('user.php/profile/vip/'); ?>" title="您还未开通绿钻，点击开通"><img src="<?php echo IN_PATH; ?>static/user/images/vip/novip.png" align="absmiddle" /></a>
+<a href="<?php echo rewrite_mode('user.php/profile/vip/'); ?>" title="您还未开通会员，点击开通"><img src="<?php echo IN_PATH; ?>static/user/images/vip/novip.png" align="absmiddle" /></a>
 <?php } ?>
 <?php if($erduo_in_isstar == 1){ ?>
 <a href="<?php echo rewrite_mode('user.php/profile/verify/'); ?>" title="明星认证"><img src="<?php echo IN_PATH; ?>static/user/images/star.png" align="absmiddle" /></a>

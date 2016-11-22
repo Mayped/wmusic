@@ -95,7 +95,7 @@ if($count == 0){
         while ($row = $db->fetch_array($result)){
                 $invisible = $db->getone("select in_invisible from ".tname('session')." where in_uid=".$row['in_userid']);
                 $online = is_numeric($invisible) && $invisible == 0 ? '<a href="'.rewrite_mode('user.php/misc/rank/online/').'" title="当前在线"><img src="'.IN_PATH.'static/user/images/online_icon.gif" align="absmiddle"></a>&nbsp;' : '';
-                $vip = $row['in_grade'] == 1 ? '<a href="'.rewrite_mode('user.php/profile/vip/').'" title="绿钻会员"><img src="'.IN_PATH.'static/user/images/vip/vip.gif" align="absmiddle"></a>&nbsp;' : '';
+                $vip = $row['in_grade'] == 1 ? '<a href="'.rewrite_mode('user.php/profile/vip/').'" title="会员"><img src="'.IN_PATH.'static/user/images/vip/vip.gif" align="absmiddle"></a>&nbsp;' : '';
                 $star = $row['in_isstar'] == 1 ? '<a href="'.rewrite_mode('user.php/profile/verify/').'" title="明星认证"><img src="'.IN_PATH.'static/user/images/star.png" align="absmiddle"></a>&nbsp;' : '';
 ?>
 <table cellspacing="0" cellpadding="0" width="100%">

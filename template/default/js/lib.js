@@ -215,7 +215,7 @@ function create_down(_id) {
                                 if (XMLHttpReq.responseText == "return_0") {
                                         lib.t_ips("请先登录用户中心！", 0, 3e3);
                                 } else if (XMLHttpReq.responseText == "return_1") {
-                                        lib.t_ips("权限不够，请开通绿钻！", 0, 3e3);
+                                        lib.t_ips("权限不够，请开通会员！", 0, 3e3);
                                 } else if (XMLHttpReq.responseText == "return_2") {
                                         lib.t_ips("金币不足，请先充值！", 0, 3e3);
                                 } else if (XMLHttpReq.responseText == "return_3") {

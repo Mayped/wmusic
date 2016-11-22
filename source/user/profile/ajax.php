@@ -169,7 +169,7 @@ if($ac == 'unconnect'){
 			        'in_uname' => $erduo_in_username,
 			        'in_uids' => $row['in_userid'],
 			        'in_unames' => $uname,
-			        'in_content' => '你好，'.$uname.'！我赠送了 '.$vipnum.' 个月绿钻给你，请注意查看。',
+			        'in_content' => '你好，'.$uname.'！我赠送了 '.$vipnum.' 个月会员给你，请注意查看。',
 			        'in_isread' => 0,
 			        'in_addtime' => $fixedtime
 		        );

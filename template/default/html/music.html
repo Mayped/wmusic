@@ -89,7 +89,7 @@ function get_tag(str) {
 				<li class="nav_home"><a href="{$_G['path']}" class="nonce"><span>音乐馆</span></a></li>
 				<li class="nav_mv"><a href="{$rewrite['index.php/page/mv/']}"><span>MV</span></a></li>
 				<li class="nav_mymusic"><a href="{$rewrite['user.php/music/index/']}" target="_blank"><span>我的音乐</span></a></li>
-				<li class="nav_musicvip"><a href="{$rewrite['user.php/profile/vip/']}" target="_blank"><span>绿钻</span></a></li>
+				<li class="nav_musicvip"><a href="{$rewrite['user.php/profile/vip/']}" target="_blank"><span>会员</span></a></li>
 			</ul>
 		</div>
 		<div class="sub_navigation">
@@ -126,7 +126,7 @@ function get_tag(str) {
 					<li><span class="singer_name">所属歌手：<a href="{$music['singerlink']}" target="_blank">{$music['singername']}</a></span></li>
 					<li><span class="album_name">所属专辑：<a href="{$music['speciallink']}" target="_blank">{$music['specialname']}</a></span></li>
 					<li>歌曲音质：<script type="text/javascript">document.write(getbitrate());</script></li>
-					<li>下载权限：<!--{if({$music['grade']}<3)}-->'.({$music['grade']}==1?'绿钻会员':'普通用户').'<!--{else}-->游客下载<!--{/if}--></li>
+					<li>下载权限：<!--{if({$music['grade']}<3)}-->'.({$music['grade']}==1?'会员':'普通用户').'<!--{else}-->游客下载<!--{/if}--></li>
 					<li>下载扣点：{$music['points']}</li>
 					<li>下载次数：{$music['downhits']}</li>
 					<li>收藏人数：{$music['favhits']}</li>

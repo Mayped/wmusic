@@ -271,7 +271,7 @@ function getvip() {
 				} else if (XMLHttpReq.responseText == 'return_4') {
 					layer.msg('用户名不存在，请更改！', {icon: 3});
 				} else if (XMLHttpReq.responseText == 'return_5') {
-					layer.msg('恭喜，绿钻开通成功！', {icon: 6});
+					layer.msg('恭喜，会员开通成功！', {icon: 6});
 					setTimeout("location.reload();", 3000);
 				} else {
 					layer.msg('内部出现错误，请稍后再试！', {icon: 5});

@@ -39,7 +39,7 @@ if($ac == 'sign'){
 			        'in_uname' => '系统用户',
 			        'in_uids' => $erduo_in_userid,
 			        'in_unames' => $erduo_in_username,
-			        'in_content' => '恭喜，您本月的打卡出勤率为100%！系统赠送了一个月绿钻给你，请注意查看。',
+			        'in_content' => '恭喜，您本月的打卡出勤率为100%！系统赠送了一个月会员给你，请注意查看。',
 			        'in_isread' => 0,
 			        'in_addtime' => $fixedtime
 		        );

@@ -17,7 +17,7 @@ if($userlogined){
 	if($erduo_in_grade == 1){
 		$showstr = $showstr.'<p onmouseover="$(\'#speed_tips\').show()" onmouseout="$(\'#speed_tips\').hide()"><a href="'.rewrite_mode('user.php/profile/credit/').'" target="_blank"><img src="'.get_template(1).'css/svip.png"></a></p>';
 		$showstr = $showstr.'</div>';
-		$showstr = $showstr.'<div class="mod_tips" id="speed_tips" style="display: none;"><i class="icon_arrow_top"></i><p><strong>'.($erduo_in_vipgrade == 1 ? '月付绿钻' : '年付绿钻').'</strong><br />绿钻服务还剩 <strong>'.floor(DateDiff(date('Y-m-d H:i:s'), $erduo_in_vipenddate) / 3600 / 24).'</strong> 天</p></div>';
+		$showstr = $showstr.'<div class="mod_tips" id="speed_tips" style="display: none;"><i class="icon_arrow_top"></i><p><strong>'.($erduo_in_vipgrade == 1 ? '月付会员' : '年付会员').'</strong><br />会员服务还剩 <strong>'.floor(DateDiff(date('Y-m-d H:i:s'), $erduo_in_vipenddate) / 3600 / 24).'</strong> 天</p></div>';
 	}else{
 		$showstr = $showstr.'<p onmouseover="$(\'#speed_tips\').show()" onmouseout="$(\'#speed_tips\').hide()"><a href="'.rewrite_mode('user.php/profile/vip/').'" target="_blank"><img src="'.get_template(1).'css/evip.png"></a></p>';
 		$showstr = $showstr.'</div>';

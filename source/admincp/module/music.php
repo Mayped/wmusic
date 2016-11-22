@@ -255,7 +255,7 @@ if($res){
 <td>下载权限：<select name="in_grade" id="in_grade">
 <option value="3">游客下载</option>
 <option value="2"<?php if($in_grade==2){echo " selected";} ?>>普通用户</option>
-<option value="1"<?php if($in_grade==1){echo " selected";} ?>>绿钻会员</option>
+<option value="1"<?php if($in_grade==1){echo " selected";} ?>>会员</option>
 </select></td>
 <td>下载扣点：<input type="text" class="txt" value="<?php echo $in_points; ?>" name="in_points" id="in_points" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"></td>
 </tr>

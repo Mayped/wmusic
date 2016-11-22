@@ -13,7 +13,7 @@ $last_doing = preg_replace('/\[em:(\d+)]/is', '<img src="'.IN_PATH.'static/user/
 <h3 id="spaceindex_name">
 <?php echo $online; ?><a href="<?php echo getlink($ear['in_userid']); ?>"><?php echo $ear['in_username']; ?></a>
 <?php if($ear['in_grade'] == 1){ ?>
-<a href="<?php echo rewrite_mode('user.php/profile/vip/'); ?>" title="绿钻会员"><img src="<?php echo IN_PATH; ?>static/user/images/vip/vip.gif" align="absmiddle" /></a>
+<a href="<?php echo rewrite_mode('user.php/profile/vip/'); ?>" title="会员"><img src="<?php echo IN_PATH; ?>static/user/images/vip/vip.gif" align="absmiddle" /></a>
 <?php } ?>
 <?php if($ear['in_isstar'] == 1){ ?>
 <a href="<?php echo rewrite_mode('user.php/profile/verify/'); ?>" title="明星认证"><img src="<?php echo IN_PATH; ?>static/user/images/star.png" align="absmiddle" /></a>
@@ -24,7 +24,7 @@ $last_doing = preg_replace('/\[em:(\d+)]/is', '<img src="'.IN_PATH.'static/user/
 <a href="javascript:void(0)" onclick="spaceshare(<?php echo $ear['in_userid']; ?>);" class="a_share">推荐</a>
 <ul class="note_list">
 <li>已有 <?php echo $ear['in_hits']; ?> 个人气, <?php echo $ear['in_points']; ?> 个金币, <?php echo $ear['in_rank']; ?> 个经验</li>
-<li>用户等级：<a href="<?php echo rewrite_mode('user.php/profile/vip/'); ?>"><?php if($ear['in_grade'] == 1){echo "绿钻会员";}else{echo "普通用户";} ?></a> </li>
+<li>用户等级：<a href="<?php echo rewrite_mode('user.php/profile/vip/'); ?>"><?php if($ear['in_grade'] == 1){echo "会员";}else{echo "普通用户";} ?></a> </li>
 <li>主页地址：<a href="javascript:void(0)" id="space_link" onclick="setcopy(this.id, '<?php echo "http://".$_SERVER['HTTP_HOST'].getlink($ear['in_userid']); ?>');"><?php echo "http://".$_SERVER['HTTP_HOST'].getlink($ear['in_userid']); ?></a></li>
 <li><?php echo $last_doing; ?></li>
 </ul>

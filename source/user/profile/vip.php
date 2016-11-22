@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=<?php echo IN_CHARSET; ?>" />
 <meta http-equiv="x-ua-compatible" content="ie=7" />
-<title>开通绿钻 - <?php echo IN_NAME; ?></title>
+<title>开通会员 - <?php echo IN_NAME; ?></title>
 <meta name="Keywords" content="<?php echo IN_KEYWORDS; ?>" />
 <meta name="Description" content="<?php echo IN_DESCRIPTION; ?>" />
 <script type="text/javascript" src="<?php echo IN_PATH; ?>static/pack/layer/jquery.js"></script>
@@ -37,14 +37,14 @@ var in_path = '<?php echo IN_PATH; ?>';
 </div>
 <div class="l_status c_form">
 <a href="<?php echo rewrite_mode('user.php/profile/credit/'); ?>">我的积分</a><span class="pipe">|</span>
-<a href="<?php echo rewrite_mode('user.php/profile/vip/'); ?>" class="active">开通绿钻</a><span class="pipe">|</span>
+<a href="<?php echo rewrite_mode('user.php/profile/vip/'); ?>" class="active">开通会员</a><span class="pipe">|</span>
 <a href="<?php echo rewrite_mode('user.php/profile/pay/'); ?>">充值金币</a>
 </div>
 <form method="get" onsubmit="getvip();return false;" class="c_form">
 <table cellspacing="0" cellpadding="0" class="formtable">
-<tr>绿钻会员每月售价为 <span style="font-weight:bold;"><?php echo IN_VIPPOINTS; ?></span> 金币，累计购买时间满360天自动转年付。</tr>
+<tr>会员每月售价为 <span style="font-weight:bold;"><?php echo IN_VIPPOINTS; ?></span> 金币，累计购买时间满360天自动转年付。</tr>
 <tr><th style="width:10em;">登录密码:</th><td><input type="password" id="password" class="t_input" /><br />提交前请先输入登录密码。</td></tr>
-<tr><th style="width:10em;">用户名:</th><td><input type="text" id="uname" value="<?php echo $erduo_in_username; ?>" class="t_input" /><br />您还可以赠送绿钻给好友。</td></tr>
+<tr><th style="width:10em;">用户名:</th><td><input type="text" id="uname" value="<?php echo $erduo_in_username; ?>" class="t_input" /><br />您还可以赠送会员给好友。</td></tr>
 <tr><th style="width:10em;">购买月数:</th><td>
 <select id="vipnum">
 <option value="1">1个月</option>

@@ -107,16 +107,16 @@ function CheckForm(){
         }
         if(gradeNew==1){
                 if(!vipgradeNew){
-		        asyncbox.tips("请选择绿钻类型！", "wait", 1000);
+		        asyncbox.tips("请选择会员类型！", "wait", 1000);
 		        return false;
 	        }
 	        if(document.form2.in_vipindate.value=="" || document.form2.in_vipindate.value=="0000-00-00 00:00:00"){
-		        asyncbox.tips("请填写绿钻开通日期！", "wait", 1000);
+		        asyncbox.tips("请填写会员开通日期！", "wait", 1000);
 		        document.form2.in_vipindate.focus();
 		        return false;
 	        }
 	        if(document.form2.in_vipenddate.value=="" || document.form2.in_vipenddate.value=="0000-00-00 00:00:00"){
-		        asyncbox.tips("请填写绿钻结束日期！", "wait", 1000);
+		        asyncbox.tips("请填写会员结束日期！", "wait", 1000);
 		        document.form2.in_vipenddate.focus();
 		        return false;
 	        }
@@ -143,7 +143,7 @@ function getvipdate(type){
 <script type="text/javascript">parent.document.title = 'Ear Music Board 管理中心 - 用户管理 - 编辑用户';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;编辑用户';</script>
 <div class="floattop"><div class="itemtitle"><h3>编辑用户</h3><ul class="tab1">
 <li><a href="?iframe=user"><span>所有用户</span></a></li>
-<li><a href="?iframe=user&action=vip"><span>绿钻会员</span></a></li>
+<li><a href="?iframe=user&action=vip"><span>会员</span></a></li>
 <li><a href="?iframe=user&action=lock"><span>锁定状态</span></a></li>
 <li><a href="?iframe=user&action=star"><span>明星认证</span></a></li>
 <li><a href="?iframe=user&action=staring"><span>待审明星</span></a></li>
@@ -238,14 +238,14 @@ for($i=1;$i<32;$i++){
 <tr class="noborder"><td class="vtop rowform"><input type="text" id="in_points" name="in_points" class="px" value="<?php echo $in_points; ?>" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" /></td><td class="vtop tips2"></td></tr>
 <tr><td colspan="2" class="td27">经验:</td></tr>
 <tr class="noborder"><td class="vtop rowform"><input type="text" id="in_rank" name="in_rank" class="px" value="<?php echo $in_rank; ?>" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" /></td><td class="vtop tips2"></td></tr>
-<tr><td colspan="2" class="td27">开通绿钻会员:</td></tr>
+<tr><td colspan="2" class="td27">开通会员:</td></tr>
 <tr class="noborder"><td class="vtop rowform"><ul><?php if($in_grade==1){echo "<li class=\"checked\">";}else{echo "<li>";} ?><input class="radio" type="radio" id="in_grade" name="in_grade" value="1" onclick="change(1);"<?php if($in_grade==1){echo " checked";} ?>>&nbsp;是</li><?php if($in_grade==0){echo "<li class=\"checked\">";}else{echo "<li>";} ?><input class="radio" type="radio" id="in_grade" name="in_grade" value="0" onclick="change(0);"<?php if($in_grade==0){echo " checked";} ?>>&nbsp;否</li></ul></td><td class="vtop tips2"></td></tr>
 <tbody class="sub" id="vipopen"<?php if($in_grade==0){echo " style=\"display:none;\"";} ?>>
-<tr><td colspan="2" class="td27">绿钻类型:</td></tr>
-<tr class="noborder"><td class="vtop rowform"><ul><?php if($in_vipgrade==1){echo "<li class=\"checked\">";}else{echo "<li>";} ?><input class="radio" type="radio" id="in_vipgrade" name="in_vipgrade" value="1" onclick="getvipdate(1);"<?php if($in_vipgrade==1){echo " checked";} ?>>&nbsp;月付绿钻</li><?php if($in_vipgrade==2){echo "<li class=\"checked\">";}else{echo "<li>";} ?><input class="radio" type="radio" id="in_vipgrade" name="in_vipgrade" value="2" onclick="getvipdate(2);"<?php if($in_vipgrade==2){echo " checked";} ?>>&nbsp;年付绿钻</li></ul></td><td class="vtop tips2"></td></tr>
-<tr><td colspan="2" class="td27">绿钻开通日期:</td></tr>
+<tr><td colspan="2" class="td27">会员类型:</td></tr>
+<tr class="noborder"><td class="vtop rowform"><ul><?php if($in_vipgrade==1){echo "<li class=\"checked\">";}else{echo "<li>";} ?><input class="radio" type="radio" id="in_vipgrade" name="in_vipgrade" value="1" onclick="getvipdate(1);"<?php if($in_vipgrade==1){echo " checked";} ?>>&nbsp;月付会员</li><?php if($in_vipgrade==2){echo "<li class=\"checked\">";}else{echo "<li>";} ?><input class="radio" type="radio" id="in_vipgrade" name="in_vipgrade" value="2" onclick="getvipdate(2);"<?php if($in_vipgrade==2){echo " checked";} ?>>&nbsp;年付会员</li></ul></td><td class="vtop tips2"></td></tr>
+<tr><td colspan="2" class="td27">会员开通日期:</td></tr>
 <tr class="noborder"><td class="vtop rowform"><input id="in_vipindate" name="in_vipindate" value="<?php echo $in_vipindate; ?>" onclick="laydate();" type="text" class="txt" /></td><td class="vtop tips2">日期格式：YYYY-MM-DD hh:mm:ss</td></tr>
-<tr><td colspan="2" class="td27">绿钻结束日期:</td></tr>
+<tr><td colspan="2" class="td27">会员结束日期:</td></tr>
 <tr class="noborder"><td class="vtop rowform"><input id="in_vipenddate" name="in_vipenddate" value="<?php echo $in_vipenddate; ?>" onclick="laydate();" type="text" class="txt" /></td><td class="vtop tips2">日期格式：YYYY-MM-DD hh:mm:ss</td></tr>
 </tbody>
 <tr><td colspan="2" class="td27">明星认证:</td></tr>
@@ -324,14 +324,14 @@ function all_save(form){
 </script>
 <div class="container">
 <?php if(empty($action)){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 用户管理 - 所有用户';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;所有用户';</script>";} ?>
-<?php if($action=="vip"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 用户管理 - 绿钻会员';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;绿钻会员';</script>";} ?>
+<?php if($action=="vip"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 用户管理 - 会员';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;会员';</script>";} ?>
 <?php if($action=="lock"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 用户管理 - 锁定状态';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;锁定状态';</script>";} ?>
 <?php if($action=="star"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 用户管理 - 明星认证';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;明星认证';</script>";} ?>
 <?php if($action=="staring"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 用户管理 - 待审明星';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;待审明星';</script>";} ?>
 <?php if($action=="keyword"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 用户管理 - 搜索用户';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;搜索用户';</script>";} ?>
-<div class="floattop"><div class="itemtitle"><h3><?php if(empty($action)){echo "所有用户";}else if($action=="vip"){echo "绿钻会员";}else if($action=="lock"){echo "锁定状态";}else if($action=="star"){echo "明星认证";}else if($action=="staring"){echo "待审明星";}else if($action=="keyword"){echo "搜索用户";} ?></h3><ul class="tab1">
+<div class="floattop"><div class="itemtitle"><h3><?php if(empty($action)){echo "所有用户";}else if($action=="vip"){echo "会员";}else if($action=="lock"){echo "锁定状态";}else if($action=="star"){echo "明星认证";}else if($action=="staring"){echo "待审明星";}else if($action=="keyword"){echo "搜索用户";} ?></h3><ul class="tab1">
 <?php if(empty($action)){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=user"><span>所有用户</span></a></li>
-<?php if($action=="vip"){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=user&action=vip"><span>绿钻会员</span></a></li>
+<?php if($action=="vip"){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=user&action=vip"><span>会员</span></a></li>
 <?php if($action=="lock"){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=user&action=lock"><span>锁定状态</span></a></li>
 <?php if($action=="star"){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=user&action=star"><span>明星认证</span></a></li>
 <?php if($action=="staring"){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=user&action=staring"><span>待审明星</span></a></li>
@@ -390,7 +390,7 @@ $(document).ready(function() {
 <td><a href="<?php echo getavatar($row['in_userid'], 'big'); ?>" id="thumb<?php echo $row['in_userid']; ?>"><img src="<?php echo getavatar($row['in_userid']); ?>" width="25" height="25" /></a></td>
 <td><a href="<?php echo getlink($row['in_userid']); ?>" target="_blank" class="act"><?php echo ReplaceStr($row['in_username'],SafeRequest("key","get"),"<em class=\"lightnum\">".SafeRequest("key","get")."</em>"); ?></a></td>
 <td><?php echo ReplaceStr($row['in_mail'],SafeRequest("key","get"),"<em class=\"lightnum\">".SafeRequest("key","get")."</em>"); ?></td>
-<td><?php if($row['in_grade']==1 && $row['in_vipgrade']==1){echo "<em class=\"lightnum\">月付绿钻</em>";}elseif($row['in_grade']==1 && $row['in_vipgrade']==2){echo "<em class=\"lightnum\">年付绿钻</em>";}else{echo "普通用户";} ?></td>
+<td><?php if($row['in_grade']==1 && $row['in_vipgrade']==1){echo "<em class=\"lightnum\">月付会员</em>";}elseif($row['in_grade']==1 && $row['in_vipgrade']==2){echo "<em class=\"lightnum\">年付会员</em>";}else{echo "普通用户";} ?></td>
 <td><?php if($row['in_islock']==1){echo "<em class=\"lightnum\">锁定</em>";}else{echo "正常";} ?></td>
 <td><?php if($row['in_isstar']==1){echo "<em class=\"lightnum\">已认证[</em>".$verify."<em class=\"lightnum\">]</em>";}elseif($row['in_isstar']==2){echo "<em class=\"lightnum\">待审核[</em>".$verify."<em class=\"lightnum\">]</em>";}else{echo "未认证";} ?></td>
 <td><a href="?iframe=user&action=edit&in_userid=<?php echo $row['in_userid']; ?>" class="act">编辑</a></td>
@@ -407,9 +407,9 @@ $(document).ready(function() {
 <option value="2">锁定状态</option>
 <option value="3">授予明星认证</option>
 <option value="4">取消明星认证</option>
-<option value="5">开通月付绿钻</option>
-<option value="6">开通年付绿钻</option>
-<option value="7">解除绿钻会员</option>
+<option value="5">开通月付会员</option>
+<option value="6">开通年付会员</option>
+<option value="7">解除会员</option>
 </select> &nbsp;&nbsp; <input type="submit" name="allsave" class="btn" value="批量操作" /></td></tr>
 <?php echo $Arr[0]; ?>
 </table>
@@ -509,13 +509,13 @@ $(document).ready(function() {
 			                        'in_uname' => '系统用户',
 			                        'in_uids' => $row['in_userid'],
 			                        'in_unames' => $row['in_username'],
-			                        'in_content' => '恭喜，您已经被管理员开通月付绿钻会员！',
+			                        'in_content' => '恭喜，您已经被管理员开通月付会员！',
 			                        'in_isread' => 0,
 			                        'in_addtime' => date('Y-m-d H:i:s')
 		                        );
 		                        inserttable('message', $setarrs, 1);
 				}
-				ShowMessage("恭喜您，用户批量开通月付绿钻会员成功！",$_SERVER['HTTP_REFERER'],"infotitle2",1000,1);
+				ShowMessage("恭喜您，用户批量开通月付会员成功！",$_SERVER['HTTP_REFERER'],"infotitle2",1000,1);
 			}elseif($in_allsave==6){
 				$vipindate = date('Y-m-d H:i:s');
 				$vipenddate = date('Y-m-d H:i:s',mktime(date('H'),date('i'),date('s'),date('m'),date('d')+360,date('Y')));
@@ -527,13 +527,13 @@ $(document).ready(function() {
 			                        'in_uname' => '系统用户',
 			                        'in_uids' => $row['in_userid'],
 			                        'in_unames' => $row['in_username'],
-			                        'in_content' => '恭喜，您已经被管理员开通年付绿钻会员！',
+			                        'in_content' => '恭喜，您已经被管理员开通年付会员！',
 			                        'in_isread' => 0,
 			                        'in_addtime' => date('Y-m-d H:i:s')
 		                        );
 		                        inserttable('message', $setarrs, 1);
 				}
-				ShowMessage("恭喜您，用户批量开通年付绿钻会员成功！",$_SERVER['HTTP_REFERER'],"infotitle2",1000,1);
+				ShowMessage("恭喜您，用户批量开通年付会员成功！",$_SERVER['HTTP_REFERER'],"infotitle2",1000,1);
 			}elseif($in_allsave==7){
 				$query = $db->query("select in_userid,in_username from ".tname('user')." where in_userid in ($in_userid)");
 				while ($row = $db->fetch_array($query)) {
@@ -543,13 +543,13 @@ $(document).ready(function() {
 			                        'in_uname' => '系统用户',
 			                        'in_uids' => $row['in_userid'],
 			                        'in_unames' => $row['in_username'],
-			                        'in_content' => '抱歉，您已经被管理员解除绿钻会员！',
+			                        'in_content' => '抱歉，您已经被管理员解除会员！',
 			                        'in_isread' => 0,
 			                        'in_addtime' => date('Y-m-d H:i:s')
 		                        );
 		                        inserttable('message', $setarrs, 1);
 				}
-				ShowMessage("恭喜您，用户批量解除绿钻会员成功！",$_SERVER['HTTP_REFERER'],"infotitle2",1000,1);
+				ShowMessage("恭喜您，用户批量解除会员成功！",$_SERVER['HTTP_REFERER'],"infotitle2",1000,1);
 			}
 		}
 	}

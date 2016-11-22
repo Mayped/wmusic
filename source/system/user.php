@@ -47,7 +47,7 @@ if($userlogined){
 			        'in_uname' => '系统用户',
 			        'in_uids' => $erduo_in_userid,
 			        'in_unames' => $erduo_in_username,
-			        'in_content' => '尊敬的用户'.$erduo_in_username.'，您的绿钻会员已到期，请重新开通！',
+			        'in_content' => '尊敬的用户'.$erduo_in_username.'，您的会员已到期，请重新开通！',
 			        'in_isread' => 0,
 			        'in_addtime' => date('Y-m-d H:i:s')
 		        );

@@ -29,7 +29,7 @@
 </div>
 <div class="l_status c_form">
 <a href="<?php echo rewrite_mode('user.php/profile/credit/'); ?>" class="active">我的积分</a><span class="pipe">|</span>
-<a href="<?php echo rewrite_mode('user.php/profile/vip/'); ?>">开通绿钻</a><span class="pipe">|</span>
+<a href="<?php echo rewrite_mode('user.php/profile/vip/'); ?>">开通会员</a><span class="pipe">|</span>
 <a href="<?php echo rewrite_mode('user.php/profile/pay/'); ?>">充值金币</a>
 </div>
 <div class="c_form">
@@ -51,12 +51,12 @@ if($erduo_in_grade == 0){
         echo '普通用户 <img src="'.IN_PATH.'static/user/images/vip/novip.jpg" align="absmiddle"></td></tr>';
 }else{
         if($erduo_in_vipgrade == 1){
-                echo '<span style="color:green;">月付绿钻</span> <img src="'.IN_PATH.'static/user/images/vip/vip.png" align="absmiddle"> <img src="'.IN_PATH.'static/user/images/vip/no_year_vip.jpg" align="absmiddle"></td></tr>';
+                echo '<span style="color:green;">月付会员</span> <img src="'.IN_PATH.'static/user/images/vip/vip.png" align="absmiddle"> <img src="'.IN_PATH.'static/user/images/vip/no_year_vip.jpg" align="absmiddle"></td></tr>';
         }elseif($erduo_in_vipgrade == 2){
-                echo '<span style="color:green;">年付绿钻</span> <img src="'.IN_PATH.'static/user/images/vip/vip.png" align="absmiddle"> <img src="'.IN_PATH.'static/user/images/vip/year_vip.jpg" align="absmiddle"></td></tr>';
+                echo '<span style="color:green;">年付会员</span> <img src="'.IN_PATH.'static/user/images/vip/vip.png" align="absmiddle"> <img src="'.IN_PATH.'static/user/images/vip/year_vip.jpg" align="absmiddle"></td></tr>';
         }
         echo '<tr><th width="150">&nbsp;</th><td class="gray">业务于 <strong>'.$erduo_in_vipindate.'</strong> 开通，将在 <strong>'.$erduo_in_vipenddate.'</strong> 到期<br />';
-        echo '绿钻服务还剩 <strong style="color:green;">'.floor(DateDiff(date('Y-m-d H:i:s'), $erduo_in_vipenddate) / 3600 / 24).'</strong> 天</td></tr>';
+        echo '会员服务还剩 <strong style="color:green;">'.floor(DateDiff(date('Y-m-d H:i:s'), $erduo_in_vipenddate) / 3600 / 24).'</strong> 天</td></tr>';
 }
 ?>
 </table>

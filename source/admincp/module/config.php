@@ -266,7 +266,7 @@ global $action;
 <tr><th colspan="15" class="partition">增值业务</th></tr>
 <tr><td colspan="2" class="td27">金币充值汇率换算:</td></tr>
 <tr><td class="vtop rowform"><input type="text" class="txt" value="<?php echo IN_RMBPOINTS; ?>" name="IN_RMBPOINTS" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"></td><td class="vtop tips2">金币/每元</td></tr>
-<tr><td colspan="2" class="td27">自助开通绿钻售价:</td></tr>
+<tr><td colspan="2" class="td27">自助开通会员售价:</td></tr>
 <tr><td class="vtop rowform"><input type="text" class="txt" value="<?php echo IN_VIPPOINTS; ?>" name="IN_VIPPOINTS" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"></td><td class="vtop tips2">金币/每月</td></tr>
 <tr><td colspan="15"><div class="fixsel"><input type="submit" class="btn" value="提交" /></div></td></tr>
 </table>
@@ -342,7 +342,7 @@ global $action;
 <option value="0">否</option>
 <option value="1"<?php if(IN_SIGNVIPOPEN==1){echo " selected";} ?>>是</option>
 </select>
-</td><td class="vtop tips2">是否设立“月付绿钻”满勤奖</td></tr>
+</td><td class="vtop tips2">是否设立“月付会员”满勤奖</td></tr>
 <tr><td colspan="2" class="td27">初次上传头像:</td></tr>
 <tr><td class="vtop rowform"><input type="text" class="txt" value="<?php echo IN_AVATARPOINTS; ?>" name="IN_AVATARPOINTS" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"></td><td class="vtop tips2">金币</td></tr>
 <tr><td class="vtop rowform"><input type="text" class="txt" value="<?php echo IN_AVATARRANK; ?>" name="IN_AVATARRANK" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"></td><td class="vtop tips2">经验</td></tr>
