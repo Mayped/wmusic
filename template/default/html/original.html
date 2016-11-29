@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset={$_G['charset']}" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-<title> 排行榜 - {$_G['name']}</title>
+<title>排行榜 - {$_G['name']}</title>
 <meta name="Keywords" content="{$_G['keywords']}" />
 <meta name="Description" content="{$_G['description']}" />
 <link href="{$_G['tempath']}css/index.css" type="text/css" rel="stylesheet" />
@@ -44,15 +44,15 @@ function display_tag(type) {
 		</div>
 		<div class="navigation">
 			<ul>
-				<li class="nav_home"><a href="{$_G['path']}" class="nonce"><span>音乐馆</span></a></li>
-				<li class="nav_ori"><a href="{$rewrite['index.php/page/original/']}"><span>原创</span></a></li>
+				<li class="nav_home"><a href="{$_G['path']}" ><span>音乐馆</span></a></li>
+				<li class="nav_ori"><a href="{$rewrite['index.php/page/original/']} "class="nonce"><span>原创</span></a></li>
 				<li class="nav_mv"><a href="{$rewrite['index.php/page/mv/']}"><span>MV</span></a></li>
 				<li class="nav_mymusic"><a href="{$rewrite['user.php/music/index/']}" target="_blank"><span>音乐人</span></a></li>
 				<li class="nav_musicvip"><a href="{$rewrite['user.php/profile/vip/']}" target="_blank"><span>会员</span></a></li>
 			</ul>
 		</div>
 		<div class="sub_navigation">
-			<p class="sub_lib" style="display: block;">
+			<p class="sub_lib" style="display: none;">
 				<a href="{$_G['path']}">首页</a>|
 				<a href="{$rewrite['index.php/page/rank/']}" class="nonce">排行榜</a>|
 				<!--{loop special_class count=1 order=asc}--><a href="{$specialclass['link']}">精选辑</a>|<!--{/loop special_class}-->

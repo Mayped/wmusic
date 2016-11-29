@@ -48,15 +48,15 @@ $(function() {
 		<div class="navigation">
 			<ul>
 				<li class="nav_home"><a href="{$_G['path']}" class="nonce"><span>音乐馆</span></a></li>
-				<li class="nav_mv"><a href="{$rewrite['index.php/page/mv/']}"><span>MV</span></a></li>
-				<li class="nav_mymusic"><a href="{$rewrite['user.php/music/index/']}" target="_blank"><span>我的音乐</span></a></li>
+			 				<li class="nav_ori"><a href="{$rewrite['index.php/page/original/']}"><span>原创</span></a></li> 				<li class="nav_mv"><a href="{$rewrite['index.php/page/mv/']}"><span>MV</span></a></li>
+				<li class="nav_mymusic"><a href="{$rewrite['user.php/music/index/']}" target="_blank"><span>音乐人</span></a></li>
 				<li class="nav_musicvip"><a href="{$rewrite['user.php/profile/vip/']}" target="_blank"><span>会员</span></a></li>
 			</ul>
 		</div>
 		<div class="sub_navigation">
 			<p class="sub_lib" style="display: block;">
 				<a href="{$_G['path']}">首页</a>|
-				<a href="{$rewrite['index.php/page/rank/']}">发现音乐</a>|
+				<a href="{$rewrite['index.php/page/rank/']}">排行榜</a>|
 				<!--{loop special_class count=1 order=asc}--><a href="{$specialclass['link']}" class="nonce">精选辑</a>|<!--{/loop special_class}-->
 				<!--{loop singer_class count=1 order=asc}--><a href="{$singerclass['link']}">歌手</a><!--{/loop singer_class}-->
 			</p>

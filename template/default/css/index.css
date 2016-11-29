@@ -514,7 +514,7 @@ a:hover {
 .header_top {
     width: 100%;
     height: 30px;
-    background: #ff3333
+    background: #000;opacity: 0.5;
 }
 
 .navlist ul {
@@ -587,7 +587,7 @@ a:hover {
     overflow: hidden;
     text-align: center;
     color: #fff;
-    background: #0dad51;
+    background: #ff3333;
     border-radius: 2px;
     margin-top: 5px;
     margin-left: 0;
@@ -685,7 +685,7 @@ a:hover {
 .navlist li a.btn_open_musicbag {
     margin-left: 10px;
     color: #fff;
-    background: #0dad51
+    background: #ff3333
 }
 
 .navlist li a.btn_open_vip:hover, .navlist li a.btn_open_musicbag:hover {
@@ -755,7 +755,7 @@ a:hover {
 }
 
 .navigation {
-    width: 480px;
+    width: 650px;
     height: 75px;
     overflow: hidden;
     position: absolute;
@@ -775,11 +775,16 @@ a:hover {
 
 .navigation li span {
     display: block;
-    height: 6px;
-    font-size: 0;
-    text-indent: -999em;
+    font-size: 14px;
+    /*text-indent: -999em;*/
     overflow: hidden;
-    background: #fff
+    background: #ffffcc;
+    padding: 28.5px 0;
+    font-family:"¿¬Ìå";
+    font-weight:900;
+    font-size: 28px;
+    color: #cc9933;
+    text-align: center;
 }
 
 .navigation li a:hover span {
@@ -787,15 +792,17 @@ a:hover {
 }
 
 .navigation li.nav_home {
-    width: 88px
+    width: 120px
 }
 
 .navigation li.nav_mv {
-    width: 58px
+    width: 80px
 }
-
+.navigation li.nav_ori {
+    width: 80px
+}
 .navigation li.nav_mymusic {
-    width: 89px
+    width: 120px
 }
 
 .navigation li.nav_software {
@@ -803,7 +810,7 @@ a:hover {
 }
 
 .navigation li.nav_musicvip {
-    width: 58px
+    width: 100px
 }
 
 .navigation li.nav_qplay {
@@ -811,13 +818,13 @@ a:hover {
 }
 
 .navigation li a {
-    background-image: url(frame_bg.png);
+    /*background-image: url(frame_bg.png);*/
     display: block;
     height: 75px;
     outline: 0
 }
 
-.navigation .nav_home a {
+/*.navigation .nav_home a {
     background-position: 0 -79px
 }
 
@@ -863,10 +870,12 @@ a:hover {
 
 .navigation .nav_qplay a.nonce {
     background-position: -445px 0
-}
+}*/
 
 .navigation a.nonce span, .navigation a.nonce:hover span {
-    display: none
+   /*display: none*/
+    background: #ff3333;
+    color: #ffffff
 }
 
 .sub_navigation {
@@ -915,12 +924,13 @@ a:hover {
 }
 
 .sub_navigation p a.nonce {
-    color: #99ff00;
-    font-weight: bold
+    color: #ff3333;
+    font-weight: bold;
+    
 }
 
 .sub_navigation p a.nonce:hover {
-    color: #99ff00
+    color: #ff3333
 }
 
 .frame_search {
@@ -3367,6 +3377,14 @@ a:hover {
     border-left: solid 5px red
 }
 
+.mod_rank .title{
+    height: 40px;
+    padding: 2px 0;
+    overflow: hidden;
+    margin: 0 0 18px;
+    border-left: solid 5px red
+}
+
 .mod_first .title h2 {
     height: 26px;
     text-indent: -9999px;
@@ -3526,7 +3544,7 @@ a:hover {
     margin: 0 0 10px
 }
 
-.mod_mv .title {
+.mod_mv .title{
     height: 26px;
     padding: 2px 0;
     overflow: hidden;
@@ -3543,6 +3561,10 @@ a:hover {
 
 .mod_mv .mod_more {
     left: 120px
+}
+
+.mod_rank .mod_more {
+    left: 100px
 }
 
 .mod_mv .mod_content {
@@ -4149,7 +4171,7 @@ a:hover {
 }
 
 .mod_user_info .mod_user_name a {
-    color: #0c8f44
+    color: #ff3333
 }
 
 .mod_user_info .mod_user_name a:hover {
@@ -4696,10 +4718,10 @@ a:hover {
     line-height: 21px \9;
     height: 20px;
     padding: 0 10px;
-    border: 1px solid #0dad51;
+    border: 1px solid #ff3333;
     border-radius: 3px;
     box-shadow: 1px 2px 0 #f2f2f2;
-    background-color: #0dad51
+    background-color: #ff3333
 }
 
 .normal_info .openv_btn:hover {
@@ -5197,6 +5219,50 @@ a:hover {
     background: url(index_title_bg.png) no-repeat 10px -52px
 }
 
+.mod_rank h2 {
+    color: #333;
+    font-size: 28px;
+    font-family: "Microsoft YaHei";
+    line-height: 40px;
+    font-weight: normal;
+    height: 40px;
+    margin-bottom: 24px;
+}
+.rank_list_title h3{
+    color: #333;
+    font-family: "Microsoft YaHei";
+    font-weight: normal;
+    font-size: 18px;
+    text-indent: 10px;
+    line-height: 30px;
+    height: 30px;
+    border-left: 5px solid #0dad51;
+    float: left;
+}
+.rank_list_title .btn_play, .rank_list_title .btn_add {
+    float: left;
+    width: 30px;
+    height: 30px;
+    background-image: url(icon_sprite.png);
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+    margin: 0 10px 0 0;
+}
+.rank_list_title .btn_play {
+    background-position: 0 -64px;
+}
+.rank_list_title .btn_add {
+    background-position: -56px -285px;
+    left: 215px;
+}
+.rank_list {
+    width: 350px;
+    height: 426px;
+    margin-right: -1px;
+    float: left;
+}
+
 .mod_recommend_2 {
     width: 350px;
     float: left;
@@ -5281,19 +5347,6 @@ a:hover {
     *zoom: 1
 }
 
-.mod_rank .title {
-    height: 18px;
-    padding: 6px 0;
-    margin: 0 0 10px
-}
-
-.mod_rank .title h2 {
-    height: 18px;
-    text-indent: -9999px;
-    overflow: hidden;
-    background: url(index_title_bg.png) no-repeat 0 -220px
-}
-
 .mod_rank .mod_t_play {
     left: 65px
 }
@@ -5314,7 +5367,7 @@ a:hover {
 
 .mod_rank .mod_rank_list {
     height: 282px;
-    background: #ffffcc url(icon_sprite.png) no-repeat -166px -225px
+    background: #fff url(icon_sprite.png) no-repeat -166px -225px
 }
 
 .mod_rank .mod_rank_list li {

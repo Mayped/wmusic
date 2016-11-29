@@ -13,7 +13,7 @@ define('IN_VERSION', '4.0');
 define('IN_CHARSET', 'gbk');
 define('IN_BUILD', '20160906');
 define('IN_UCOPEN', '0');
-define('IN_NAME', '耳朵音乐');
+define('IN_NAME', '西部音乐基地');
 define('IN_KEYWORDS', '耳朵音乐,音乐人,SNS互动社区,流行音乐,原创音乐,翻唱,伴奏,网络歌曲,高清MV,MP3下载,歌词下载');
 define('IN_DESCRIPTION', '耳朵音乐是一个以音乐人为主的SNS互动社区，汇聚了大量的原创音乐及翻唱歌曲，主要提供海量乐库、高品质MV视听服务！');
 define('IN_ICP', '备案中...');

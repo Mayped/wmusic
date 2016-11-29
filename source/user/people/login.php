@@ -64,9 +64,9 @@ function update_seccode(){
 <input type="submit" value="µÇÂ¼" class="submit" />
 <a href="<?php echo rewrite_mode('user.php/people/lostpasswd/'); ?>">Íü¼ÇÃÜÂë?</a>
 </td></tr>
-<tr><th width="100">&nbsp;</th><td>
+<!--<tr><th width="100">&nbsp;</th><td>
 <a href="javascript:void(0)" onclick="pop.up('no', 'QQµÇÂ¼', in_path+'source/pack/connect/login.php', '700px', '430px', '100px');"><img src="<?php echo IN_PATH; ?>static/user/images/connect.gif" /></a>
-</td></tr>
+</td></tr>-->
 </table>
 </form>
 <div class="c_form">

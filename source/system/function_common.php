@@ -229,7 +229,7 @@ function SafeRequest($key, $mode, $type=0){
 	$magic = get_magic_quotes_gpc();
 	switch($mode){
 		case 'post':
-			$value = isset($_POST[$key]) ? $magic ? trim($_POST[$key]) : addslashes(trim($_POST[$key])) : NULL;
+			$value = isset($_POST[$key]) ? $magic ?  ($_POST[$key]) : addslashes(trim($_POST[$key])) : NULL;
 			break;
 		case 'get':
 			$value = isset($_GET[$key]) ? $magic ? trim($_GET[$key]) : addslashes(trim($_GET[$key])) : NULL;

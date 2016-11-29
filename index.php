@@ -1,4 +1,4 @@
-<?php
+ <?php
 include 'source/system/db.class.php';
 include 'source/system/cache.class.php';
 include 'source/system/user.php';
