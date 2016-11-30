@@ -36,7 +36,7 @@ function main($type){
 	$count=$db->num_rows($result);
 ?>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'Ear Music Board 管理中心 - 内容审核 - 音乐标签';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;音乐标签';</script>
+<script type="text/javascript">parent.document.title = '西部音乐基地 管理中心 - 内容审核 - 音乐标签';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;音乐标签';</script>
 <div class="floattop"><div class="itemtitle"><h3><?php if($type==1){echo "按曲风";}elseif($type==2){echo "按心情";}elseif($type==3){echo "按歌手";}elseif($type==4){echo "按语言";}else{echo "按地域";} ?></h3><ul class="tab1">
 <?php if($type==0){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=tag"><span>按地域</span></a></li>
 <?php if($type==1){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=tag&type=1"><span>按曲风</span></a></li>

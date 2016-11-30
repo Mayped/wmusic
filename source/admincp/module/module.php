@@ -38,7 +38,7 @@ $action=SafeRequest("ac","get");
 if($action=="uninst"){del_plugin($_GET['id'],$_GET['dir']);}elseif($action=="status"){cut_plugin($_GET['id'],$_GET['is']);}
 ?>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'Ear Music Board 管理中心 - 云平台';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='云平台';</script>
+<script type="text/javascript">parent.document.title = '西部音乐基地 管理中心 - 云平台';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='云平台';</script>
 <div class="floattop"><div class="itemtitle"><h3>所有应用</h3></div></div><div class="floattopempty"></div>
 <table class="tb tb2">
 <tr><th class="partition">插件列表</th></tr>

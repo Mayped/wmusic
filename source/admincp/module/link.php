@@ -104,7 +104,7 @@ function EditBoard($Arr,$url,$arrname){
 	$in_hide = !IsNum($Arr[4]) ? 0 : $Arr[4];
 ?>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'Ear Music Board 管理中心 - 系统 - <?php echo $arrname; ?>链接';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='系统&nbsp;&raquo;&nbsp;<?php echo $arrname; ?>链接';</script>
+<script type="text/javascript">parent.document.title = '西部音乐基地 管理中心 - 系统 - <?php echo $arrname; ?>链接';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='系统&nbsp;&raquo;&nbsp;<?php echo $arrname; ?>链接';</script>
 <div class="floattop"><div class="itemtitle"><h3><?php echo $arrname; ?>链接</h3><ul class="tab1">
 <li><a href="?iframe=link"><span>友情链接</span></a></li>
 <?php if($_GET['action']=="add"){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=link&action=add"><span>新增链接</span></a></li>
@@ -143,7 +143,7 @@ function main($sql,$size){
 	$count=$db->num_rows($result);
 ?>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'Ear Music Board 管理中心 - 系统 - 友情链接';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='系统&nbsp;&raquo;&nbsp;友情链接';</script>
+<script type="text/javascript">parent.document.title = '西部音乐基地 管理中心 - 系统 - 友情链接';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='系统&nbsp;&raquo;&nbsp;友情链接';</script>
 <div class="floattop"><div class="itemtitle"><h3>友情链接</h3><ul class="tab1">
 <li class="current"><a href="?iframe=link"><span>友情链接</span></a></li>
 <li><a href="?iframe=link&action=add"><span>新增链接</span></a></li>

@@ -70,7 +70,7 @@ function TempList(){
 if(is_file(SafeRequest("path","get").SafeRequest("file","get"))){
 ?>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'Ear Music Board 管理中心 - 界面风格 - 编辑模板';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='界面风格&nbsp;&raquo;&nbsp;编辑模板';</script>
+<script type="text/javascript">parent.document.title = '西部音乐基地 管理中心 - 界面风格 - 编辑模板';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='界面风格&nbsp;&raquo;&nbsp;编辑模板';</script>
 <div class="floattop"><div class="itemtitle"><h3>编辑模板</h3></div></div><div class="floattopempty"></div>
 <table class="tb tb2">
 <tr><th class="partition"><?php echo SafeRequest("tempname","get"); ?></th></tr>
@@ -92,7 +92,7 @@ $dir = SafeRequest("path","get");
 $path = !empty($dir) ? $dir : getcwd();
 ?>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'Ear Music Board 管理中心 - 界面风格 - 浏览模板';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='界面风格&nbsp;&raquo;&nbsp;浏览模板';</script>
+<script type="text/javascript">parent.document.title = '西部音乐基地 管理中心 - 界面风格 - 浏览模板';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='界面风格&nbsp;&raquo;&nbsp;浏览模板';</script>
 <div class="floattop"><div class="itemtitle"><h3>浏览模板</h3></div></div><div class="floattopempty"></div>
 <table class="tb tb2">
 <tr><th class="partition"><?php echo SafeRequest("tempname","get"); ?></th></tr>
@@ -146,7 +146,7 @@ function main($develop_auth){
 	$count=$db->num_rows($result);
 ?>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'Ear Music Board 管理中心 - 界面风格 - 模板方案';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='界面风格&nbsp;&raquo;&nbsp;模板方案';</script>
+<script type="text/javascript">parent.document.title = '西部音乐基地 管理中心 - 界面风格 - 模板方案';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='界面风格&nbsp;&raquo;&nbsp;模板方案';</script>
 <div class="floattop"><div class="itemtitle"><h3>模板方案</h3></div></div><div class="floattopempty"></div>
 <table class="tb tb2">
 <tr><th class="partition">模板列表</th></tr>

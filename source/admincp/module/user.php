@@ -140,7 +140,7 @@ function getvipdate(type){
 }
 </script>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'Ear Music Board 管理中心 - 用户管理 - 编辑用户';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;编辑用户';</script>
+<script type="text/javascript">parent.document.title = '西部音乐基地 管理中心 - 用户管理 - 编辑用户';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;编辑用户';</script>
 <div class="floattop"><div class="itemtitle"><h3>编辑用户</h3><ul class="tab1">
 <li><a href="?iframe=user"><span>所有用户</span></a></li>
 <li><a href="?iframe=user&action=vip"><span>会员</span></a></li>
@@ -323,12 +323,12 @@ function all_save(form){
 }
 </script>
 <div class="container">
-<?php if(empty($action)){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 用户管理 - 所有用户';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;所有用户';</script>";} ?>
-<?php if($action=="vip"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 用户管理 - 会员';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;会员';</script>";} ?>
-<?php if($action=="lock"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 用户管理 - 锁定状态';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;锁定状态';</script>";} ?>
-<?php if($action=="star"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 用户管理 - 明星认证';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;明星认证';</script>";} ?>
-<?php if($action=="staring"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 用户管理 - 待审明星';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;待审明星';</script>";} ?>
-<?php if($action=="keyword"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 用户管理 - 搜索用户';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;搜索用户';</script>";} ?>
+<?php if(empty($action)){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 用户管理 - 所有用户';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;所有用户';</script>";} ?>
+<?php if($action=="vip"){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 用户管理 - 会员';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;会员';</script>";} ?>
+<?php if($action=="lock"){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 用户管理 - 锁定状态';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;锁定状态';</script>";} ?>
+<?php if($action=="star"){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 用户管理 - 明星认证';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;明星认证';</script>";} ?>
+<?php if($action=="staring"){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 用户管理 - 待审明星';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;待审明星';</script>";} ?>
+<?php if($action=="keyword"){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 用户管理 - 搜索用户';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;搜索用户';</script>";} ?>
 <div class="floattop"><div class="itemtitle"><h3><?php if(empty($action)){echo "所有用户";}else if($action=="vip"){echo "会员";}else if($action=="lock"){echo "锁定状态";}else if($action=="star"){echo "明星认证";}else if($action=="staring"){echo "待审明星";}else if($action=="keyword"){echo "搜索用户";} ?></h3><ul class="tab1">
 <?php if(empty($action)){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=user"><span>所有用户</span></a></li>
 <?php if($action=="vip"){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=user&action=vip"><span>会员</span></a></li>

@@ -87,7 +87,7 @@ function main(){
 	$count=$db->num_rows($result);
 ?>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'Ear Music Board 管理中心 - 内容审核 - 音乐栏目';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;音乐栏目';</script>
+<script type="text/javascript">parent.document.title = '西部音乐基地 管理中心 - 内容审核 - 音乐栏目';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;音乐栏目';</script>
 <div class="floattop"><div class="itemtitle"><h3>音乐栏目</h3></div></div><div class="floattopempty"></div>
 <table class="tb tb2">
 <tr><th class="partition">栏目管理</th></tr>

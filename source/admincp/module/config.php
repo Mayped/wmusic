@@ -66,7 +66,7 @@ global $action;
 <form method="post" action="?iframe=config&action=save">
 <input type="hidden" name="hash" value="<?php echo $_COOKIE['in_adminpassword']; ?>" />
 <div class="container" style="<?php if(empty($action)){echo "display:";}else{echo "display:none";} ?>;">
-<?php if(empty($action)){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 全局 - 站点信息';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='全局&nbsp;&raquo;&nbsp;站点信息';</script>";} ?>
+<?php if(empty($action)){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 全局 - 站点信息';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='全局&nbsp;&raquo;&nbsp;站点信息';</script>";} ?>
 <div class="floattop"><div class="itemtitle"><h3>站点信息</h3><ul class="tab1">
 <li class="current"><a href="?iframe=config"><span>站点信息</span></a></li>
 <li><a href="?iframe=config&action=cache"><span>缓存信息</span></a></li>
@@ -131,7 +131,7 @@ global $action;
 </div>
 
 <div class="container" style="<?php if($action=="cache"){echo "display:";}else{echo "display:none";} ?>;">
-<?php if($action=="cache"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 全局 - 缓存信息';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='全局&nbsp;&raquo;&nbsp;缓存信息';</script>";} ?>
+<?php if($action=="cache"){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 全局 - 缓存信息';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='全局&nbsp;&raquo;&nbsp;缓存信息';</script>";} ?>
 <div class="floattop"><div class="itemtitle"><h3>缓存信息</h3><ul class="tab1">
 <li><a href="?iframe=config"><span>站点信息</span></a></li>
 <li class="current"><a href="?iframe=config&action=cache"><span>缓存信息</span></a></li>
@@ -168,7 +168,7 @@ global $action;
 </div>
 
 <div class="container" style="<?php if($action=="upload"){echo "display:";}else{echo "display:none";} ?>;">
-<?php if($action=="upload"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 全局 - 上传信息';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='全局&nbsp;&raquo;&nbsp;上传信息';</script>";} ?>
+<?php if($action=="upload"){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 全局 - 上传信息';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='全局&nbsp;&raquo;&nbsp;上传信息';</script>";} ?>
 <div class="floattop"><div class="itemtitle"><h3>上传信息</h3><ul class="tab1">
 <li><a href="?iframe=config"><span>站点信息</span></a></li>
 <li><a href="?iframe=config&action=cache"><span>缓存信息</span></a></li>
@@ -245,7 +245,7 @@ global $action;
 </div>
 
 <div class="container" style="<?php if($action=="pay"){echo "display:";}else{echo "display:none";} ?>;">
-<?php if($action=="pay"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 全局 - 支付信息';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='全局&nbsp;&raquo;&nbsp;支付信息';</script>";} ?>
+<?php if($action=="pay"){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 全局 - 支付信息';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='全局&nbsp;&raquo;&nbsp;支付信息';</script>";} ?>
 <div class="floattop"><div class="itemtitle"><h3>支付信息</h3><ul class="tab1">
 <li><a href="?iframe=config"><span>站点信息</span></a></li>
 <li><a href="?iframe=config&action=cache"><span>缓存信息</span></a></li>
@@ -273,7 +273,7 @@ global $action;
 </div>
 
 <div class="container" style="<?php if($action=="user"){echo "display:";}else{echo "display:none";} ?>;">
-<?php if($action=="user"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 全局 - 会员信息';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='全局&nbsp;&raquo;&nbsp;会员信息';</script>";} ?>
+<?php if($action=="user"){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 全局 - 会员信息';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='全局&nbsp;&raquo;&nbsp;会员信息';</script>";} ?>
 <div class="floattop"><div class="itemtitle"><h3>会员信息</h3><ul class="tab1">
 <li><a href="?iframe=config"><span>站点信息</span></a></li>
 <li><a href="?iframe=config&action=cache"><span>缓存信息</span></a></li>

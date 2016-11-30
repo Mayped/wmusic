@@ -39,7 +39,7 @@ switch($action){
 <?php function main(){ ?>
 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>?action=save">
 <div class="container">
-<script type="text/javascript">parent.document.title = 'Ear Music Board 管理中心 - 即时通讯';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='即时通讯';</script>
+<script type="text/javascript">parent.document.title = '西部音乐基地 管理中心 - 即时通讯';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='即时通讯';</script>
 <div class="floattop"><div class="itemtitle"><h3>即时通讯</h3></div></div><div class="floattopempty"></div>
 <table class="tb tb2">
 <tr><th colspan="15" class="partition">插件设置</th></tr>

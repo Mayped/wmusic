@@ -182,7 +182,7 @@ if (isset($_POST['submit']) == '1') {
             <td class="lineheight smallfont"><?php echo $check_curl_init; ?></td>
         </tr>
     </table>
-    <table class="tb tb2 fixpadding">
+<!--    <table class="tb tb2 fixpadding">
         <tr>
             <th colspan="15" class="partition">开发团队</th>
         </tr>
@@ -211,7 +211,7 @@ if (isset($_POST['submit']) == '1') {
                                                                              class="lightlink2" target="_blank">www.erduo.in</a>
             </td>
         </tr>
-    </table>
+    </table>-->
 </div>
 </body>
 </html>

@@ -35,7 +35,7 @@ function setdown(dlen){
 </head>
 <body>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'Ear Music Board 管理中心 - 安装应用';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='安装应用';</script>
+<script type="text/javascript">parent.document.title = '西部音乐基地 管理中心 - 安装应用';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='安装应用';</script>
 <div class="floattop"><div class="itemtitle"><h3>安装应用</h3></div></div><div class="floattopempty"></div>
 <table class="tb tb2">
 <tr><th class="partition">技巧提示</th></tr>

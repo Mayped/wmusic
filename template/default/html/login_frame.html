@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset={$_G['charset']}" />
-<title>用户登录 - {$_G['name']}</title>
+<title>用户登录 - 西部音乐基地</title>
 <meta name="Keywords" content="{$_G['keywords']}" />
 <meta name="Description" content="{$_G['description']}" />
 <link href="{$_G['tempath']}css/login_v2.css" type="text/css" rel="stylesheet" />
@@ -41,16 +41,19 @@ function update_seccode(){
 </script>
 </head>
 <body>
+<div class="top"></div>
+<div class="headerbackground">
 <div class="header">
-	<h1><a href="{$_G['path']}" target="_top">{$_G['name']}</a></h1>
+	<h1><a href="{$_G['path']}" target="_top">西部音乐基地</a></h1>
 	<div class="mini_nav">
 		<a href="{$_G['path']}" target="_top">网站首页</a>|<a href="{$_G['path']}user.php" target="_top">用户中心</a>
 	</div>
 </div>
+</div>
 <div class="mod_main">
 	<div class="decorate_pic">
 		<img src="{$_G['tempath']}css/banner.jpg" width="518" height="310">
-	</div>
+	</div>-
 	<div class="mod_login">
 		<div class="login_box">
 			<div class="login_no_qlogin">
@@ -92,9 +95,9 @@ function update_seccode(){
 									</div>
 								</form>
 							</div>
-							<div class="bottom">
+							<!--<div class="bottom">
 								<a style="cursor:pointer" title="QQ登录" onclick="pop.up('no', 'QQ登录', in_path+'source/pack/connect/login.php', '700px', '430px', '60px');"><img src="{$_G['path']}static/user/images/connect.gif"/></a>
-							</div>
+							</div>-->
 						</div>
 					</div>
 				</div>

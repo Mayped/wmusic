@@ -48,12 +48,12 @@ Administrator(1);
                         <li><em><a href="?iframe=admin" id="header_system" hidefocus="true"
                                    onmouseover="previewheader('system')" onmouseout="previewheader()"
                                    onclick="toggleMenu('system', '?iframe=admin');doane(event);">系统</a></em></li>
-                        <li><em><a href="?iframe=module" id="header_app" hidefocus="true"
+<!--                        <li><em><a href="?iframe=module" id="header_app" hidefocus="true"
                                    onmouseover="previewheader('app')" onmouseout="previewheader()"
                                    onclick="toggleMenu('app', '?iframe=module');doane(event);">云平台</a></em></li>
-                        <li><em><a href="?iframe=ucenter" id="header_uc" hidefocus="true"
+                      <li><em><a href="?iframe=ucenter" id="header_uc" hidefocus="true"
                                    onmouseover="previewheader('uc')" onmouseout="previewheader()"
-                                   onclick="toggleMenu('uc', '?iframe=ucenter');doane(event);">UCenter</a></em></li>
+                                   onclick="toggleMenu('uc', '?iframe=ucenter');doane(event);">UCenter</a></em></li>-->
                     </ul>
                     <div class="currentloca">
                         <p id="admincpnav"></p>
@@ -217,13 +217,13 @@ Administrator(1);
     <span onclick="menuScroll(1)"><img src="static/admincp/css/scrollu.gif"/></span><span onclick="menuScroll(2)"><img
             src="static/admincp/css/scrolld.gif"/></span>
 </div>
-<div class="copyright">
+<!--<div class="copyright">
     <p>版本: <?php echo IN_VERSION; ?></p>
     <p>编码: <?php echo strtoupper(IN_CHARSET); ?></p>
     <p>更新: <?php echo IN_BUILD; ?></p>
     <p>Powered by <a href="http://www.erduo.in/" target="_blank">Ear Music</a></p>
     <p>&copy; 2011-<?php echo date('Y'); ?>, <a href="http://www.earcms.com/" target="_blank">Earcms Inc.</a></p>
-</div>
+</div>-->
 <div id="cpmap_menu" class="custom" style="display: none">
     <div class="cmain" id="cmain"></div>
     <div class="cfixbd"></div>

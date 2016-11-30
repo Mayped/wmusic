@@ -51,7 +51,7 @@ switch($action){
 </head>
 <body>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'Ear Music Board 管理中心 - 工具 - 站点备份';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='工具&nbsp;&raquo;&nbsp;站点备份';</script>
+<script type="text/javascript">parent.document.title = '西部音乐基地 管理中心 - 工具 - 站点备份';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='工具&nbsp;&raquo;&nbsp;站点备份';</script>
 <div class="floattop"><div class="itemtitle"><h3>站点备份</h3></div></div><div class="floattopempty"></div>
 <form method="post" name="form" target="iframe">
 <table class="tb tb2">

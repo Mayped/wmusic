@@ -36,7 +36,7 @@ function setdown(dlen){
 </head>
 <body>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'Ear Music Board 管理中心 - 程序升级';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='程序升级';</script>
+<script type="text/javascript">parent.document.title = '西部音乐基地 管理中心 - 程序升级';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='程序升级';</script>
 <div class="itemtitle"><h3>程序升级</h3><ul class="tab1" style="margin-right:10px"></ul><ul class="stepstat">
 <?php if($setup=="downfile"){echo "<li class=\"current\">";}else{echo "<li>";} ?>1.下载文件</li>
 <?php if($setup=="replacefile"){echo "<li class=\"current\">";}else{echo "<li>";} ?>2.更新文件</li>

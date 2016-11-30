@@ -69,7 +69,7 @@ function main($sql,$size){
 	$count=$db->num_rows($result);
 ?>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'Ear Music Board 管理中心 - 用户管理 - 所有评论';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;所有评论';</script>
+<script type="text/javascript">parent.document.title = '西部音乐基地 管理中心 - 用户管理 - 所有评论';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户管理&nbsp;&raquo;&nbsp;所有评论';</script>
 <div class="floattop"><div class="itemtitle"><h3>所有评论</h3></div></div><div class="floattopempty"></div>
 <table class="tb tb2">
 <tr><th class="partition">技巧提示</th></tr>

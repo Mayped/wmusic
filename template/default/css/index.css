@@ -106,10 +106,7 @@ a:hover {
     float: left
 }
 
-.layout_1 .main_container {
-    width: 760px;
-    float: left
-}
+
 
 .layout_2 {
     width: 960px;
@@ -5348,7 +5345,7 @@ a:hover {
 }
 
 .mod_rank .mod_t_play {
-    left: 65px
+    left: 100px
 }
 
 .mod_rank .mod_content {

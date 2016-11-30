@@ -38,7 +38,7 @@ function clean_cache(){
 </head>
 <body>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'Ear Music Board 管理中心 - 工具 - 更新缓存';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='工具&nbsp;&raquo;&nbsp;更新缓存';</script>
+<script type="text/javascript">parent.document.title = '西部音乐基地 管理中心 - 工具 - 更新缓存';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='工具&nbsp;&raquo;&nbsp;更新缓存';</script>
 <div class="floattop"><div class="itemtitle"><h3>更新缓存</h3></div></div><div class="floattopempty"></div>
 <table class="tb tb2">
 <tr><th class="partition">技巧提示</th></tr>

@@ -79,8 +79,8 @@ function EditBoard($Arr,$url,$arrname){
 		$in_selflable = $Arr[4];
 ?>
 <div class="container">
-<?php if($_GET['action']=="add"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 界面风格 - 新增标签';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='界面风格&nbsp;&raquo;&nbsp;新增标签';</script>";} ?>
-<?php if($_GET['action']=="edit"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 界面风格 - 编辑标签';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='界面风格&nbsp;&raquo;&nbsp;编辑标签';</script>";} ?>
+<?php if($_GET['action']=="add"){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 界面风格 - 新增标签';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='界面风格&nbsp;&raquo;&nbsp;新增标签';</script>";} ?>
+<?php if($_GET['action']=="edit"){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 界面风格 - 编辑标签';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='界面风格&nbsp;&raquo;&nbsp;编辑标签';</script>";} ?>
 <div class="floattop"><div class="itemtitle"><h3><?php echo $arrname; ?>标签</h3><ul class="tab1">
 <li><a href="?iframe=label"><span>模板标签</span></a></li>
 <?php if($_GET['action']=="add"){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=label&action=add"><span>新增标签</span></a></li>
@@ -150,8 +150,8 @@ function setcopy(text, id){
 }
 </script>
 <div class="container">
-<?php if(empty($action)){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 界面风格 - 模板标签';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='界面风格&nbsp;&raquo;&nbsp;模板标签';</script>";} ?>
-<?php if($action=="keyword"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 界面风格 - 标签分类';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='界面风格&nbsp;&raquo;&nbsp;标签分类';</script>";} ?>
+<?php if(empty($action)){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 界面风格 - 模板标签';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='界面风格&nbsp;&raquo;&nbsp;模板标签';</script>";} ?>
+<?php if($action=="keyword"){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 界面风格 - 标签分类';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='界面风格&nbsp;&raquo;&nbsp;标签分类';</script>";} ?>
 <div class="floattop"><div class="itemtitle"><h3><?php if(empty($action)){echo "模板标签";}else if($action=="keyword"){echo "标签分类";} ?></h3><ul class="tab1">
 <?php if(empty($action)){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=label"><span>模板标签</span></a></li>
 <li><a href="?iframe=label&action=add"><span>新增标签</span></a></li>

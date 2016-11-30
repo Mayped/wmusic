@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset={$_G['charset']}" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-<title>{$_G['name']}</title>
+<title>西部音乐基地</title>
 <meta name="Keywords" content="{$_G['keywords']}" />
 <meta name="Description" content="{$_G['description']}" />
 <link href="{$_G['tempath']}css/index.css" type="text/css" rel="stylesheet" />
@@ -25,7 +25,7 @@ var _menu = 'music';
 <div class="frame_top">
 	<!--{require 'top.html'}-->
 	<div class="main_top">
-		<h1 class="frame_logo"><a href="{$_G['path']}" class="logo">{$_G['name']}</a></h1>
+		<h1 class="frame_logo"><a href="{$_G['path']}" class="logo">西部音乐基地</a></h1>
 		<div class="frame_search">
 			<input type="text" value="找到好音乐" class="search_text" id="keyword" onfocus="if(this.value=='找到好音乐'){this.value='';}$('.frame_search').addClass('search_focus');" onblur="if(this.value==''){this.value='找到好音乐';}$('.frame_search').removeClass('search_focus');lib.s_onblur();" onkeyup="get_search(this.value);">
 			<input type="button" value="搜索" onclick="lib.s_earch('keyword');return false;" class="go_search">
@@ -33,7 +33,7 @@ var _menu = 'music';
 		</div>
 		<div class="navigation">
 			<ul>
-				<li class="nav_home"><a href="{$_G['path']}" class="nonce"><span>音乐馆</span></a></li>
+				<li class="nav_home"><a href="{$_G['path']}" class="nonce"><span>乐库</span></a></li>
 				<li class="nav_ori"><a href="{$rewrite['index.php/page/original/']}"><span>原创</span></a></li>
 				<li class="nav_mv"><a href="{$rewrite['index.php/page/mv/']}"><span>MV</span></a></li>
 				<li class="nav_mymusic"><a href="{$rewrite['user.php/music/index/']}" target="_blank"><span>音乐人</span></a></li>
@@ -44,7 +44,7 @@ var _menu = 'music';
 			<p class="sub_lib" style="display: block;">
 				<a href="{$_G['path']}" class="nonce">首页</a>|
 				<a href="{$rewrite['index.php/page/rank/']}">排行榜</a>|
-				<!--{loop special_class count=1 order=asc}--><a href="{$specialclass['link']}">精选辑</a>|<!--{/loop special_class}-->
+				<!--{loop special_class count=1 order=asc}--><a href="{$specialclass['link']}">专辑</a>|<!--{/loop special_class}-->
 				<!--{loop singer_class count=1 order=asc}--><a href="{$singerclass['link']}">歌手</a><!--{/loop singer_class}-->
 			</p>
 			<p class="sub_mv" style="display: none;">
@@ -66,7 +66,10 @@ var _menu = 'music';
 				<a href="javascript:void(0)" id="btnLeft" class="slide_prev">上一张</a><a href="javascript:void(0)" id="btnRight" class="slide_next">下一张</a>
 				<ul class="mod_focus_pic">
 					<!--{loop special count=5 sort=hits}-->
-					<li><img src="{$special['cover']}" title="{$special['name']}" onclick="window.open('{$special['link']}');"></li>
+					<li>
+						<!--<img src="{$special['cover']}" title="{$special['name']}" onclick="window.open('{$special['link']}');">-->
+						<img src="/template/default/css/图片2.png">
+					</li>
 					<!--{/loop special}-->
 					<!--{loop special count=1 sort=hits}-->
 					<li><img src="{$special['cover']}" title="{$special['name']}" onclick="window.open('{$special['link']}');" width="700" height="320" style="cursor:pointer"></li>
@@ -192,8 +195,9 @@ var _menu = 'music';
 
 			<div class="rank_list">
 				<div class="rank_list_title">
-					<h2>最新排行&nbsp;&nbsp;</h2>
-					<a href="javascript:player_index('rank_new', 'ing');" class="btn_play" title="播放">播放</a><a href="javascript:player_index('rank_new', 'add');" class="btn_add" title="添加">添加</a>
+					<h3>最新排行&nbsp;&nbsp;</h3>
+					<a href="javascript:player_index('rank_new', 'ing');" class="btn_play" title="播放">播放</a>
+					<a href="javascript:player_index('rank_new', 'add');" class="btn_add" title="添加">添加</a>
 				</div>
 				<div class="class_songlist">
 					<ol id="rank_new">
@@ -214,7 +218,7 @@ var _menu = 'music';
 			</div>
 			<div class="rank_list">
 				<div class="rank_list_title">
-					<h2>最热排行&nbsp;&nbsp;</h2>
+					<h3>最热排行&nbsp;&nbsp;</h3>
 					<a href="javascript:player_index('rank_hot', 'ing');" class="btn_play" title="播放">播放</a><a href="javascript:player_index('rank_hot', 'add');" class="btn_add" title="添加">添加</a>
 				</div>
 				<div class="class_songlist">
@@ -242,7 +246,7 @@ var _menu = 'music';
 			</div>
 			<div class="mod_rank">
 				<div class="title">
-					<h2>巅峰榜</h2>
+					<h2>原创榜</h2>
 				</div>
 				<div class="mod_t_play">
 					<a href="javascript:player_index('rank_list', 'ing');" class="mod_play" title="播放">播放</a><a href="javascript:player_index('rank_list', 'add');" class="mod_add" title="添加">添加</a>

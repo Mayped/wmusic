@@ -45,11 +45,11 @@ switch($action){
 </head>
 <body>
 <div class="container">
-<?php if($action==""){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 静态生成 - 生成首页';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='静态生成&nbsp;&raquo;&nbsp;生成首页';</script>";} ?>
-<?php if($action=="music"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 静态生成 - 生成音乐';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='静态生成&nbsp;&raquo;&nbsp;生成音乐';</script>";} ?>
-<?php if($action=="special"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 静态生成 - 生成专辑';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='静态生成&nbsp;&raquo;&nbsp;生成专辑';</script>";} ?>
-<?php if($action=="singer"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 静态生成 - 生成歌手';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='静态生成&nbsp;&raquo;&nbsp;生成歌手';</script>";} ?>
-<?php if($action=="video"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 静态生成 - 生成视频';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='静态生成&nbsp;&raquo;&nbsp;生成视频';</script>";} ?>
+<?php if($action==""){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 静态生成 - 生成首页';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='静态生成&nbsp;&raquo;&nbsp;生成首页';</script>";} ?>
+<?php if($action=="music"){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 静态生成 - 生成音乐';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='静态生成&nbsp;&raquo;&nbsp;生成音乐';</script>";} ?>
+<?php if($action=="special"){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 静态生成 - 生成专辑';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='静态生成&nbsp;&raquo;&nbsp;生成专辑';</script>";} ?>
+<?php if($action=="singer"){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 静态生成 - 生成歌手';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='静态生成&nbsp;&raquo;&nbsp;生成歌手';</script>";} ?>
+<?php if($action=="video"){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 静态生成 - 生成视频';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='静态生成&nbsp;&raquo;&nbsp;生成视频';</script>";} ?>
 <div class="floattop"><div class="itemtitle"><h3><?php if($action=="music"){echo "生成音乐";}else if($action=="special"){echo "生成专辑";}else if($action=="singer"){echo "生成歌手";}else if($action=="video"){echo "生成视频";}else{echo "生成首页";} ?></h3><ul class="tab1">
 <?php if($action==""){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=html"><span>生成首页</span></a></li>
 <?php if($action=="music"){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=html&action=music"><span>生成音乐</span></a></li>

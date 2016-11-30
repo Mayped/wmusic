@@ -136,7 +136,7 @@ function CheckForm(){
 }
 </script>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'Ear Music Board 管理中心 - 内容审核 - <?php echo $arrname; ?>专辑';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;<?php echo $arrname; ?>专辑';</script>
+<script type="text/javascript">parent.document.title = '西部音乐基地 管理中心 - 内容审核 - <?php echo $arrname; ?>专辑';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;<?php echo $arrname; ?>专辑';</script>
 <div class="floattop"><div class="itemtitle"><h3><?php echo $arrname; ?>专辑</h3><ul class="tab1">
 <li><a href="?iframe=special"><span>所有专辑</span></a></li>
 <?php if($action=="add"){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=special&action=add"><span>新增专辑</span></a></li>
@@ -241,11 +241,11 @@ function all_save(form){
 }
 </script>
 <div class="container">
-<?php if(empty($action)){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 内容审核 - 所有专辑';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;所有专辑';</script>";} ?>
-<?php if($action=="pass"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 内容审核 - 待审专辑';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;待审专辑';</script>";} ?>
-<?php if($action=="keyword"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 内容审核 - 搜索专辑';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;搜索专辑';</script>";} ?>
-<?php if($action=="list"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 内容审核 - 栏目专辑';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;栏目专辑';</script>";} ?>
-<?php if($action=="singer"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 内容审核 - 歌手专辑';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;歌手专辑';</script>";} ?>
+<?php if(empty($action)){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 内容审核 - 所有专辑';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;所有专辑';</script>";} ?>
+<?php if($action=="pass"){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 内容审核 - 待审专辑';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;待审专辑';</script>";} ?>
+<?php if($action=="keyword"){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 内容审核 - 搜索专辑';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;搜索专辑';</script>";} ?>
+<?php if($action=="list"){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 内容审核 - 栏目专辑';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;栏目专辑';</script>";} ?>
+<?php if($action=="singer"){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 内容审核 - 歌手专辑';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;歌手专辑';</script>";} ?>
 <div class="floattop"><div class="itemtitle"><h3><?php if(empty($action)){echo "所有专辑";}else if($action=="pass"){echo "待审专辑";}else if($action=="keyword"){echo "搜索专辑";}else if($action=="list"){echo "栏目专辑";}else if($action=="singer"){echo "歌手专辑";} ?></h3><ul class="tab1">
 <?php if(empty($action)){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=special"><span>所有专辑</span></a></li>
 <li><a href="?iframe=special&action=add"><span>新增专辑</span></a></li>
@@ -390,7 +390,7 @@ function CheckForm(){
 }
 </script>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'Ear Music Board 管理中心 - 内容审核 - 专辑栏目';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;专辑栏目';</script>
+<script type="text/javascript">parent.document.title = '西部音乐基地 管理中心 - 内容审核 - 专辑栏目';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;专辑栏目';</script>
 <div class="floattop"><div class="itemtitle"><h3>专辑栏目</h3><ul class="tab1">
 <li><a href="?iframe=special"><span>所有专辑</span></a></li>
 <li><a href="?iframe=special&action=add"><span>新增专辑</span></a></li>

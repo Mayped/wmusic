@@ -139,7 +139,7 @@ function CheckForm(){
 }
 </script>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'Ear Music Board 管理中心 - 内容审核 - <?php echo $arrname; ?>歌手';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;<?php echo $arrname; ?>歌手';</script>
+<script type="text/javascript">parent.document.title = '西部音乐基地 管理中心 - 内容审核 - <?php echo $arrname; ?>歌手';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;<?php echo $arrname; ?>歌手';</script>
 <div class="floattop"><div class="itemtitle"><h3><?php echo $arrname; ?>歌手</h3><ul class="tab1">
 <li><a href="?iframe=singer"><span>所有歌手</span></a></li>
 <?php if($action=="add"){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=singer&action=add"><span>新增歌手</span></a></li>
@@ -217,10 +217,10 @@ function all_save(form){
 }
 </script>
 <div class="container">
-<?php if(empty($action)){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 内容审核 - 所有歌手';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;所有歌手';</script>";} ?>
-<?php if($action=="pass"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 内容审核 - 待审歌手';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;待审歌手';</script>";} ?>
-<?php if($action=="keyword"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 内容审核 - 搜索歌手';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;搜索歌手';</script>";} ?>
-<?php if($action=="list"){echo "<script type=\"text/javascript\">parent.document.title = 'Ear Music Board 管理中心 - 内容审核 - 栏目歌手';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;栏目歌手';</script>";} ?>
+<?php if(empty($action)){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 内容审核 - 所有歌手';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;所有歌手';</script>";} ?>
+<?php if($action=="pass"){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 内容审核 - 待审歌手';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;待审歌手';</script>";} ?>
+<?php if($action=="keyword"){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 内容审核 - 搜索歌手';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;搜索歌手';</script>";} ?>
+<?php if($action=="list"){echo "<script type=\"text/javascript\">parent.document.title = '西部音乐基地 管理中心 - 内容审核 - 栏目歌手';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;栏目歌手';</script>";} ?>
 <div class="floattop"><div class="itemtitle"><h3><?php if(empty($action)){echo "所有歌手";}else if($action=="pass"){echo "待审歌手";}else if($action=="keyword"){echo "搜索歌手";}else if($action=="list"){echo "栏目歌手";} ?></h3><ul class="tab1">
 <?php if(empty($action)){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=singer"><span>所有歌手</span></a></li>
 <li><a href="?iframe=singer&action=add"><span>新增歌手</span></a></li>
@@ -377,7 +377,7 @@ function CheckForm(){
 }
 </script>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'Ear Music Board 管理中心 - 内容审核 - 歌手栏目';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;歌手栏目';</script>
+<script type="text/javascript">parent.document.title = '西部音乐基地 管理中心 - 内容审核 - 歌手栏目';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='内容审核&nbsp;&raquo;&nbsp;歌手栏目';</script>
 <div class="floattop"><div class="itemtitle"><h3>歌手栏目</h3><ul class="tab1">
 <li><a href="?iframe=singer"><span>所有歌手</span></a></li>
 <li><a href="?iframe=singer&action=add"><span>新增歌手</span></a></li>
