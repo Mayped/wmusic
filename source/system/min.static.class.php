@@ -63,6 +63,8 @@ class Min{
 							        case 'user':
                                                                         $content .= self::U_ser($arr[0][$i], $arr[3][$i], $row, $sort);
                                                                         break;
+                                    case 'slideshow_home':              $content .= self::S_lideshowHome($arr[0][$i], $arr[3][$i], $row, $sort);
+                                                                        break;
 						        }
 					        }
 				        }
@@ -143,7 +145,7 @@ class Min{
                                                 $data = str_replace('{$music[\'classlink\']}', getlink($row['in_classid'], 'class'), $data);
                                                 break;
 				        case 'specialname':
-                                                $data = str_replace($arr[0][$i], getlenth(getfield('special', 'in_name', 'in_id', $row['in_specialid'], 'Î´Öª×¨¼­'), $arr[3][$i]), $data);
+                                                $data = str_replace($arr[0][$i], getlenth(getfield('special', 'in_name', 'in_id', $row['in_specialid'], 'Î´Öª×¨ï¿½ï¿½'), $arr[3][$i]), $data);
                                                 break;
 				        case 'speciallink':
                                                 $data = str_replace('{$music[\'speciallink\']}', getlink($row['in_specialid'], 'special'), $data);
@@ -152,7 +154,7 @@ class Min{
                                                 $data = str_replace('{$music[\'specialcover\']}', geturl(getfield('special', 'in_cover', 'in_id', $row['in_specialid']), 'cover'), $data);
                                                 break;
 				        case 'singername':
-                                                $data = str_replace($arr[0][$i], getlenth(getfield('singer', 'in_name', 'in_id', $row['in_singerid'], 'Î´Öª¸èÊÖ'), $arr[3][$i]), $data);
+                                                $data = str_replace($arr[0][$i], getlenth(getfield('singer', 'in_name', 'in_id', $row['in_singerid'], 'Î´Öªï¿½ï¿½ï¿½ï¿½'), $arr[3][$i]), $data);
                                                 break;
 				        case 'singerlink':
                                                 $data = str_replace('{$music[\'singerlink\']}', getlink($row['in_singerid'], 'singer'), $data);
@@ -270,7 +272,7 @@ class Min{
                                                 $data = str_replace('{$special[\'classlink\']}', getlink($row['in_classid'], 'specialclass'), $data);
                                                 break;
 				        case 'singername':
-                                                $data = str_replace($arr[0][$i], getlenth(getfield('singer', 'in_name', 'in_id', $row['in_singerid'], 'Î´Öª¸èÊÖ'), $arr[3][$i]), $data);
+                                                $data = str_replace($arr[0][$i], getlenth(getfield('singer', 'in_name', 'in_id', $row['in_singerid'], 'Î´Öªï¿½ï¿½ï¿½ï¿½'), $arr[3][$i]), $data);
                                                 break;
 				        case 'singerlink':
                                                 $data = str_replace('{$special[\'singerlink\']}', getlink($row['in_singerid'], 'singer'), $data);
@@ -337,6 +339,34 @@ class Min{
 	        unset($arr);
 	        return $data;
 	}
+
+    public static function S_lideshowHome($para, $data, $row, $sort=1){
+        preg_match_all('/\{\$slideshow_home\[\'\s*([0-9a-zA-Z]+)([\s]*[len]*)[=]??([0-9a-zA-Z]*)\'\]\}/', $para, $arr);
+        if(!empty($arr)){
+            for($i=0;$i<count($arr[0]);$i++){
+                switch($arr[1][$i]){
+                    case 'i':
+                        $data = str_replace('{$slideshow_home[\'i\']}', $sort, $data);
+                        break;
+                    case 'id':
+                        $data = str_replace('{$slideshow_home[\'id\']}', $row['in_id'], $data);
+                        break;
+                    case 'name':
+                        $data = str_replace('{$slideshow_home[\'name\']}', $row['in_name'], $data);
+                        break;
+                    case 'link':
+                        $data = str_replace('{$slideshow_home[\'link\']}',$row['in_link'], $data);
+                        break;
+                    case 'cover':
+                        $data = str_replace('{$slideshow_home[\'cover\']}',geturl($row['in_cover'], 'cover'),$data);
+                        break;
+                }
+            }
+        }
+        unset($arr);
+        return $data;
+    }
+
 	public static function S_inger($para, $data, $row, $sort=1){
 	        preg_match_all('/\{\$singer\[\'\s*([0-9a-zA-Z]+)([\s]*[len|style|size]*)[=]??([\da-zA-Z\-\\\\:\s]*)\'\]\}/', $para, $arr);
 	        if(!empty($arr)){
@@ -440,7 +470,7 @@ class Min{
                                                 $data = str_replace('{$video[\'classlink\']}', getlink($row['in_classid'], 'videoclass'), $data);
                                                 break;
 				        case 'singername':
-                                                $data = str_replace($arr[0][$i], getlenth(getfield('singer', 'in_name', 'in_id', $row['in_singerid'], 'Î´Öª¸èÊÖ'), $arr[3][$i]), $data);
+                                                $data = str_replace($arr[0][$i], getlenth(getfield('singer', 'in_name', 'in_id', $row['in_singerid'], 'Î´Öªï¿½ï¿½ï¿½ï¿½'), $arr[3][$i]), $data);
                                                 break;
 				        case 'singerlink':
                                                 $data = str_replace('{$video[\'singerlink\']}', getlink($row['in_singerid'], 'singer'), $data);
@@ -583,6 +613,7 @@ class Min{
 		        $order = '';
 		        $start = '';
 		        $count = '';
+				$slideshow_home ='';
 		        for($i=0;$i<count($arr[0]);$i++){
 			        switch($arr[1][$i]){
 				        case 'class':
@@ -594,6 +625,9 @@ class Min{
 				        case 'singer':
 					        $singer = $arr[2][$i];
 					        break;
+						case 'slideshow_home':
+							$slideshow_home=$arr[2][$i];
+							break;
 				        case 'best':
 					        $best = $arr[2][$i];
 					        break;
@@ -726,6 +760,18 @@ class Min{
 					        $sql .= " LIMIT ".($start-1).",".$count;
 				        }
 				        break;
+
+					case 'slideshow_home':
+						if($sort == 'rand'){
+							$sort = "rand()";
+						}elseif($sort == 'id'){
+							$sort = "in_id";
+						}
+						$sql .= " in_hide=0  order by ".$sort." ".$order;
+						if(is_numeric($count)){
+							$sql .= " LIMIT ".($start-1).",".$count;
+						}
+						break;
 			        case 'singer_class':
 				        if($sort == 'rand'){
 					        $sort = "rand()";

@@ -5,7 +5,7 @@ include 'source/system/user.php';
 include 'source/system/min.static.class.php';
 include 'source/system/lib.static.class.php';
 global $cache;
-$array = array('class', 'music', 'special_class', 'special', 'singer_class', 'singer', 'video_class', 'video', 'search', 'page', 'misc');
+$array = array('class', 'music', 'special_class', 'special', 'singer_class', 'singer', 'video_class', 'video', 'search', 'page', 'misc','slideshow_home');
 $index = explode('/', isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : NULL);
 $table = isset($index[1]) ? $index[1] : NULL;
 if(in_array($table, $array)){

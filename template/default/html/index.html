@@ -65,18 +65,20 @@ var _menu = 'music';
 			<div class="mod_focus_show" id="slide">
 				<a href="javascript:void(0)" id="btnLeft" class="slide_prev">上一张</a><a href="javascript:void(0)" id="btnRight" class="slide_next">下一张</a>
 				<ul class="mod_focus_pic">
-					<!--{loop special count=5 sort=hits}-->
+					<!--{loop slideshow_home count=5  sort=id}-->
 					<li>
-						<!--<img src="{$special['cover']}" title="{$special['name']}" onclick="window.open('{$special['link']}');">-->
-						<img src="/template/default/css/图片2.png">
+						<img src="{$slideshow_home['cover']}" title="{$slideshow_home['name']}" onclick="window.open('{$slideshow_home['link']}');">
+						 <!-- <img src="/template/default/css/图片2.png"> -->
 					</li>
-					<!--{/loop special}-->
-					<!--{loop special count=1 sort=hits}-->
-					<li><img src="{$special['cover']}" title="{$special['name']}" onclick="window.open('{$special['link']}');" width="700" height="320" style="cursor:pointer"></li>
-					<!--{/loop special}-->
+					<!--{/loop slideshow_home}-->
+					<!--{loop slideshow_home count=1 sort=id}-->
+					<li><img src="{$slideshow_home['cover']}" title="{$slideshow_home['name']}" onclick="window.open('{$slideshow_home['link']}');" width="700" height="320" style="cursor:pointer"></li>
+					<!--{/loop slideshow_home}-->
 				</ul>
 				<div class="focus_switch" id="ico">
-					<!--{loop special count=5 sort=hits}--><!--{if({$special['i']}==1)}--><a class="current" style="cursor:pointer"><!--{else}--><a style="cursor:pointer"><!--{/if}--></a><!--{/loop special}-->
+					<!--{loop slideshow_home count=5 sort=id}-->
+					 <!--{if({$slideshow_home['i']}==1)}-->
+					         <a class="current" style="cursor:pointer"><!--{else}-->  <a style="cursor:pointer"><!--{/if}--></a><!--{/loop slideshow_home}-->
 				</div>
 			</div>
 			<div class="mod_first">
