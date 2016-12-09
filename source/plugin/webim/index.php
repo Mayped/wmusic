@@ -18,40 +18,14 @@ var in_time = <?php echo in_plugin_webim_time; ?>;
 var in_num = <?php echo in_plugin_webim_num; ?>;
 var in_sec = <?php echo in_plugin_webim_sec; ?>;
 var in_uid = <?php echo $erduo_in_userid; ?>;
+var in_space = '<?php echo getlink(0); ?>';
+layer.use('confirm-ext.js');
 </script>
+<script type="text/javascript" src="<?php echo IN_PATH; ?>static/pack/upload/swfobject.js"></script>
+<script type="text/javascript" src="<?php echo IN_PATH; ?>source/plugin/webim/api/uploadify.js"></script>
+<script type="text/javascript" src="<?php echo IN_PATH; ?>source/plugin/webim/api/lib.js"></script>
 <script type="text/javascript" src="<?php echo IN_PATH; ?>source/plugin/webim/api/chat.js"></script>
-<script type="text/javascript">
-function setDoodle(fid, oid, url, tid, from) {
-	if (url.match(/^(http:\/\/)/g)){
-		$("#textarea").val($("#textarea").val() + "[img]" + url + "[/img]");
-		$("#textarea").focus();
-		layer.closeAll();
-	}else{
-		lib.upload(url);
-	}
-}
-function f_getURL() {
-	return in_path + 'source/pack/upload/save.php';
-}
-function f_getMAX() {
-	return 60;
-}
-function f_getMIN() {
-	return 3;
-}
-function f_complete(filename) {
-	if (filename == 'error'){
-		$("#textarea").val($("#textarea").val() + "[语音保存失败]");
-	}else{
-		$("#textarea").val($("#textarea").val() + "[record:" + filename.substr(9, filename.length - 13) + "]");
-	}
-	$("#textarea").focus();
-	$(".wl_faces_box8").hide();
-}
-</script>
-<style type="text/css">
-@import url(<?php echo IN_PATH; ?>static/user/css/style.css);
-</style>
+<style type="text/css">@import url(<?php echo IN_PATH; ?>static/user/css/style.css);</style>
 </head>
 <body>
 <?php include 'source/user/people/top.php'; ?>
@@ -60,6 +34,32 @@ function f_complete(filename) {
 <div id="mainarea">
 <h2 class="title"><img src="<?php echo IN_PATH; ?>source/plugin/webim/icon.jpg">即时通讯</h2>
 <?php if(in_plugin_webim_open){ ?>
+<div id="menu_girl" style="display:none">
+	<ul>
+		<li id="space"><img src="<?php echo IN_PATH; ?>source/plugin/webim/api/space.png"> 访问主页</li>
+		<li id="move"><img src="<?php echo IN_PATH; ?>source/plugin/webim/api/move.png"> 好友分组</li>
+		<li id="del"><img src="<?php echo IN_PATH; ?>source/plugin/webim/api/del.png"> 删除好友</li>
+	</ul>
+</div>
+<div id="menu_boy" style="display:none">
+	<ul>
+		<li id="space"><img src="<?php echo IN_PATH; ?>source/plugin/webim/api/space.png"> 访问主页</li>
+		<li id="add"><img src="<?php echo IN_PATH; ?>source/plugin/webim/api/add.png"> 加为好友</li>
+		<li id="lock"><img src="<?php echo IN_PATH; ?>source/plugin/webim/api/lock.png"> 锁定用户</li>
+	</ul>
+</div>
+<div id="menu_group" style="display:none">
+	<ul>
+		<li id="insert"><img src="<?php echo IN_PATH; ?>source/plugin/webim/api/insert.png"> 新增分组</li>
+		<li id="edit"><img src="<?php echo IN_PATH; ?>source/plugin/webim/api/edit.png"> 修改分组</li>
+		<li id="cancel"><img src="<?php echo IN_PATH; ?>source/plugin/webim/api/cancel.png"> 删除分组</li>
+	</ul>
+</div>
+<div id="menu_preset" style="display:none">
+	<ul>
+		<li id="insert"><img src="<?php echo IN_PATH; ?>source/plugin/webim/api/insert.png"> 新增分组</li>
+	</ul>
+</div>
 <div id="content" style="width:732px">
 	<div class="c_mgs">
 		<div class="chatBox">
@@ -77,11 +77,12 @@ function f_complete(filename) {
 				</div>
 				<div class="chat02">
 					<div class="chat02_title">
-						<a class="chat02_title_btn ctb01"></a>
-						<a class="chat02_title_btn ctb08"></a>
+						<a class="chat02_title_btn ctb00" id="_emoji"></a>
+						<a class="chat02_title_btn ctb07" id="_record"></a>
 						<a class="chat02_title_btn ctb02"></a>
 						<a class="chat02_title_btn ctb03"></a>
 						<a class="chat02_title_btn ctb04" id="_shake" title="窗口抖动"></a>
+						<a class="chat02_title_btn ctb09" id="_upload" title="分享文件"><input type="file" name="uploadify" id="uploadify" /></a>
 						<a class="chat02_title_btn ctb06" title="涂鸦板"></a>
 						<div class="wl_faces_box">
 							<div class="wl_faces_content">
@@ -214,7 +215,7 @@ function f_complete(filename) {
 				<div class="chat03">
 					<div class="chat03_title">
 						<label class="chat03_title_t">用户列表</label>
-						<label class="chat02_title_t" title="刷新列表" id="list_reload" onclick="listenMsg.load();"></label>
+						<label class="chat02_title_t" title="刷新列表" id="list_reload"></label>
 					</div>
 					<div class="chat03_content"><script type="text/javascript">listenMsg.load();</script></div>
 				</div>

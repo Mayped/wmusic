@@ -8,9 +8,9 @@ $charset = strtoupper(IN_CHARSET);
 $build = IN_BUILD;
 $year = date('Y');
 
-$lock = IN_ROOT.'./data/install.txt';
+$lock = IN_ROOT.'./data/install.lock';
 if(file_exists($lock)) {
-	show_msg('警告！您已经安装过Ear Music！<br>为了保证数据安全，请立即删除{install.php}文件！<br>如果您想重新安装Ear Music，请删除{data/install.txt}文件！', 999);
+	show_msg('警告！您已经安装过Ear Music！<br>为了保证数据安全，请立即删除{install.php}文件！<br>如果您想重新安装Ear Music，请删除{data/install.lock}文件！', 999);
 }
 $sql = IN_ROOT.'./static/install/table.sql';
 if(!file_exists($sql)) {
@@ -496,7 +496,7 @@ END;
 	$sql2="insert into `".tname('plugin')."` (in_name,in_dir,in_file,in_isindex,in_type,in_author,in_address,in_addtime) values ('耳朵站群','chat','talk','0','1','erduo','http://www.erduo.in/','".date('Y-m-d H:i:s')."')";
 	$sql3="insert into `".tname('plugin')."` (in_name,in_dir,in_file,in_isindex,in_type,in_author,in_address,in_addtime) values ('".$p_name."','".$p_dir."','".$p_file."','1','".$p_type."','".$p_author."','".$p_address."','".date('Y-m-d H:i:s')."')";
 	if(mysql_query($sql) && mysql_query($sqls) && mysql_query($sqlss) && mysql_query($sql1) && mysql_query($sql2) && mysql_query($sql3)) {
-		fwrite(fopen('data/install.txt', 'wb+'), date('Y-m-d H:i:s'));
+		fwrite(fopen('data/install.lock', 'wb+'), date('Y-m-d H:i:s'));
 		show_msg('恭喜！Ear Music 顺利安装完成！<br>为了保证数据安全，请手动删除install目录！<br><br>您的后台管理员帐号与前台会员帐号已经成功建立。接下来，您可以：<br><br><a href="index.php" target="_blank">进入网站首页</a><br>或 <a href="admin.php" target="_blank">进入管理后台</a> 以管理员身份对站点参数进行设置！', 999);
 	} else {
 		show_msg(mysql_error(), 999);

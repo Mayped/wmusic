@@ -10,8 +10,9 @@
 <link href="{$_G['tempath']}css/rank_index.css" type="text/css" rel="stylesheet" />
 <link href="{$_G['tempath']}css/tips.css" type="text/css" rel="stylesheet" />
 <link href="{$_G['tempath']}css/visitor.css" type="text/css" rel="stylesheet" />
+<link href="{$_G['tempath']}css/visitor.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript" src="{$_G['tempath']}js/jquery.js"></script>
-<script type="text/javascript" src="{$_G['tempath']}js/menu.js"></script>
+<!--<script type="text/javascript" src="{$_G['tempath']}js/menu.js"></script>-->
 <script type="text/javascript" src="{$_G['tempath']}js/visitor.js"></script>
 <script type="text/javascript" src="{$_G['tempath']}js/lib.js"></script>
 <script type="text/javascript">
@@ -44,28 +45,24 @@ function display_tag(type) {
 		</div>
 		<div class="navigation">
 			<ul>
-				<li class="nav_home"><a href="{$_G['path']}" ><span>乐库</span></a></li>
-				<li class="nav_ori"><a href="{$rewrite['index.php/page/original/']} "class="nonce"><span>原创</span></a></li>
-				<li class="nav_mv"><a href="{$rewrite['index.php/page/mv/']}"><span>MV</span></a></li>
-				<li class="nav_mymusic"><a href="{$rewrite['user.php/music/index/']}" target="_blank"><span>音乐人</span></a></li>
-				<li class="nav_musicvip"><a href="{$rewrite['user.php/profile/vip/']}" target="_blank"><span>会员</span></a></li>
+				<li class="nav_home"><a href="{$_G['path']}" class="nonce"><span>音乐天地</span></a></li>
+				<!--<li class="nav_ori"><a href="{$rewrite['index.php/page/original/']}"><span>原创</span></a></li>-->
+				<!--<li class="nav_mv"><a href="{$rewrite['index.php/page/mv/']}"><span>MV</span></a></li>-->
+				<li class="nav_mymusic"><a href="{$rewrite['user.php/music/index/']}" target="_blank"><span>我的音乐</span></a></li>
+				<li class="nav_download"><a href="javascript:void(0)" ><span>下载客户端</span></a></li>
+				<li class="nav_musicvip"><a href="{$rewrite['user.php/profile/vip/']}" target="_blank"><span>VIP</span></a></li>
 			</ul>
 		</div>
 		<div class="sub_navigation">
-			<p class="sub_lib" style="display: none;">
-				<a href="{$_G['path']}">首页</a>|
-				<a href="{$rewrite['index.php/page/rank/']}" class="nonce">排行榜</a>|
+			<p class="sub_lib" style="display: block;">
+				<a href="{$_G['path']}" >首页</a>|
+				<a href="{$rewrite['index.php/page/rank/']}">排行榜</a>|
+				<a href="{$_G['path']}">乐库</a>|
+				<a href="{$rewrite['index.php/page/mv/']}">MV</a>|
+				<!--{loop video_class count=1 order=asc}--><a href="{$videoclass['link']}">MV库</a>|<!--{/loop video_class}-->
 				<!--{loop special_class count=1 order=asc}--><a href="{$specialclass['link']}">专辑</a>|<!--{/loop special_class}-->
-				<!--{loop singer_class count=1 order=asc}--><a href="{$singerclass['link']}">歌手</a><!--{/loop singer_class}-->
-			</p>
-			<p class="sub_mv" style="display: none;">
-				<a href="{$rewrite['index.php/page/mv/']}">MV推荐</a>|
-				<!--{loop video_class count=1 order=asc}--><a href="{$videoclass['link']}">MV库</a><!--{/loop video_class}-->
-			</p>
-			<p class="sub_mymusic" style="display: none;">
-				<a href="{$rewrite['user.php/music/index/']}" target="_blank">我上传的</a>|
-				<a href="{$rewrite['user.php/music/song/']}" target="_blank">我收藏的</a>|
-				<a href="{$rewrite['user.php/music/song/listen/']}" target="_blank">我听过的</a>
+				<!--{loop singer_class count=1 order=asc}--><a href="{$singerclass['link']}">歌手</a>|<!--{/loop singer_class}-->
+				<a href="{$rewrite['index.php/page/original/']} " class="nonce"><span>原创</span></a>
 			</p>
 		</div>
 	</div>
@@ -75,8 +72,15 @@ function display_tag(type) {
 		<div class="side_container">
 			<div class="mod_side_nav">
 				<ul>
-					<li><a href="{$rewrite['index.php/page/rank/']}" class="js_nav current">排行榜</a></li>
-					<!--{loop class order=asc}--><li><a href="{$class['link']}" class="js_nav">{$class['name']}</a></li><!--{/loop class}-->
+					<li><a href="javascript:void(0)" class="js_nav current">排行榜</a></li>
+					<!--{lop class order=asc}-->
+					<li><a href="javascript:void(0)" class="js_nav">流行</a></li>
+					<li><a href="javascript:void(0)" class="js_nav">民族</a></li>
+					<li><a href="javascript:void(0)" class="js_nav">藏族</a></li>
+					<li><a href="javascript:void(0)" class="js_nav">彝族</a></li>
+					<li><a href="javascript:void(0)" class="js_nav">羌族</a></li>
+					<li><a href="javascript:void(0)" class="js_nav">其他民族</a></li>
+					<!--{/loop class}-->
 				</ul>
 				<div class="gedan_sort">
 					<div id="tag_0">

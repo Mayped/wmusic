@@ -21,14 +21,14 @@ if(IN_UPOPEN==1){
 }elseif(IN_REMOTE==1){
 	$row=$db->getrow("select * from ".tname('plugin')." where in_type=3 and in_dir='".IN_REMOTEPK."'");
         $script="../../plugin/".IN_REMOTEPK."/".$row['in_file'].".php";
-        $data="'time':'".$_SERVER['HTTP_HOST'].".".date('YmdHis').rand(2,pow(2,24))."'";
+        $data="'uid':'".$uid."'";
         if(!is_file($script)){
                 $script="uplog.php";
                 $data="'type':'".$_GET['type']."','uid':'".$uid."','uname':'".$uname."'";
         }
 }else{
         $script="../ftp/uplog.php";
-        $data="'t':'".$_GET['type']."','time':'".date('YmdHis').rand(2,pow(2,24))."'";
+        $data="'t':'".$_GET['type']."','uid':'".$uid."'";
 }
 switch($_GET['type']){
 	case 'music_audio':

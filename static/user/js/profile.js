@@ -295,24 +295,24 @@ function getpay() {
 		$('_rmb').focus();
 		return;
 	}
-	var _type = $('_type').value;
-	var pay = layer.open({
-		type: 2,
-		maxmin: true,
-		title: '充值金币',
-		content: [in_path + 'source/pack/' + _type + '/pay.php', 'yes'],
-		area: ['700px', '430px'],
-		offset: '100px',
-		shade: false
-	});
+	var _title = new Date().getTime() + Math.floor(Math.random() * 1000000 + 1);
 	createXMLHttpRequest();
-	XMLHttpReq.open('GET', in_path + 'source/user/profile/ajax.php?ac=pay&rmb=' + _rmb + '&type=' + _type, true);
+	XMLHttpReq.open('GET', in_path + 'source/user/profile/ajax.php?ac=pay&rmb=' + _rmb + '&title=' + _title, true);
 	XMLHttpReq.onreadystatechange = function() {
 		if (XMLHttpReq.readyState == 4) {
 			if (XMLHttpReq.status == 200) {
 				if (XMLHttpReq.responseText == 'return_1') {
 					layer.msg('请先登录用户中心！', {icon: 2});
-				} else if (XMLHttpReq.responseText == _type) {
+				} else if ($('_type').value == 'alipay' && XMLHttpReq.responseText == 'return_2') {
+					var pay = layer.open({
+						type: 2,
+						maxmin: true,
+						title: '充值金币',
+						content: [in_path + 'source/pack/alipay/pay.php?in_title=' + _title, 'yes'],
+						area: ['700px', '430px'],
+						offset: '100px',
+						shade: false
+					});
 					layer.full(pay);
 				} else {
 					layer.msg('内部出现错误，请稍后再试！', {icon: 5});

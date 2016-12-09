@@ -32,8 +32,8 @@ $filearray = preg_split('/\|/', $fileext);
 $filepart = pathinfo($_FILES['Filedata']['name']);
 if(!empty($_FILES) && in_array(strtolower($filepart['extension']), $filearray)){
         $ftp = new ftp(IN_REMOTEHOST, IN_REMOTEPORT, IN_REMOTEOUT, IN_REMOTEUSER, IN_REMOTEPW, IN_REMOTEPASV);
-        $src = IN_ROOT.'./data/tmp/ftp_'.$_GET['time'].'_'.basename($_FILES['Filedata']['tmp_name']);
-        $path = '/'.$_GET['time'].'.'.fileext($_FILES['Filedata']['name']);
+        $src = IN_ROOT.'./data/tmp/ftp_'.$_GET['uid'].'.'.date('YmdHis').rand(2,pow(2,24)).'_'.basename($_FILES['Filedata']['tmp_name']);
+        $path = '/'.$_GET['uid'].'.'.date('YmdHis').rand(2,pow(2,24)).'.'.fileext($_FILES['Filedata']['name']);
         $dir = IN_REMOTEDIR == '.' ? NULL : IN_REMOTEDIR;
         move_uploaded_file($_FILES['Filedata']['tmp_name'], $src);
         $return = $ftp->f_put($src, $dir, $path);

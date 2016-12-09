@@ -32,10 +32,14 @@ function uc_syn(type) {
 	function processAJAX() {
 		if (theHttpRequest.readyState == 4) {
 			if (theHttpRequest.status == 200) {
-				var src = theHttpRequest.responseText.match(/src=\"([^\"]*)\"/);
-				var theHttpRequests = getHttpObject();
-				theHttpRequests.open('GET', src ? src[1] : 0, true);
-				theHttpRequests.send(null);
+				var src = theHttpRequest.responseText.match(/src=".*?"/g);
+				if (src) {
+					for (i = 0; i < src.length; i++) {
+						theHttpRequest = getHttpObject();
+						theHttpRequest.open('GET', src[i].match(/src="([^"]*)"/)[1], true);
+						theHttpRequest.send(null);
+					}
+				}
 			}
 		}
 	}

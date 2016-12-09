@@ -74,7 +74,7 @@ if(!empty($_FILES)){
 		}
 		$setarr = array(
 			'in_uid' => SafeRequest("uid","get"),
-			'in_uname' => base64_decode(SafeRequest("uname","get")),
+			'in_uname' => SafeSql(base64_decode(SafeRequest("uname","get"))),
 			'in_title' => str_replace($dir, '', $file),
 			'in_type' => $text,
 			'in_size' => $_FILES['Filedata']['size'],

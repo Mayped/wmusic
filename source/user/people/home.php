@@ -80,7 +80,7 @@ function search_user() {
 <td valign="top" width="150">
 <div class="ar_r_t"><div class="ar_l_t"><div class="ar_r_b"><div class="ar_l_b"><img src="<?php echo getavatar($erduo_in_userid, 'middle'); ?>" width="120" height="120"></div></div></div></div>
 <ul class="u_setting">
-<li class="dropmenu"><a href="<?php echo rewrite_mode('user.php/profile/avatar/'); ?>">设置头像 <img src="<?php echo IN_PATH; ?>static/user/images/more.gif" align="absmiddle"></a></li>
+<li class="dropmenu"><a href="<?php echo rewrite_mode('user.php/profile/avatar/'); ?>">设置新头像 <img src="<?php echo IN_PATH; ?>static/user/images/more.gif" align="absmiddle"></a></li>
 </ul>
 </td>
 <td valign="top">

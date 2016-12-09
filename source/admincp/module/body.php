@@ -138,7 +138,7 @@ if (isset($_POST['submit']) == '1') {
         </tr>
         <tr>
             <td class="vtop td24 lineheight">程序版本</td>
-            <td class="lineheight smallfont">Ear Music <?php echo IN_VERSION; ?>
+            <td class="lineheight smallfont">West Music <?php echo IN_VERSION; ?>
                 简体中文<?php echo strtoupper(IN_CHARSET); ?> <?php echo IN_BUILD; ?></td>
         </tr>
         <tr>

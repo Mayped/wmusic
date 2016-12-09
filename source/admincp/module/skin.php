@@ -36,11 +36,14 @@ function del_msg(href) {
 <body>
 <?php
 switch($action){
+	case 'setting':
+		Setting();
+		break;
+	case 'savesetting':
+		SaveSetting();
+		break;
 	case 'temp':
 		Temp();
-		break;
-	case 'edit':
-		Edit();
 		break;
 	case 'del':
 		Del();
@@ -66,6 +69,43 @@ switch($action){
 </body>
 </html>
 <?php
+function Setting(){
+	$in_id = SafeRequest("in_id","get");
+	$in_name = getfield('template', 'in_name', 'in_id', $in_id);
+	$in_path = getfield('template', 'in_path', 'in_id', $in_id);
+	$temp = substr($in_path, 0, strrpos(str_replace('//', '', $in_path.'/'), '/') + 1);
+?>
+<div class="container">
+<script type="text/javascript">parent.document.title = 'Ear Music Board 管理中心 - 界面风格 - 设置模板';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='界面风格&nbsp;&raquo;&nbsp;设置模板';</script>
+<div class="floattop"><div class="itemtitle"><h3>设置模板</h3></div></div><div class="floattopempty"></div>
+<table class="tb tb2">
+<tr><th class="partition"><?php echo $in_name; ?></th></tr>
+</table>
+<table class="tb tb2">
+<form action="?iframe=skin&action=savesetting&in_id=<?php echo $in_id; ?>" method="post">
+<tr><td colspan="2" class="td27">模板名称:</td></tr>
+<tr><td class="vtop rowform"><input type="text" class="txt" value="<?php echo $in_name; ?>" name="in_name"></td><td class="vtop tips2">默认项目</td></tr>
+<?php
+if($xml = @simplexml_load_file($temp.'setting.xml')){
+foreach($xml->item as $key){
+echo '<tr><td colspan="2" class="td27">'.trim(detect_encoding($key['title'])).':</td></tr>';
+if(trim($key['type']) == 'select'){
+echo '<tr><td class="vtop rowform"><select name="setting[]"><option value="0">禁用</option><option value="1"'.(trim($key['value']) == 1 ? ' selected' : '').'>启用</option></select></td></tr>';
+}else{
+echo '<tr><td class="vtop rowform"><input type="text" class="txt" value="'.trim(detect_encoding($key['value'])).'" name="setting[]"></td></tr>';
+}
+}
+}
+?>
+<tr><td colspan="15"><div class="fixsel"><input name="edit" type="submit" class="btn" value="提交" /></div></td></tr>
+</form>
+</table>
+</div>
+
+
+
+<?php
+}
 function TempList(){
 if(is_file(SafeRequest("path","get").SafeRequest("file","get"))){
 ?>
@@ -162,24 +202,22 @@ if($result){
 while ($row = $db->fetch_array($result)){
 $temp = substr($row['in_path'], 0, strrpos(str_replace('//', '', $row['in_path'].'/'), '/') + 1);
 ?>
-<form action="?iframe=skin&action=edit" method="post">
 <table cellspacing="0" cellpadding="0" style="margin-left: 10px; width: 250px;height: 200px;" class="left">
 <tr><th class="partition" colspan="2"><?php echo $row['in_path']; ?></th></tr>
 <tr>
 <td style="width: 130px;height:170px" valign="top">
 <p style="margin-bottom: 12px;"><img width="110" height="120" style="cursor:pointer" onclick="location.href='?iframe=skin&action=templist&tempname=<?php echo $row['in_name']; ?>&path=<?php echo $row['in_path']; ?>';" title="<?php echo $row['in_name']; ?>" onerror="this.src='static/admincp/css/preview.gif'" src="<?php echo $temp; ?>preview.jpg" /></p>
-<p style="margin: 2px 0"><input type="hidden" name="in_id" value="<?php echo $row['in_id']; ?>"><input type="text" class="txt" name="in_name" value="<?php echo $row['in_name']; ?>" style="margin:0; width: 104px;"></p>
+<p style="margin: 2px 0;font-weight:700;color:#090"><?php echo $row['in_name']; ?></p>
 </td>
 <td valign="top">
 <p><div class="fixsel"><input type="button" class="btn"<?php if($row['in_default'] == 1){ ?> value="已为默认" disabled="disabled"<?php }else{ ?> value="设为默认" onclick="location.href='?iframe=skin&action=temp&in_id=<?php echo $row['in_id']; ?>';"<?php } ?> /></div></p>
 <p style="margin: 1px 0"><div class="fixsel"><input type="button" class="btn" value="手机版" onclick="location.href='?iframe=skin&action=templist&tempname=<?php echo $row['in_name']; ?>&path=<?php echo $temp; ?>mobile/html/';" /></div></p>
-<p style="margin: 1px 0"><div class="fixsel"><input name="edit" type="submit" class="btn" value="修改" /></div></p>
+<p style="margin: 1px 0"><div class="fixsel"><input type="button" class="btn" value="设置" onclick="location.href='?iframe=skin&action=setting&in_id=<?php echo $row['in_id']; ?>';" /></div></p>
 <p style="margin: 8px 0 0 0"><div class="fixsel"><input type="button" class="btn"<?php if($row['in_default'] == 1){ ?> value="保留" disabled="disabled"<?php }else{ ?> value="卸载" onclick="del_msg('?iframe=skin&action=del&in_id=<?php echo $row['in_id']; ?>');"<?php } ?> /></div></p>
 <p style="margin: 8px 0 2px 0"><?php echo date("Y-m-d",strtotime($row['in_addtime']))==date('Y-m-d') ? '<em class="lightnum">'.date("Y-m-d",strtotime($row['in_addtime'])).'</em>' : date("Y-m-d",strtotime($row['in_addtime'])); ?></p>
 </td>
 </tr>
 </table>
-</form>
 <?php
 }
 }
@@ -254,17 +292,25 @@ function Del(){
 }
 
 //编辑模板方案
-function Edit(){
-	global $db;
+function SaveSetting(){
 	if(!submitcheck('edit')){ShowMessage("表单验证不符，无法提交！",$_SERVER['PHP_SELF'],"infotitle3",3000,1);}
-	$in_id = intval(SafeRequest("in_id","post"));
+	$in_id = SafeRequest("in_id","get");
 	$in_name = SafeRequest("in_name","post");
-	$sql = "update ".tname('template')." set in_name='".$in_name."' where in_id=".$in_id;
-	if(!IsNul($in_name)){
-		ShowMessage("修改出错，方案名称不能为空！","?iframe=skin","infotitle3",3000,1);
-	}elseif($db->query($sql)){
-		ShowMessage("恭喜您，模板方案修改成功！","?iframe=skin","infotitle2",1000,1);
+	$in_path = getfield('template', 'in_path', 'in_id', $in_id);
+	$temp = substr($in_path, 0, strrpos(str_replace('//', '', $in_path.'/'), '/') + 1);
+	IsNul($in_name) or ShowMessage("修改出错，模板名称不能为空！","history.back(1);","infotitle3",3000,2);
+	if(is_file($temp.'setting.xml')){
+		$content = file_get_contents($temp.'setting.xml');
+		preg_match_all('/<item(.*?)>/', $content, $array);
+		for($i=0;$i<count($_POST['setting']);$i++){
+			$edit = preg_replace('/value="(.*?)"/', 'value="'.convert_xmlcharset(SafeSql($_POST['setting'][$i]), 1).'"', $array[0][$i]);
+			$content = str_replace($array[0][$i], $edit, $content);
+		}
+		$ifile = new iFile($temp.'setting.xml', 'w');
+		$ifile->WriteFile($content, 3);
 	}
+	updatetable('template', array('in_name' => $in_name), array('in_id' => $in_id));
+	ShowMessage("恭喜您，模板方案修改成功！","?iframe=skin","infotitle2",1000,1);
 }
 
 //切换模板方案
@@ -320,7 +366,7 @@ function getTemplateType($filename){
 			break;
 		default:
 			if(stristr($filename, '.html')){
-				$Type="模板扩展";
+				$Type="模板拓展";
 			}else{
 				$Type="其它文件";
 			}

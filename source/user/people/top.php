@@ -4,12 +4,14 @@
 <div id="header">
         <div class="headerwarp">
                 <h1 class="logo"><a href="<?php if($userlogined){echo rewrite_mode('user.php/people/home/');}else{echo IN_PATH.'user.php';} ?>"><img src="<?php echo IN_PATH; ?>static/user/images/logo.gif" /></a></h1>
-                <ul id="ucappmenu_menu" class="dropmenu_drop" style="position:absolute;z-index:50;clip:rect(auto auto auto auto);left:602px;top:40px;display:none;">
+                <div id="ucappmenu_menu" style="position:relative;z-index:9999;display:none">
+                <ul class="dropmenu_drop">
                         <li><a href="<?php echo rewrite_mode('user.php/people/home/'); ?>">管理首页</a></li>
                         <li><a href="<?php echo 'http://'.$_SERVER['HTTP_HOST'].IN_PATH; ?>" target="_blank">网站首页</a></li>
                 </ul>
+                </div>
                 <ul class="menu">
-                        <li class="dropmenu" onclick="document.getElementById('ucappmenu_menu').style.display=''"><a href="javascript:void(0)">首页</a></li>
+                        <li class="dropmenu" style="cursor:pointer" onclick="if(document.getElementById('ucappmenu_menu').style.display==''){document.getElementById('ucappmenu_menu').style.display='none'}else{document.getElementById('ucappmenu_menu').style.display=''}"><a href="javascript:void(0)">首页</a></li>
                         <li><a href="<?php if($userlogined){echo getlink($erduo_in_userid);}else{echo rewrite_mode('user.php/people/login/');} ?>">个人主页</a></li>
                         <li><a href="<?php echo rewrite_mode('user.php/friend/index/'); ?>">好友</a></li>
                         <li><a href="<?php echo IN_PATH; ?>user.php">随便看看</a></li>

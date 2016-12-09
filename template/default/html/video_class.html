@@ -14,7 +14,7 @@
 .mod_side_nav .current_{$video['classid']}{color:#0c8f44;font-weight:bold;border-left:5px solid #F60}
 </style>
 <script type="text/javascript" src="{$_G['tempath']}js/jquery.js"></script>
-<script type="text/javascript" src="{$_G['tempath']}js/menu.js"></script>
+<!--<script type="text/javascript" src="{$_G['tempath']}js/menu.js"></script>-->
 <script type="text/javascript" src="{$_G['tempath']}js/visitor.js"></script>
 <script type="text/javascript" src="{$_G['tempath']}js/lib.js"></script>
 <script type="text/javascript">
@@ -36,28 +36,24 @@ var _menu = 'video';
 		</div>
 		<div class="navigation">
 			<ul>
-				<li class="nav_home"><a href="{$_G['path']}"><span>乐库</span></a></li>
-				<li class="nav_ori"><a href="{$rewrite['index.php/page/original/']}"><span>原创</span></a></li>
-				<li class="nav_mv"><a href="{$rewrite['index.php/page/mv/']}" class="nonce"><span>MV</span></a></li>
-				<li class="nav_mymusic"><a href="{$rewrite['user.php/music/index/']}" target="_blank"><span>音乐人</span></a></li>
-				<li class="nav_musicvip"><a href="{$rewrite['user.php/profile/vip/']}" target="_blank"><span>会员</span></a></li>
+				<li class="nav_home"><a href="{$_G['path']}" class="nonce"><span>音乐天地</span></a></li>
+				<!--<li class="nav_ori"><a href="{$rewrite['index.php/page/original/']}"><span>原创</span></a></li>-->
+				<!--<li class="nav_mv"><a href="{$rewrite['index.php/page/mv/']}"><span>MV</span></a></li>-->
+				<li class="nav_mymusic"><a href="{$rewrite['user.php/music/index/']}" target="_blank"><span>我的音乐</span></a></li>
+				<li class="nav_download"><a href="javascript:void(0)" ><span>下载客户端</span></a></li>
+				<li class="nav_musicvip"><a href="{$rewrite['user.php/profile/vip/']}" target="_blank"><span>VIP</span></a></li>
 			</ul>
 		</div>
 		<div class="sub_navigation">
-			<p class="sub_lib" style="display: none;">
-				<a href="{$_G['path']}">首页</a>|
+			<p class="sub_lib" style="display: block;">
+				<a href="{$_G['path']}" >首页</a>|
 				<a href="{$rewrite['index.php/page/rank/']}">排行榜</a>|
+				<a href="{$_G['path']}">乐库</a>|
+				<a href="{$rewrite['index.php/page/mv/']}">MV</a>|
+				<!--{loop video_class count=1 order=asc}--><a href="{$videoclass['link']}" class="nonce">MV库</a>|<!--{/loop video_class}-->
 				<!--{loop special_class count=1 order=asc}--><a href="{$specialclass['link']}">专辑</a>|<!--{/loop special_class}-->
-				<!--{loop singer_class count=1 order=asc}--><a href="{$singerclass['link']}">歌手</a><!--{/loop singer_class}-->
-			</p>
-			<p class="sub_mv" style="display: block;">
-				<a href="{$rewrite['index.php/page/mv/']}">MV推荐</a>|
-				<!--{loop video_class count=1 order=asc}--><a href="{$videoclass['link']}" class="nonce">MV库</a><!--{/loop video_class}-->
-			</p>
-			<p class="sub_mymusic" style="display: none;">
-				<a href="{$rewrite['user.php/music/index/']}" target="_blank">我上传的</a>|
-				<a href="{$rewrite['user.php/music/song/']}" target="_blank">我收藏的</a>|
-				<a href="{$rewrite['user.php/music/song/listen/']}" target="_blank">我听过的</a>
+				<!--{loop singer_class count=1 order=asc}--><a href="{$singerclass['link']}">歌手</a>|<!--{/loop singer_class}-->
+				<a href="{$rewrite['index.php/page/original/']}"><span>原创</span></a>
 			</p>
 		</div>
 	</div>

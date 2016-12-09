@@ -350,12 +350,13 @@ li.notify{
 	overflow:hidden
 }
 .dropmenu_drop{
-	margin:-1px 0 0;
+	position:absolute;
+	top:40px;
+	left:125px;
 	padding:0 10px 10px;
 	width:150px;
 	border:1px solid #CCC;
-	background:#FFF;
-	z-index:200
+	background:#FFF
 }
 .dropmenu_drop li{
 	padding:5px 10px;

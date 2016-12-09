@@ -10,7 +10,7 @@
 <link href="{$_G['tempath']}css/tips.css" type="text/css" rel="stylesheet" />
 <link href="{$_G['tempath']}css/visitor.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript" src="{$_G['tempath']}js/jquery.js"></script>
-<script type="text/javascript" src="{$_G['tempath']}js/menu.js"></script>
+<!--<script type="text/javascript" src="{$_G['tempath']}js/menu.js"></script>-->
 <script type="text/javascript" src="{$_G['tempath']}js/visitor.js"></script>
 <script type="text/javascript" src="{$_G['tempath']}js/index.js"></script>
 <script type="text/javascript" src="{$_G['tempath']}js/lib.js"></script>
@@ -33,35 +33,30 @@ var _menu = 'music';
 		</div>
 		<div class="navigation">
 			<ul>
-				<li class="nav_home"><a href="{$_G['path']}" class="nonce"><span>乐库</span></a></li>
-				<li class="nav_ori"><a href="{$rewrite['index.php/page/original/']}"><span>原创</span></a></li>
-				<li class="nav_mv"><a href="{$rewrite['index.php/page/mv/']}"><span>MV</span></a></li>
-				<li class="nav_mymusic"><a href="{$rewrite['user.php/music/index/']}" target="_blank"><span>音乐人</span></a></li>
-				<li class="nav_musicvip"><a href="{$rewrite['user.php/profile/vip/']}" target="_blank"><span>会员</span></a></li>
+				<li class="nav_home"><a href="{$_G['path']}" class="nonce"><span>音乐天地</span></a></li>
+				<!--<li class="nav_ori"><a href="{$rewrite['index.php/page/original/']}"><span>原创</span></a></li>-->
+				<!--<li class="nav_mv"><a href="{$rewrite['index.php/page/mv/']}"><span>MV</span></a></li>-->
+				<li class="nav_mymusic"><a href="{$rewrite['user.php/music/index/']}" target="_blank"><span>我的音乐</span></a></li>
+				<li class="nav_download"><a href="javascript:void(0)" ><span>下载客户端</span></a></li>
+				<li class="nav_musicvip"><a href="{$rewrite['user.php/profile/vip/']}" target="_blank"><span>VIP</span></a></li>
 			</ul>
 		</div>
 		<div class="sub_navigation">
 			<p class="sub_lib" style="display: block;">
 				<a href="{$_G['path']}" class="nonce">首页</a>|
 				<a href="{$rewrite['index.php/page/rank/']}">排行榜</a>|
+				<a href="{$_G['path']}">乐库</a>|
+				<a href="{$rewrite['index.php/page/mv/']}">MV</a>|
+				<!--{loop video_class count=1 order=asc}--><a href="{$videoclass['link']}">MV库</a>|<!--{/loop video_class}-->
 				<!--{loop special_class count=1 order=asc}--><a href="{$specialclass['link']}">专辑</a>|<!--{/loop special_class}-->
-				<!--{loop singer_class count=1 order=asc}--><a href="{$singerclass['link']}">歌手</a><!--{/loop singer_class}-->
-			</p>
-			<p class="sub_mv" style="display: none;">
-				<a href="{$rewrite['index.php/page/mv/']}">MV推荐</a>|
-				<!--{loop video_class count=1 order=asc}--><a href="{$videoclass['link']}">MV库</a><!--{/loop video_class}-->
-			</p>
-			<p class="sub_mymusic" style="display: none;">
-				<a href="{$rewrite['user.php/music/index/']}" target="_blank">我上传的</a>|
-				<a href="{$rewrite['user.php/music/song/']}" target="_blank">我收藏的</a>|
-				<a href="{$rewrite['user.php/music/song/listen/']}" target="_blank">我听过的</a>
+				<!--{loop singer_class count=1 order=asc}--><a href="{$singerclass['link']}">歌手</a>|<!--{/loop singer_class}-->
+			<a href="{$rewrite['index.php/page/original/']}"><span>原创</span></a>
 			</p>
 		</div>
 	</div>
+
 </div>
-<div class="main_frame">
-	<div class="layout_2">
-		<div class="main_container">
+<div class="mod_img">
 			<div class="mod_focus_show" id="slide">
 				<a href="javascript:void(0)" id="btnLeft" class="slide_prev">上一张</a><a href="javascript:void(0)" id="btnRight" class="slide_next">下一张</a>
 				<ul class="mod_focus_pic">
@@ -81,12 +76,18 @@ var _menu = 'music';
 					         <a class="current" style="cursor:pointer"><!--{else}-->  <a style="cursor:pointer"><!--{/if}--></a><!--{/loop slideshow_home}-->
 				</div>
 			</div>
+	 </div>
+<div class="main_frame">
+	<div class="layout_2">
+		<div class="main_container">
 			<div class="mod_first">
 				<div class="title">
 					<h2>在线首发</h2>
-				</div>
-				<div class="mod_more">
-					<!--{loop special_class count=1 order=asc}--><a href="{$specialclass['link']}" target="_blank" class="mod_more_link">更多</a><!--{/loop special_class}-->
+					<div class="mod_album">
+					<!--{loop special_class order=asc}-->
+					<a href="{$specialclass['link']}" class="js_nav current_{$specialclass['id']}">{$specialclass['name']}</a>|
+					<!--{/loop special_class}-->
+					</div>
 				</div>
 				<div class="mod_content">
 					<div class="slide_content">
@@ -187,15 +188,15 @@ var _menu = 'music';
 					</div>
 				</div>
 			</div>
-			<div class="mod_rank">
+			<div class="mod_rank2">
 				<div class="title">
 				<h2>排行榜</h2>
 				</div>
 				<div class="mod_more">
 					<a href="{$rewrite['index.php/page/rank/']}" target="_blank" class="mod_more_link">更多</a>
 				</div>
-
-			<div class="rank_list">
+            <div  class="Rank_list_frame">
+			    <div class="rank_list">
 				<div class="rank_list_title">
 					<h3>最新排行&nbsp;&nbsp;</h3>
 					<a href="javascript:player_index('rank_new', 'ing');" class="btn_play" title="播放">播放</a>
@@ -210,15 +211,12 @@ var _menu = 'music';
 								<span class="music_name"><a href="{$music['link']}" target="_blank" title="{$music['name']}">{$music['name']}</a></span>
 								<span class="singer_name"><a href="{$music['singerlink']}" target="_blank" title="{$music['singername']}">{$music['singername']}</a></span>
 							</div>
-							<div class="list_cp">
-								<a href="javascript:player_index({$music['id']}, 'ing');" title="播放" class="btn_play">播放</a><a href="javascript:player_index({$music['id']}, 'add');" title="添加" class="btn_add">添加</a><a href="javascript:create_fav({$music['id']});" title="收藏" class="btn_like">收藏</a>
-							</div>
 						</li>
 						<!--{/loop music}-->
 					</ol>
 				</div>
 			</div>
-			<div class="rank_list">
+			    <div class="rank_list">
 				<div class="rank_list_title">
 					<h3>最热排行&nbsp;&nbsp;</h3>
 					<a href="javascript:player_index('rank_hot', 'ing');" class="btn_play" title="播放">播放</a><a href="javascript:player_index('rank_hot', 'add');" class="btn_add" title="添加">添加</a>
@@ -232,12 +230,29 @@ var _menu = 'music';
 								<span class="music_name"><a href="{$music['link']}" target="_blank" title="{$music['name']}">{$music['name']}</a></span>
 								<span class="singer_name"><a href="{$music['singerlink']}" target="_blank" title="{$music['singername']}">{$music['singername']}</a></span>
 							</div>
-							<div class="list_cp">
-								<a href="javascript:player_index({$music['id']}, 'ing');" title="播放" class="btn_play">播放</a><a href="javascript:player_index({$music['id']}, 'add');" title="添加" class="btn_add">添加</a><a href="javascript:create_fav({$music['id']});" title="收藏" class="btn_like">收藏</a>
-							</div>
 						</li>
 						<!--{/loop music}-->
 					</ol>
+				</div>
+			</div>
+				<div class="rank_list">
+					<div class="rank_list_title">
+						<h3>歌手排行&nbsp;&nbsp;</h3>
+						<a href="javascript:player_index('rank_bad', 'ing');" class="btn_play" title="播放">播放</a><a href="javascript:player_index('rank_bad', 'add');" class="btn_add" title="添加">添加</a>
+					</div>
+					<div class="class_songlist">
+						<ol id="rank_bad">
+							<!--{loop music count=10 sort=badhits}--><input style="display:none" type="checkbox" value="{$music['id']}" checked>
+							<li onmouseover="this.className='play_hover'" onmouseout="this.className=''">
+								<span class="rank_down"></span>
+								<div class="music_info">
+									<span class="music_name"><a href="{$music['link']}" target="_blank" title="{$music['name']}">{$music['name']}</a></span>
+									<span class="singer_name"><a href="{$music['singerlink']}" target="_blank" title="{$music['singername']}">{$music['singername']}</a></span>
+								</div>
+							</li>
+							<!--{/loop music}-->
+						</ol>
+					</div>
 				</div>
 			</div>
 			</div>
@@ -250,9 +265,10 @@ var _menu = 'music';
 				<div class="title">
 					<h2>原创榜</h2>
 				</div>
-				<div class="mod_t_play">
-					<a href="javascript:player_index('rank_list', 'ing');" class="mod_play" title="播放">播放</a><a href="javascript:player_index('rank_list', 'add');" class="mod_add" title="添加">添加</a>
+				<div class="mod_more">
+					<!--{loop singer_class count=1 order=asc}--><a href="{$singerclass['link']}" target="_blank" class="mod_more_link">更多&gt&gt</a><!--{/loop singer_class}-->
 				</div>
+
 				<div class="mod_content">
 					<ol class="mod_rank_list" id="rank_list">
 						<!--{loop music count=1 sort=best}--><input style="display:none" type="checkbox" value="{$music['id']}" checked>
@@ -282,7 +298,7 @@ var _menu = 'music';
 					<h2>热门歌手</h2>
 				</div>
 				<div class="mod_more">
-					<!--{loop singer_class count=1 order=asc}--><a href="{$singerclass['link']}" target="_blank" class="mod_more_link">更多</a><!--{/loop singer_class}-->
+					<!--{loop singer_class count=1 order=asc}--><a href="{$singerclass['link']}" target="_blank" class="mod_more_link">更多&gt&gt</a><!--{/loop singer_class}-->
 				</div>
 				<div class="mod_content">
 					<div class="hot_singer_list">

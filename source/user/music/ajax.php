@@ -55,8 +55,8 @@ if($ac == 'delete'){
 	$tag = unescape(SafeRequest("tag","get"));
 	$cover = checkrename(unescape(SafeRequest("cover","get")), 'attachment/music/cover');
 	$lyric = checkrename(unescape(SafeRequest("lyric","get")), 'attachment/music/lyric');
-	$text = unescape(str_replace('&lt;br /&gt;', '<br />', SafeRequest("text","get")));
-	$content = ReplaceStr($text,"<br />","\r\n");
+	$text = unescape(SafeRequest("text","get"));
+	$content = ReplaceStr($text,"&lt;br /&gt;","\r\n");
 	$time = date('Y-m-d H:i:s');
 	global $erduo_in_userid,$erduo_in_username;
 	$cid = $db->getone("select in_id from ".tname('class')." where in_id=".$classid);
@@ -120,8 +120,8 @@ if($ac == 'delete'){
 	$tag = unescape(SafeRequest("tag","get"));
 	$cover = checkrename(unescape(SafeRequest("cover","get")), 'attachment/music/cover', getfield('music', 'in_cover', 'in_id', $id), 'edit', 'music', 'in_cover', $id);
 	$lyric = checkrename(unescape(SafeRequest("lyric","get")), 'attachment/music/lyric', getfield('music', 'in_lyric', 'in_id', $id), 'edit', 'music', 'in_lyric', $id);
-	$text = unescape(str_replace('&lt;br /&gt;', '<br />', SafeRequest("text","get")));
-	$content = ReplaceStr($text,"<br />","\r\n");
+	$text = unescape(SafeRequest("text","get"));
+	$content = ReplaceStr($text,"&lt;br /&gt;","\r\n");
 	global $erduo_in_userid;
 	$row = $db->getrow("select in_uid,in_passed from ".tname('music')." where in_id=".$id);
 	$cid = $db->getone("select in_id from ".tname('class')." where in_id=".$classid);

@@ -201,16 +201,17 @@ if($ac == 'login'){
 		include_once '../../pack/mail/mail.php';
 		$mail = new PHPMailer();
 		$mail->IsSMTP();
+		$mail->CharSet = 'utf-8';
 		$mail->SMTPAuth = true;
 		$mail->Host = IN_MAILSMTP;
 		$mail->Username = IN_MAIL;
 		$mail->Password = IN_MAILPW;
 		$mail->From = IN_MAIL;
-		$mail->FromName = IN_NAME;
-		$mail->Subject = '['.$in_uname.']密码的重设地址邮件';
-		$mail->AddAddress($in_email, $in_uname);
+		$mail->FromName = convert_xmlcharset(IN_NAME, 2);
+		$mail->Subject = convert_xmlcharset('['.$in_uname.']密码的重设地址邮件', 2);
+		$mail->AddAddress($in_email, convert_xmlcharset($in_uname, 2));
 		$html = 'http://'.$_SERVER['HTTP_HOST'].rewrite_mode('user.php/people/lostpasswd/'.$ucode.'/').'<br />以上地址请勿泄露给任何人。该地址有效期为'.IN_MAILDAY.'天，逾期失效！<br />如非本人操作，请勿理会！<br /><br />http://'.$_SERVER['HTTP_HOST'].IN_PATH;
-		$mail->MsgHTML($html);
+		$mail->MsgHTML(convert_xmlcharset($html, 2));
 		$mail->IsHTML(true);
 		if(!$mail->Send()){
 		        echo 'return_27';

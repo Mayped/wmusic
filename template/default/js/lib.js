@@ -215,7 +215,7 @@ function create_down(_id) {
                                 if (XMLHttpReq.responseText == "return_0") {
                                         lib.t_ips("请先登录用户中心！", 0, 3e3);
                                 } else if (XMLHttpReq.responseText == "return_1") {
-                                        lib.t_ips("权限不够，请开通会员！", 0, 3e3);
+                                        lib.t_ips("权限不够，请开通绿钻！", 0, 3e3);
                                 } else if (XMLHttpReq.responseText == "return_2") {
                                         lib.t_ips("金币不足，请先充值！", 0, 3e3);
                                 } else if (XMLHttpReq.responseText == "return_3") {
@@ -242,10 +242,14 @@ function uc_syn(type) {
         function processAJAX() {
                 if (theHttpRequest.readyState == 4) {
                         if (theHttpRequest.status == 200) {
-                                var src = theHttpRequest.responseText.match(/src=\"([^\"]*)\"/);
-                                var theHttpRequests = getHttpObject();
-                                theHttpRequests.open("GET", src ? src[1] : 0, true);
-                                theHttpRequests.send(null);
+				var src = theHttpRequest.responseText.match(/src=".*?"/g);
+				if (src) {
+					for (i = 0; i < src.length; i++) {
+						theHttpRequest = getHttpObject();
+						theHttpRequest.open('GET', src[i].match(/src="([^"]*)"/)[1], true);
+						theHttpRequest.send(null);
+					}
+				}
                         }
                 }
         }

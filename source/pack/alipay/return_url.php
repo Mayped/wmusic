@@ -16,11 +16,11 @@ if($verify_result) {
 	$total_fee	= $_GET['price'];
 	if($_GET['trade_status'] == 'WAIT_SELLER_SEND_GOODS' || $_GET['trade_status'] == 'TRADE_FINISHED') {
 		global $db;
-		$result=$db->query("select * from ".tname('paylog')." where cd_title='".SafeSql($dingdan)."'");
+		$result=$db->query("select * from ".tname('paylog')." where in_title='".SafeSql($dingdan)."'");
 		if($row=$db->fetch_array($result)){
 			$in_uid = $row['in_uid'];
 			$in_points = $row['in_points'];
-			$db->query("update ".tname('paylog')." set in_lock=0 where cd_title='".SafeSql($dingdan)."'");
+			$db->query("update ".tname('paylog')." set in_lock=0 where in_title='".SafeSql($dingdan)."'");
 			$db->query("update ".tname('user')." set in_points=in_points+".$in_points." where in_userid=".$in_uid);
 			$trade_statuss = "恭喜您，成功购买 ".$in_points." 个金币";
 		}else{

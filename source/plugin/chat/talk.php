@@ -17,32 +17,13 @@ var in_path = "<?php echo IN_PATH; ?>";
 var in_info = "<?php echo str_replace(array(auth_codes('aHR0cDovL3d3dy5lYXJjbXMuY29tLz9oPQ==', 'de'), auth_codes($_SERVER['PHP_SELF'])), array('?ac=login&h=', auth_codes(IN_PATH)), $develop_auth); ?>";
 var in_server = "\u0077\u0077\u0077\u002e\u0065\u0061\u0072\u0063\u006d\u0073\u002e\u0063\u006f\u006d";
 var in_avatar = "?ucapi=http%3A%2F%2F" + in_server + "%2Fsource%2Fpack%2Fupload%2Favatar.php&input=uid%3D";
-function updateavatar() {
-	$("#uid_" + $(".chat01_title span").attr("uid") + " img").attr("src", "http://" + in_server + "/data/attachment/avatar/" + $(".chat01_title span").attr("uid") + ".jpg?" + Math.random());
-	layer.closeAll();
-}
-function f_getURL() {
-	return in_path + "source/pack/upload/save.php";
-}
-function f_getMAX() {
-	return 60;
-}
-function f_getMIN() {
-	return 3;
-}
-function f_complete(filename) {
-	if (filename == 'error'){
-		$("#textarea").val($("#textarea").val() + "[语音保存失败]");
-	}else{
-		$("#textarea").val($("#textarea").val() + "[record:" + filename.substr(9, filename.length - 13) + "]");
-	}
-	$("#textarea").focus();
-	$(".wl_faces_box8").hide();
-}
+layer.use('confirm-ext.js');
 </script>
+<script type="text/javascript" src="<?php echo IN_PATH; ?>static/pack/upload/swfobject.js"></script>
+<script type="text/javascript" src="<?php echo IN_PATH; ?>source/plugin/chat/api/uploadify.js"></script>
+<script type="text/javascript" src="<?php echo IN_PATH; ?>source/plugin/chat/api/chat.js"></script>
 </head>
 <body>
-<script type="text/javascript" src="<?php echo IN_PATH; ?>source/plugin/chat/api/chat.js"></script>
 <div class="container">
 	<div class="infobox">
 		<div class="chatBox" id="content">
@@ -62,11 +43,12 @@ function f_complete(filename) {
 				</div>
 				<div class="chat02">
 					<div class="chat02_title">
-						<a class="chat02_title_btn ctb01"></a>
-						<a class="chat02_title_btn ctb08"></a>
+						<a class="chat02_title_btn ctb00" id="_emoji"></a>
+						<a class="chat02_title_btn ctb07" id="_record"></a>
 						<a class="chat02_title_btn ctb02"></a>
 						<a class="chat02_title_btn ctb03"></a>
 						<a class="chat02_title_btn ctb04" id="_shake" title="窗口抖动"></a>
+						<a class="chat02_title_btn ctb09" id="_upload" title="分享文件"><input type="file" name="uploadify" id="uploadify" /></a>
 						<a class="chat02_title_btn ctb06" title="更新头像"></a>
 						<div class="wl_faces_box">
 							<div class="wl_faces_content">
@@ -199,7 +181,7 @@ function f_complete(filename) {
 				<div class="chat03">
 					<div class="chat03_title">
 						<span class="chat03_title_t">站长列表</span>
-						<label class="chat02_title_t" title="刷新列表" id="list_reload" onclick="listenMsg.login();"></label>
+						<label class="chat02_title_t" title="刷新列表" id="list_reload"></label>
 					</div>
 					<div class="chat03_content">
 						<script type="text/javascript">listenMsg.login();</script>

@@ -1,6 +1,6 @@
 <?php
 require_once 'config.inc.php';
-if(!is_file(IN_ROOT.'./data/install.txt')){exit(header("location:install.php"));}
+if(!is_file(IN_ROOT.'./data/install.lock')){exit(header("location:install.php"));}
 class db_mysql{
 	protected $link_id;
 	public function __construct($dbhost, $dbuser, $dbpw, $dbname, $charset = IN_DBCHARSET){

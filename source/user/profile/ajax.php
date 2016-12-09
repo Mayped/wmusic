@@ -60,16 +60,17 @@ if($ac == 'unconnect'){
 		include_once '../../pack/mail/mail.php';
 		$mail = new PHPMailer();
 		$mail->IsSMTP();
+		$mail->CharSet = 'utf-8';
 		$mail->SMTPAuth = true;
 		$mail->Host = IN_MAILSMTP;
 		$mail->Username = IN_MAIL;
 		$mail->Password = IN_MAILPW;
 		$mail->From = IN_MAIL;
-		$mail->FromName = IN_NAME;
-		$mail->Subject = '['.$erduo_in_username.']激活邮箱的验证码邮件';
-		$mail->AddAddress($in_mail, $erduo_in_username);
+		$mail->FromName = convert_xmlcharset(IN_NAME, 2);
+		$mail->Subject = convert_xmlcharset('['.$erduo_in_username.']激活邮箱的验证码邮件', 2);
+		$mail->AddAddress($in_mail, convert_xmlcharset($erduo_in_username, 2));
 		$html = '激活邮箱的验证码为【'.$ucode.'】。该验证码有效期为'.IN_MAILDAY.'天，逾期失效！<br />如非本人操作，请忽略此邮件！<br /><br />http://'.$_SERVER['HTTP_HOST'].IN_PATH;
-		$mail->MsgHTML($html);
+		$mail->MsgHTML(convert_xmlcharset($html, 2));
 		$mail->IsHTML(true);
 		if(!$mail->Send()){
 		        echo 'return_3';
@@ -181,12 +182,11 @@ if($ac == 'unconnect'){
 	}
 }elseif($ac == 'pay'){
 	$rmb = intval(SafeRequest("rmb","get"));
-	$type = SafeRequest("type","get");
+	$title = SafeRequest("title","get");
 	global $erduo_in_userid,$erduo_in_username;
 	if(!$userlogined){
 		echo 'return_1';
 	}else{
-		$title = date('YmdHis').rand(2,pow(2,24));
 		$setarr = array(
 		        'in_uid' => $erduo_in_userid,
 		        'in_uname' => $erduo_in_username,
@@ -197,8 +197,7 @@ if($ac == 'unconnect'){
 		        'in_addtime' => date('Y-m-d H:i:s')
 		);
 		inserttable('paylog', $setarr, 1);
-		setcookie('in_paylog_title', $title, time()+60, IN_PATH);
-		echo $type;
+		echo 'return_2';
 	}
 }
 ?>

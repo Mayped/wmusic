@@ -3,7 +3,7 @@ include '../../system/db.class.php';
 require_once 'alipay.config.php';
 require_once 'alipay_service.class.php';
 global $db;
-$row                    = $db->getrow("select * from ".tname('paylog')." where in_title='".SafeSql($_COOKIE['in_paylog_title'])."'");
+$row                    = $db->getrow("select * from ".tname('paylog')." where in_title='".SafeSql($_GET['in_title'])."'");
 $out_trade_no		= trim($row['in_title']);
 $subject		= "充值".$row['in_points']."金币";
 $body			= "充值".$row['in_points']."金币";

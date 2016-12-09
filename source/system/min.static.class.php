@@ -145,7 +145,7 @@ class Min{
                                                 $data = str_replace('{$music[\'classlink\']}', getlink($row['in_classid'], 'class'), $data);
                                                 break;
 				        case 'specialname':
-                                                $data = str_replace($arr[0][$i], getlenth(getfield('special', 'in_name', 'in_id', $row['in_specialid'], 'Î´Öª×¨ï¿½ï¿½'), $arr[3][$i]), $data);
+                                                $data = str_replace($arr[0][$i], getlenth(getfield('special', 'in_name', 'in_id', $row['in_specialid'], 'Î´Öª×¨¼­'), $arr[3][$i]), $data);
                                                 break;
 				        case 'speciallink':
                                                 $data = str_replace('{$music[\'speciallink\']}', getlink($row['in_specialid'], 'special'), $data);
@@ -154,7 +154,7 @@ class Min{
                                                 $data = str_replace('{$music[\'specialcover\']}', geturl(getfield('special', 'in_cover', 'in_id', $row['in_specialid']), 'cover'), $data);
                                                 break;
 				        case 'singername':
-                                                $data = str_replace($arr[0][$i], getlenth(getfield('singer', 'in_name', 'in_id', $row['in_singerid'], 'Î´Öªï¿½ï¿½ï¿½ï¿½'), $arr[3][$i]), $data);
+                                                $data = str_replace($arr[0][$i], getlenth(getfield('singer', 'in_name', 'in_id', $row['in_singerid'], 'Î´Öª¸èÊÖ'), $arr[3][$i]), $data);
                                                 break;
 				        case 'singerlink':
                                                 $data = str_replace('{$music[\'singerlink\']}', getlink($row['in_singerid'], 'singer'), $data);
@@ -272,7 +272,7 @@ class Min{
                                                 $data = str_replace('{$special[\'classlink\']}', getlink($row['in_classid'], 'specialclass'), $data);
                                                 break;
 				        case 'singername':
-                                                $data = str_replace($arr[0][$i], getlenth(getfield('singer', 'in_name', 'in_id', $row['in_singerid'], 'Î´Öªï¿½ï¿½ï¿½ï¿½'), $arr[3][$i]), $data);
+                                                $data = str_replace($arr[0][$i], getlenth(getfield('singer', 'in_name', 'in_id', $row['in_singerid'], 'Î´Öª¸èÊÖ'), $arr[3][$i]), $data);
                                                 break;
 				        case 'singerlink':
                                                 $data = str_replace('{$special[\'singerlink\']}', getlink($row['in_singerid'], 'singer'), $data);
@@ -470,7 +470,7 @@ class Min{
                                                 $data = str_replace('{$video[\'classlink\']}', getlink($row['in_classid'], 'videoclass'), $data);
                                                 break;
 				        case 'singername':
-                                                $data = str_replace($arr[0][$i], getlenth(getfield('singer', 'in_name', 'in_id', $row['in_singerid'], 'Î´Öªï¿½ï¿½ï¿½ï¿½'), $arr[3][$i]), $data);
+                                                $data = str_replace($arr[0][$i], getlenth(getfield('singer', 'in_name', 'in_id', $row['in_singerid'], 'Î´Öª¸èÊÖ'), $arr[3][$i]), $data);
                                                 break;
 				        case 'singerlink':
                                                 $data = str_replace('{$video[\'singerlink\']}', getlink($row['in_singerid'], 'singer'), $data);

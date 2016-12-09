@@ -38,7 +38,7 @@ table {
 }
 
 a {
-    color: #515151;
+    color: #333333;
     text-decoration: none
 }
 
@@ -126,7 +126,7 @@ a:hover {
 
 .layout_2 .side_container {
     width: 220px;
-    float: right
+    float: right;
 }
 
 .layout_2 .main_container {
@@ -494,18 +494,18 @@ a:hover {
     color: #949494
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+/*@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
     .icon_try {
         background-image: url(icon_sprite@2x.png);
         background-size: 199px 600px
     }
-}
+}*/
 
 .frame_top {
     height: 143px;
     border-bottom: 1px solid #DDD;
     min-width: 960px;
-    background: #FFFFCC
+    background: #ffffff;
 }
 
 .header_top {
@@ -584,7 +584,7 @@ a:hover {
     overflow: hidden;
     text-align: center;
     color: #fff;
-    background: #ff3333;
+    background: #cc6633;
     border-radius: 2px;
     margin-top: 5px;
     margin-left: 0;
@@ -682,7 +682,7 @@ a:hover {
 .navlist li a.btn_open_musicbag {
     margin-left: 10px;
     color: #fff;
-    background: #ff3333
+    background: #cc6633
 }
 
 .navlist li a.btn_open_vip:hover, .navlist li a.btn_open_musicbag:hover {
@@ -699,7 +699,8 @@ a:hover {
     height: 112px;
     margin: 0 auto;
     position: relative;
-    background: #FFFFCC;
+    background: #fff
+;
 }
 
 .main_top h1 {
@@ -710,12 +711,12 @@ a:hover {
 }
 
 .main_top .frame_logo {
-    width: 185px;
-    height: 58px;
+    width: 262px;
+    height: 60px;
     background: #fff url(logo.png) no-repeat;
     position: absolute;
-    top: 29px;
-    left: -4px;
+    top: 10px;
+    left: -40px;
     margin: 0
 }
 
@@ -723,8 +724,8 @@ a:hover {
     text-indent: -9999em;
     overflow: hidden;
     display: block;
-    width: 185px;
-    height: 58px;
+    width: 262px;
+    height: 60px;
     position: absolute
 }
 
@@ -775,9 +776,9 @@ a:hover {
     font-size: 14px;
     /*text-indent: -999em;*/
     overflow: hidden;
-    background: #ffffcc;
+    background: #fff;
     padding: 28.5px 0;
-    font-family:"¿¬Ìå";
+    font-family:Arial;
     font-weight:900;
     font-size: 28px;
     color: #cc9933;
@@ -871,59 +872,52 @@ a:hover {
 
 .navigation a.nonce span, .navigation a.nonce:hover span {
    /*display: none*/
-    background: #ff3333;
+    background: #cc6633;
     color: #ffffff
 }
 
 .sub_navigation {
     color: #c5c5c5;
     position: absolute;
-    top: 85px;
+    top: 84px;
     right: 0;
-    bottom: 0;
+    /*bottom: 0;*/
     left: 0;
-    z-index: 1
+    z-index: 1;
+    background: #333333;
+    margin-left: -115px;
+    margin-right: -115px;
+    height: 30px;
+
 }
 
-.sub_navigation p {
-    display: none
-}
+
 
 .sub_navigation .sub_lib {
-    margin-left: 244px
+    margin-left: 400px
 }
 
-.sub_navigation .sub_mv {
-    margin-left: 336px
-}
 
-.sub_navigation .sub_mymusic {
-    margin-left: 398px
-}
 
-.sub_navigation .sub_qplay {
-    margin-left: 526px
-}
 
-.sub_navigation .sub_software {
-    margin-left: 464px
-}
 
 .sub_navigation p a {
-    color: #6e6e6e;
+    color: #FFF;
     font-size: 14px;
-    padding: 0 15px
+    padding: 0 15px;
+    font-family: arial;
+    line-height: 30px;
 }
 
 .sub_navigation p a:hover {
-    color: #444;
+    font-size: 16px;
     text-decoration: none
 }
 
 .sub_navigation p a.nonce {
     color: #ff3333;
     font-weight: bold;
-    
+
 }
 
 .sub_navigation p a.nonce:hover {
@@ -1568,7 +1562,7 @@ a:hover {
     height: 140px
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+/*@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
     .logined .btn_open_vip, .navigation li a, .frame_search, .search_focus, .visitor_cp button {
         background-image: url(frame_bg@2x.png);
         background-size: 1000px 200px;
@@ -1599,7 +1593,7 @@ a:hover {
         background-image: url(frame_logo@2x.png);
         background-size: 295px 113px
     }
-}
+}  */
 
 .m_player {
     width: 563px;
@@ -3216,11 +3210,12 @@ a:hover {
 }
 
 .mod_focus_show {
-    width: 700px;
+    width: 960px;
     height: 280px;
     position: relative;
     overflow: hidden;
-    margin: 0 0 40px
+    margin: 0 auto;
+    background: #FFF;
 }
 
 .mod_focus_show .slide_prev, .mod_focus_show .slide_next {
@@ -3243,7 +3238,7 @@ a:hover {
 }
 
 .mod_focus_show .slide_next {
-    right: 0;
+    right: 0px;
     background-position: -40px 0
 }
 
@@ -3258,13 +3253,14 @@ a:hover {
 
 .mod_focus_show .mod_focus_pic {
     display: block;
-    width: 700px;
-    height: 280px
+    width: 960px;
+    height: 280px;
+    float: left;
 }
 
 .mod_focus_show .mod_focus_pic li, .mod_focus_show .mod_focus_pic a, .mod_focus_show .mod_focus_pic img {
     display: block;
-    width: 700px;
+    width: 960px;
     height: 280px
 }
 
@@ -3278,7 +3274,7 @@ a:hover {
     font-size: 0;
     position: absolute;
     bottom: 10px;
-    left: 50%;
+    left: 350px;
     width: 738px;
     height: 10px;
     margin-left: -369px;
@@ -3352,12 +3348,12 @@ a:hover {
     background-position: -64px -129px
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+/*@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
     .cp_prev, .cp_prev_disabled, .cp_prev:hover, .cp_next, .cp_next_disabled, .cp_next:hover {
         background-image: url(icon_sprite@2x.png);
         background-size: 199px 600px
     }
-}
+}  */
 
 .mod_first {
     width: 700px;
@@ -3371,26 +3367,58 @@ a:hover {
     padding: 2px 0;
     overflow: hidden;
     margin: 0 0 18px;
-    border-left: solid 5px red
+    border-left: solid 5px red;
+    background: #FFF;
+
 }
 
 .mod_rank .title{
-    height: 40px;
-    padding: 2px 0;
+    height: 30px;
+    padding: 0 10px;
     overflow: hidden;
     margin: 0 0 18px;
-    border-left: solid 5px red
+    /*border-left: solid 5px red;*/
+    background: #cc6633;;
 }
+
+.mod_rank2 .title{
+    height: 30px;
+    width: 700px;
+    padding: 2px 10px;
+    overflow: hidden;
+    margin: 0 0 18px;
+    border-left: solid 5px red;
+    background:#FFF;
+}
+
+
 
 .mod_first .title h2 {
-    height: 26px;
-    text-indent: -9999px;
+    height: 30px;
+    /*text-indent: -9999px;*/
     overflow: hidden;
-    background: url(index_title_bg.png) no-repeat 10px 0
+    font-family: Simsun;
+    font-size: 25px;
+    color: #000;
+    font-weight: bold;
+    float:left;
+    line-height: 30px;
+    /*background: url(index_title_bg.png) no-repeat 10px 0*/
 }
 
-.mod_first .mod_more {
-    left: 135px
+.mod_first .mod_album {
+    display:inline-block;
+    left: 135px;
+    width: 500px;
+    height: 30px;
+    float: left;
+}
+
+.mod_first .mod_album a{
+    font-family: Simsun;
+    font-size: 14px;
+    padding: 0 15px;
+   line-height: 30px;
 }
 
 .mod_first .mod_content {
@@ -3430,7 +3458,8 @@ a:hover {
 .mod_poster_130, .mod_poster_130 img {
     display: block;
     width: 130px;
-    height: 130px
+    height: 130px;
+    box-shadow: 5px 5px #666666;
 }
 
 .mod_poster_130:hover {
@@ -3551,9 +3580,15 @@ a:hover {
 
 .mod_mv .title h2 {
     height: 26px;
-    text-indent: -9999px;
+    /*text-indent: -9999px;*/
     overflow: hidden;
-    background: url(index_title_bg.png) no-repeat 10px -26px
+    font-family: Simsun;
+    font-size: 25px;
+    color: #000;
+    font-weight: bold;
+    padding-left: 10px;
+    line-height: 30px;
+    /*background: url(index_title_bg.png) no-repeat 10px -26px*/
 }
 
 .mod_mv .mod_more {
@@ -3561,8 +3596,13 @@ a:hover {
 }
 
 .mod_rank .mod_more {
-    left: 100px
+    left: 150px
 }
+
+.mod_rank2 .mod_more {
+    left: 120px
+}
+
 
 .mod_mv .mod_content {
     width: 700px;
@@ -4099,7 +4139,9 @@ a:hover {
     border-bottom: solid 1px #e4e4e4;
     margin: 0 0 20px;
     *zoom: 1;
-    position: relative
+    position: relative;
+    opacity: 1;
+
 }
 
 .mod_user .mod_tips {
@@ -4123,7 +4165,8 @@ a:hover {
 
 .mod_user .mod_content {
     width: 220px;
-    overflow: hidden
+    overflow: hidden;
+    background: #fff;
 }
 
 .mod_user_info {
@@ -4168,7 +4211,7 @@ a:hover {
 }
 
 .mod_user_info .mod_user_name a {
-    color: #ff3333
+    color: #cc6633
 }
 
 .mod_user_info .mod_user_name a:hover {
@@ -4715,10 +4758,10 @@ a:hover {
     line-height: 21px \9;
     height: 20px;
     padding: 0 10px;
-    border: 1px solid #ff3333;
+    border: 1px solid #cc6633;
     border-radius: 3px;
     box-shadow: 1px 2px 0 #f2f2f2;
-    background-color: #ff3333
+    background-color: #cc6633
 }
 
 .normal_info .openv_btn:hover {
@@ -5101,13 +5144,15 @@ a:hover {
 
 .mod_more .mod_more_link {
     display: block;
-    width: 37px;
-    height: 14px;
-    font-size: 0;
+    width: 50px;
+    line-height: 30px;
     line-height: normal;
-    text-indent: -9999px;
+    font-family: Simsun;
+    font-size: 14px;
+    /*color: #fff;*/
+    /*text-indent: -9999px;*/
     overflow: hidden;
-    background: url(index_title_bg.png) no-repeat left -238px
+    /*background: url(index_title_bg.png) no-repeat left -238px*/
 }
 
 .mod_t_play {
@@ -5211,18 +5256,25 @@ a:hover {
 
 .mod_recommend_1 .title h2 {
     height: 26px;
-    text-indent: -9999px;
+    color:#000;
+    /*text-indent: -9999px;*/
     overflow: hidden;
-    background: url(index_title_bg.png) no-repeat 10px -52px
+    font-family: Simsun;
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 10px;
+    line-height: 30px;
+    /*background: url(index_title_bg.png) no-repeat 10px -52px*/
 }
 
 .mod_rank h2 {
-    color: #333;
-    font-size: 28px;
-    font-family: "Microsoft YaHei";
-    line-height: 40px;
-    font-weight: normal;
-    height: 40px;
+    overflow: hidden;
+    font-family: SimHei;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 30px;
+    line-height: 30px;
     margin-bottom: 24px;
 }
 .rank_list_title h3{
@@ -5254,7 +5306,7 @@ a:hover {
     left: 215px;
 }
 .rank_list {
-    width: 350px;
+    width: 300px;
     height: 426px;
     margin-right: -1px;
     float: left;
@@ -5270,9 +5322,15 @@ a:hover {
 
 .mod_recommend_2 .title h2 {
     height: 26px;
-    text-indent: -9999px;
+    /*text-indent: -9999px;*/
     overflow: hidden;
-    background: url(index_title_bg.png) no-repeat 10px -253px
+    color:#000;
+    font-family: Simsun;
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 10px;
+    line-height: 30px;
+. /*background: url(index_title_bg.png) no-repeat 10px -253px*/
 }
 
 .mod_recommend_2 .recommend_list li {
@@ -5338,8 +5396,9 @@ a:hover {
 }
 
 .mod_rank {
+    width:220px;
     position: relative;
-    border-bottom: solid 1px #e4e4e4;
+    /*border-bottom: solid 1px #e4e4e4;*/
     margin: 0 0 20px;
     *zoom: 1
 }
@@ -5472,24 +5531,31 @@ a:hover {
 .mod_hot_singer .title {
     height: 18px;
     padding: 6px 0;
-    margin: 0 0 13px
+    margin: 0 0 13px;
+    background: #cc6633;
 }
 
 .mod_hot_singer .title h2 {
     height: 18px;
-    text-indent: -9999px;
+    /*text-indent: -9999px;*/
     overflow: hidden;
-    background: url(index_title_bg.png) no-repeat 0 -202px
+    font-family: SimHei;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 30px;
+    /*background: url(index_title_bg.png) no-repeat 0 -202px*/
 }
 
 .mod_hot_singer .mod_more {
-    left: 81px;
+    left: 150px;
     top: 10px
 }
 
 .mod_hot_singer .mod_content {
     width: 220px;
-    overflow: hidden
+    overflow: hidden;
+    background: #FFF;
 }
 
 .mod_hot_singer .hot_singer_list {
@@ -5650,12 +5716,12 @@ a:hover {
     background-color: #a0a0a0
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+/*@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
     .mod_t_play a, .mod_rank .mod_rank_list {
         background-image: url(icon_sprite@2x.png);
         background-size: 199px 600px
     }
-}
+}*/
 
 .popup_questionnaire {
     position: fixed;
@@ -5713,7 +5779,7 @@ a:hover {
     background-position: 0 -41px
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-resolution: 120dpi), only screen and (min-resolution: 1.25dppx) {
+/*@media only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-resolution: 120dpi), only screen and (min-resolution: 1.25dppx) {
     .icon_mblog, .icon_ticket, .icon_mv, .icon_sosomusic, .icon_try {
         background-image: url(icon_sprite@2x.png);
         background-size: 199px 598px
@@ -5748,8 +5814,114 @@ a:hover {
         background-image: url(icon_sprite@2x.png);
         background-size: 199px 598px
     }
-}
+}*/
 
 #CssGaga {
     content: "160526194113,juu,334"
+}
+
+.rank_list_title {
+     margin-bottom: 30px;
+ }
+
+.rank_list li.play_hover .list_cp {
+    display: block
+}
+
+.rank_list li .list_cp {
+    display: none;
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 60px
+}
+
+.rank_list li.play_hover {
+    border-bottom: 1px dotted #e2e2e2
+}
+
+.rank_list .play_hover .music_info {
+    width: 200px
+}
+
+.rank_list .play_hover .music_name {
+    max-width: 114px;
+    margin-right: 80px
+}
+
+.rank_list .play_hover .singer_name {
+    max-width: 70px;
+    margin-left: -80px
+}
+
+.rank_list li .music_name {
+    height: 29px;
+    line-height: 29px;
+    overflow: hidden;
+    _float: left;
+    margin: 0 116px 0 0;
+    font-size: 14px;
+    display: inline-block;
+    max-width: 160px;
+    vertical-align: top;
+    vertical-align: middle\9;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    _white-space: normal;
+    _word-break: break-all;
+}
+
+.rank_list li .music_name a {
+    color: #0c8f44;
+}
+
+.rank_list li .singer_name {
+    display: inline-block;
+    max-width: 116px;
+    vertical-align: top;
+    vertical-align: middle \9;
+    height: 29px;
+    line-height: 29px;
+    overflow: hidden;
+    _float: left;
+    margin: 0 0 0 -116px;
+    padding: 0 0 0 8px;
+    background: url(delimiter.png) no-repeat left center;
+    _background: url(delimiter.png) no-repeat 2px 16px;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    _white-space: normal;
+    _word-break: break-all;
+}
+.mod_img{
+    width:100%;
+    background: #999999;
+}
+
+.mod_focus_show .news{
+    float: left;
+    width: 260px;
+    height: 280px;
+}
+
+.main_frame {
+background-color:rgba(153,204,204,0.2);
+}
+
+.mod_rank2 h2 {
+    font-size: 28px;
+    font-family: Simsun;
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 10px;
+    line-height: 30px;
+}
+
+.mod_rank2{
+    width: 1000px;
+    position: relative;
+    margin: 0 0 20px;
+
+
 }

@@ -70,7 +70,8 @@ function CheckLogin(){
 <tr>
 	<td class="login">
 		<h1>Ear Music Administrator's Control Panel</h1>
-		<p><?php echo IN_VERSION; ?> 是 <a href="http://www.earcms.com" target="_blank">Earcms</a> 旗下 <a href="http://www.erduo.in" target="_blank">耳朵音乐</a> 推出的以音乐为基础的专业建站平台，帮助网站实现一站式服务。</p>
+<!--		<p>--><?php //echo IN_VERSION; ?><!-- 是 <a href="http://www.earcms.com" target="_blank">Earcms</a> 旗下 <a href="http://www.erduo.in" target="_blank">耳朵音乐</a> 推出的以音乐为基础的专业建站平台，帮助网站实现一站式服务。</p>-->
+		  <p>   wmusic-西部音乐基地是以“西部原创音乐”为主题的音乐交流平台</p>
 	</td>
 	<td>	<form method="post" name="form" action="?action=login" target="_top">
 		<p class="logintitle">用户名: </p>

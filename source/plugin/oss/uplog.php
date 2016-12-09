@@ -4,7 +4,7 @@ require_once 'conf.inc.php';
 require_once 'sdk.class.php';
 if(!empty($_FILES)){
         $oss_sdk_service = new ALIOSS();
-        $object = $_GET['time'].'.'.strtolower(trim(substr(strrchr($_FILES['Filedata']['name'],'.'),1)));
+        $object = $_SERVER['HTTP_HOST'].'.'.$_GET['uid'].'.'.date('YmdHis').rand(2,pow(2,24)).'.'.strtolower(trim(substr(strrchr($_FILES['Filedata']['name'],'.'),1)));
         $content = '';
         $length = 0;
         $fp = fopen($_FILES['Filedata']['tmp_name'], 'r');

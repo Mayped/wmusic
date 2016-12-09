@@ -226,11 +226,50 @@ function getSongInfo() {
                 });
         }
 }
+function setip(text, type, time) {
+        document.getElementById("error_tips").style.display = "";
+        document.getElementById("error_tips_content").style.background = type ? "#0dad51" :"#525c5f";
+        document.getElementById("error_message").innerHTML = text;
+        setTimeout("document.getElementById('error_tips').style.display = 'none';", time);
+}
+function getfav() {
+        var queryUrl = temp_url + "source/json.php?type=getfav&id=" + music_id;
+        ajax({
+                type:"get",
+                url:queryUrl,
+                dataType:"text",
+                success:function(data) {
+                        $html("favorites", data);
+                }
+        });
+}
+function putfav() {
+        var queryUrl = temp_url + "source/json.php?type=putfav&id=" + music_id;
+        ajax({
+                type:"get",
+                url:queryUrl,
+                dataType:"text",
+                success:function(data) {
+                        if (data == 1) {
+                                setip("音乐收藏成功！", 1, 1e3);
+                                getfav();
+                        } else if (data == -1) {
+                                setip("音乐取消收藏！", 1, 1e3);
+                                getfav();
+                        } else if (data == -2) {
+                                setip("音乐不存在！", 0, 3e3);
+                        } else {
+                                setip("登录已过期！", 0, 3e3);
+                        }
+                }
+        });
+}
 function playSong(url) {
         $html("playHTMLId", '<audio id="mediaPlayId" src="' + url + '" autoplay="autoplay" onended="getSongInfo();" onloadstart="loadStatus();" onplaying="playStatus();" onerror="loadError();" ontimeupdate="updateMethod();" mozaudiochannel="content" controls="controls"></audio>');
 }
 function c_init() {
         $S("lrctextId").style.height = "336px";
         getSongInfo();
+        getfav();
 }
 window.onload = c_init;

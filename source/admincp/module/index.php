@@ -122,8 +122,6 @@ Administrator(1);
                                             onclick="menuNewwin(this)" title="新窗口打开"></em>所有专辑</a></li>
                                 <li><a href="?iframe=special&action=add" hidefocus="true" target="main"><em
                                             onclick="menuNewwin(this)" title="新窗口打开"></em>新增专辑</a></li>
-                                <li><a href="#" hidefocus="true" target="main"><em
-                                            onclick="menuNewwin(this)" title="新窗口打开"></em>新增轮播图片</a></li>
                                 <li><a href="?iframe=special&action=pass" hidefocus="true" target="main"><em
                                             onclick="menuNewwin(this)" title="新窗口打开"></em>待审专辑</a></li>
                                 <li><a href="?iframe=special&action=class" hidefocus="true" target="main"><em
@@ -148,6 +146,18 @@ Administrator(1);
                             </ol>
                         </div>
                     </li>
+
+                    <li class="s">
+                        <div class="lsub desc" subid="broadcast">
+                            <div onclick="lsub('broadcast', this.parentNode)">轮播图</div>
+                            <ol style="display:" id="broadcast">
+                                <li><a href="?iframe=broadcast" hidefocus="true" target="main"><em
+                                            onclick="menuNewwin(this)" title="新窗口打开"></em>轮播图新增</a></li>
+                                <li class="sp"></li>
+                            </ol>
+                        </div>
+                    </li>
+
                     <li class="s">
                         <div class="lsub desc" subid="M9570187e">
                             <div onclick="lsub('M9570187e', this.parentNode)">视频</div>

@@ -31,8 +31,8 @@ if($ac == 'del'){
 	$classid = intval(SafeRequest("classid","get"));
 	$nick = unescape(SafeRequest("nick","get"));
 	$cover = checkrename(unescape(SafeRequest("cover","get")), 'attachment/singer/cover');
-	$intro = unescape(str_replace('&lt;br /&gt;', '<br />', SafeRequest("intro","get")));
-	$content = ReplaceStr($intro,"<br />","\r\n");
+	$intro = unescape(SafeRequest("intro","get"));
+	$content = ReplaceStr($intro,"&lt;br /&gt;","\r\n");
 	$time = date('Y-m-d H:i:s');
 	global $erduo_in_userid,$erduo_in_username;
 	$cid = $db->getone("select in_id from ".tname('singer_class')." where in_id=".$classid);
@@ -73,8 +73,8 @@ if($ac == 'del'){
 	$classid = intval(SafeRequest("classid","get"));
 	$nick = unescape(SafeRequest("nick","get"));
 	$cover = checkrename(unescape(SafeRequest("cover","get")), 'attachment/singer/cover', getfield('singer', 'in_cover', 'in_id', $id), 'edit', 'singer', 'in_cover', $id);
-	$intro = unescape(str_replace('&lt;br /&gt;', '<br />', SafeRequest("intro","get")));
-	$content = ReplaceStr($intro,"<br />","\r\n");
+	$intro = unescape(SafeRequest("intro","get"));
+	$content = ReplaceStr($intro,"&lt;br /&gt;","\r\n");
 	global $erduo_in_userid;
 	$row = $db->getrow("select in_uid,in_passed from ".tname('singer')." where in_id=".$id);
 	$cid = $db->getone("select in_id from ".tname('singer_class')." where in_id=".$classid);
